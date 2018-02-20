@@ -19,7 +19,7 @@ You will use two independant tools to manage and use Nimbus.  You will (usually)
 
 Let's take a closer look at the dashboard;
 
-![The Nimbus Dashboard]({{ page.root }}/fig/Overview_dasboard.jpg)
+![The Nimbus Dashboard]({{ page.root }}/fig/Overview_dasboard.png)
 
 You'll see here there is a menu on the left side of the view, here you will be able to explore the core functionality across Nimbus.  At first glance on the left you see the various plots that show current quota and usage.
 
