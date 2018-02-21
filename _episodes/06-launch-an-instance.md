@@ -11,18 +11,29 @@ keypoints:
 - "First key point."
 ---
 
+## The steps to launch a virtual machine
+
+**1. Set a name**
+
 ![Launch Details]({{ page.root }}/fig/Launch_details.png)
+
+**2. Define a source image (Ubuntu LTS 16.04)**
 
 ![Launch Source]({{ page.root }}/fig/Lauch_source.png)
 
+**3. Select a flavor (m2.small)**
+
 ![Launch Flavor]({{ page.root }}/fig/Launch_flavor.png)
+
+**4. Select a network**
 
 ![Launch Networks]({{ page.root }}/fig/Launch_networks.png)
 
-![Launch Security Groups]({{ page.root }}/fig/Launch_security_groups.png)
+**5. Check security groups**
 
 ![Launch Security Groups]({{ page.root }}/fig/Launch_security_groups.png)
 
+## Let's go!
 ![Launch Instance Post Click]({{ page.root }}/fig/Launch_instance_click.png)
 
 ![Launch Instance Done]({{ page.root }}/fig/Launch_instance_click2.png)
