@@ -14,16 +14,16 @@ keypoints:
 1. Root Disk- your home directory, and storage for the operating system of your virtual machine
 2. Volume Storage - a 2nd hard disk you can add to your VM for working storage
 
-
+## First create a volume
 ![Nimbus Volumes]({{ page.root }}/fig/Nimbus_volumes.png)
 
 ![Nimbus Create Volumes]({{ page.root }}/fig/nimbus_create_volume.png)
 
+## Now, manage attachements.
 ![Nimbus Configure Volumes]({{ page.root }}/fig/Nimbus_configure_volumes.png)
 
 ![Nimbus Manage Attachments]({{ page.root }}/fig/nimbus_vol_manage_attachments.png)
 
-=
 We can check that the volume is attached, but we can’t use it just yet.  If the unformatted disk is properly attached you should see (from the fdisk command):
 
 ```
