@@ -21,7 +21,7 @@ Let's take a closer look at the dashboard;
 
 ![The Nimbus Dashboard]({{ page.root }}/fig/Overview_dasboard.png)
 
-You'll see here there is a menu on the left side of the view, here you will be able to explore the core functionality across Nimbus.  At first glance on the right you see the various plots that show current quota and usage.
+You'll see here there is a menu on the left side of the view, here you will be able to explore the core functionality across Nimbus.  At first glance on the right you see the various plots that show current quota and usage.  We'll be exploring the other sections of the website as we make our way through the 
 
 ## Key Terminology
 

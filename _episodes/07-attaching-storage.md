@@ -14,6 +14,7 @@ keypoints:
 1. Root Disk- your home directory, and storage for the operating system of your virtual machine
 2. Volume Storage - a 2nd hard disk you can add to your VM for working storage
 
+Volumes are created, attached using the Nimbus interface, and then formatted and mounted 
 ## First create a volume
 ![Nimbus Volumes]({{ page.root }}/fig/Nimbus_volumes.png)
 
