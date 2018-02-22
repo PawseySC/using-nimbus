@@ -1,6 +1,6 @@
 ---
 title: "Simplified security and networking"
-teaching: 0
+teaching: 15
 exercises: 0
 questions:
 - "Let's have a look at security and networking"

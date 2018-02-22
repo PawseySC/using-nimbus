@@ -1,6 +1,6 @@
 ---
 title: "Maintaining your instance"
-teaching: 0
+teaching: 10
 exercises: 0
 questions:
 - "How do you keep your VM up to date and safe?"

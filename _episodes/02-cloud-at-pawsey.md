@@ -1,6 +1,6 @@
 ---
 title: "Nimbus: Cloud computing at Pawsey"
-teaching: 0
+teaching: 20
 exercises: 0
 questions:
 - "How does cloud fit into Pawsey?"

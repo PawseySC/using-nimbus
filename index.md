@@ -3,10 +3,11 @@ layout: lesson
 root: .
 permalink: index.html  # Is the only page that don't follow the partner /:path/index.html
 ---
-Welcome to Nimbus Training
+This course will introduce you to the use of Nimbus, the research cloud at Pawsey Supercomputing Centre.
+
 
 > ## Prerequisites
 >
-> You will need a access to a Pawsey JupyterHub or
-> a web browser and a shell program
+> No particular prerequisites are required.  All command line actions can be copied from this course.  If you have a working 
+> knowledge of the basics of the unix command line (ie: mv, ls, cp) you will have slightly easier time in this course.
 {: .prereq}

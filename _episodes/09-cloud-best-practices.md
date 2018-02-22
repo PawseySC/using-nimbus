@@ -1,6 +1,6 @@
 ---
 title: "Cloud best practices"
-teaching: 0
+teaching: 10
 exercises: 0
 questions:
 - "What's the best way to use cloud?"

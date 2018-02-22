@@ -1,6 +1,6 @@
 ---
 title: "Launching an Instance"
-teaching: 0
+teaching: 45
 exercises: 0
 questions:
 - "Let's launch an instance"

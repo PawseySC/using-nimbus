@@ -1,6 +1,6 @@
 ---
 title: "First steps: making keypairs"
-teaching: 0
+teaching: 30
 exercises: 0
 questions:
 - "What are keypairs and why do we need them?"
