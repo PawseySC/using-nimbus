@@ -5,9 +5,10 @@ exercises: 0
 questions:
 - "How do you setup disks and store data?"
 objectives:
-- "First objective."
+- "Attach and use an external data volume to your instance."
 keypoints:
-- "First key point."
+- "You learnt how to create a new volume and attach it to your instance."
+- "You learnt how to create a new filesystem and mount it to your instance"
 ---
 
 **There are two types of built-in storage**
