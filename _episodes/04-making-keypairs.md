@@ -79,27 +79,25 @@ The key's randomart image is:
 
 
 ## Installing keypairs
+Store your private key in a safe place!
 
-## If you are using JupyterHub
+### If you are using JupyterHub
 We need to move your .pem file to JupyterHub.  Your instructor will discuss at this point.
 
-## If you are using Putty
+### If you are using Windows with PuTTY
 1. Open PuTTYgen (All Apps -> Putty -> Puttygen)
 2. Click on the LOAD button.
 3. Select the .pem file you just downloaded from the Nimbus Dashboard. If you cannot see your .pem file , select "All Files" instead of "Putty Private Key Files" from the dropdown bottom menu.
 4. Set a new passphrase and confirm it for your private key.
 5. Click on the "Save private key" button and give it the name you prefer.
 
-## If you are using Linux / Mac / Unix
+### If you are using Linux / Mac / Unix
 If you used Nimbus to make the keypair, you should move the downloaded .pem file somewhere where you can find it later.
 1. Store in your .ssh/ directory and rename it id_rsa (or give it another name if you have more than a private key)
 ```
 $ cp ~/Downloads/file_name.pem  ~/.ssh/id_rsa
 ```
-2. If using PC it will depend on the Linux emulator you are using, but creating a specific local directory is a universally acceptable procedures
-```
-$ cp ~/Downloads/file_name.pem  ~/Desktop/My_Directory
-```
+
 If you created your keypair on the commandline, then you will need to get the public key data and import this into Nimbus using the "Import Key Pair" button.
 
 First get the public key data
