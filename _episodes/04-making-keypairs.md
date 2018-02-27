@@ -95,7 +95,7 @@ The key's randomart image is:
 > ## If you are using Linux / Mac / Unix
 > If you used Nimbus to make the keypair, you should move the downloaded .pem file somewhere where you can find it later.
 > 
-> 1. Store in your .ssh/ directory and rename it id_rsa
+> 1. Store in your .ssh/ directory and rename it id_rsa (or give it another name if you have more than a private key)
 > ```
 > $ cp ~/Downloads/file_name.pem  ~/.ssh/id_rsa
 > ```
