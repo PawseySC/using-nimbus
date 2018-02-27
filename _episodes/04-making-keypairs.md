@@ -93,7 +93,7 @@ We need to move your .pem file to JupyterHub.  Your instructor will discuss at t
 
 ### If you are using Linux / Mac / Unix
 If you used Nimbus to make the keypair, you should move the downloaded .pem file somewhere where you can find it later.
-1. Store in your .ssh/ directory and rename it id_rsa (or give it another name if you have more than a private key)
+Store in your .ssh/ directory and rename it id_rsa (or give it another name if you have more than a private key)
 ```
 $ cp ~/Downloads/file_name.pem  ~/.ssh/id_rsa
 ```
@@ -110,7 +110,7 @@ Then copy/paste this into the keypair import interface, as shown:
 
 ![Import Keypairs]({{ page.root }}/fig/Nimbus_import_key_pair.png)
 
-## Final (Important) step
+## Final (Important) step - For Linux / Mac / Unix users only
 
 By default, Key Pairs do not have the appropriate permissions required to be used to connect (ssh) to your instances.
 
