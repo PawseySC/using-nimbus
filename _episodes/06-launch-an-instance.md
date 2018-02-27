@@ -59,19 +59,33 @@ What you need:
 1. Your instance’s IP address -> get this from the instance overview in your dashboard
     ###.###.###.###
 
-2. Your login name -> this depends on the name of the Linux OS image you selected
+2. Your login_name -> this depends on the name of the Linux OS image you selected
     Login names:
 
     | Fedora/Centos/Scientific Linux | **fedora/centos/root** |
     | Debian  | **debian** |
     | Ubuntu  | **ubuntu** |
 
-3. The location and name of your private key pair
-    My_Key_Pair.pem or .key
+3. The location and name of your private key pair (if you are using Windows and Putty)
+    My_Key_Pair.ppk
 
-**Now you can log in**
+> ## If you're using Linux / Mac / Unix
+>  
+>  $ ssh login_name@###.###.###.### 
+> or (if you have more than one private key)
+>  $ ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###  
+{: .callout}
 
-    $ ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###  
+> ## If you're using Windows
+>  
+> 1) Open Putty
+> 2) Under "Host name (or IP address)" put: login_name@###.###.###.### 
+> 3) In the menu on the left, expand "SSH" and click on "Auth". 
+> 4) Under the section "Authentication parameters" click on "Browse...".
+> 5) Select your previously create .ppk private key. 
+> 6) Click on "Open" to start the connection to your instance. 
+{: .callout}
+
 
 ## If it all worked...
 
