@@ -70,11 +70,14 @@ What you need:
     My_Key_Pair.ppk
 
 ## If you're using Linux / Mac / Unix
-  
-$ ssh login_name@###.###.###.### 
-or (if you have more than one private key)
-$ ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###  
 
+```
+$ ssh login_name@###.###.###.### 
+```
+or (if you have more than one private key)
+```
+$ ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###  
+```
 
 ## If you're using Windows
   
