@@ -97,6 +97,11 @@ Store in your .ssh/ directory and rename it id_rsa (or give it another name if y
 ```
 $ cp ~/Downloads/file_name.pem  ~/.ssh/id_rsa
 ```
+To allow the correct permissions we want to allow only the user (you) to have at least read and write privileges:
+
+```
+$  chmod 600 ~/.ssh/id_rsa
+```
 
 If you created your keypair on the commandline, then you will need to get the public key data and import this into Nimbus using the "Import Key Pair" button.
 
@@ -109,17 +114,3 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVZTn98qxxovMDnui8L+WynWptAGS8sR2GIJ4HE+9v
 Then copy/paste this into the keypair import interface, as shown:
 
 ![Import Keypairs]({{ page.root }}/fig/Nimbus_import_key_pair.png)
-
-## Final (Important) step - For Linux / Mac / Unix users only
-
-By default, Key Pairs do not have the appropriate permissions required to be used to connect (ssh) to your instances.
-
-**Permissions = who (users, group, world) can read, write, execute a file**
-
-To allow the correct permissions we want to allow only the user (you) to have at least read and write privileges:
-
-```
-$  chmod 600 .ssh/id_rsa
-```
-
-If you skip step, you will encounter errors when you try and use the key.
