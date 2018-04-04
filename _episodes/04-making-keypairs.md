@@ -84,7 +84,8 @@ Store your private key in a safe place!
 ### Keypairs with JupyterHub
 From JupyterHub, click on the upload file button, select the key you just generated in the Nimbus web interface, and upload it. We will need this file later to connect to our instance (virtual machine).
 
-> ### If you are using Windows with PuTTY
+> ## If you are using Windows with PuTTY
+> 
 > 1. Open PuTTYgen (All Apps -> Putty -> Puttygen)
 > 2. Click on the LOAD button.
 > 3. Select the .pem file you just downloaded from the Nimbus Dashboard. If you cannot see your .pem file , select "All Files" instead of "Putty Private Key Files" from the dropdown bottom menu.
