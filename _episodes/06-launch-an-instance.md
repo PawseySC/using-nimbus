@@ -94,14 +94,9 @@ $ ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###
 
 
 
-> ## Challenge Title
+
+> ## Optional exercise
 >
-> This is the body of the challenge.
+> This is a test optional exercise
 >
->
-> > ## Optional exercise
-> >
-> > This is a test optional exercise
-> >
-> {: .solution}
-{: .challenge}
+{: .solution}
