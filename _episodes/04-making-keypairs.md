@@ -122,3 +122,23 @@ From JupyterHub, click on the upload file button, select the key you just genera
 > > ![Import Keypairs]({{ page.root }}/fig/Nimbus_import_key_pair.png)
 > {: .callout}
 {: .solution}
+
+> ## Challenge Title
+>
+> This is the body of the challenge.
+>
+> ~~~
+> it may include some code
+> ~~~
+> {: .source}
+>
+> > ## Solution
+> >
+> > This is the body of the solution.
+> >
+> > ~~~
+> > it may also include some code
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge}
