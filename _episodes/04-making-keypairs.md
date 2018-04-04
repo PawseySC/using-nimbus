@@ -52,7 +52,7 @@ When done, your browser will download the .pem file.
 > 
 > Run the command as shown below (with a useful name for "My_Key_Pair_Name");
 > 
-> ```
+> ~~~
 > popocatepetl:~ markg$ ssh-keygen  -t  rsa  -f  My_Key_Pair_Name.key
 > Generating public/private rsa key pair.
 > Enter passphrase (empty for no passphrase):
@@ -73,7 +73,8 @@ When done, your browser will download the .pem file.
 > |.o.B o.       o .|
 > |.oBo++.        . |
 > +----[SHA256]-----+
-> ```
+> ~~~
+> {: .source}
 {: .solution}
 
 
@@ -98,14 +99,15 @@ From JupyterHub, click on the upload file button, select the key you just genera
 > >
 > > If you used Nimbus to make the keypair, you should move the downloaded .pem file somewhere where you can find it later.
 > > Store in your .ssh/ directory and rename it id_rsa (or give it another name if you have more than a private key)
-> > ```
+> > ~~~
 > > $ cp ~/Downloads/file_name.pem  ~/.ssh/id_rsa
-> > ```
+> > ~~~
+> > {: .source}
 > > To allow the correct permissions we want to allow only the user (you) to have at least read and write privileges:
-> > ```
+> > ~~~
 > > $  chmod 600 ~/.ssh/id_rsa
-> > ```
-> > 
+> > ~~~
+> > {: .source}
 > {: .callout}
 > > ## If you created your keypair on the commandline
 > >
