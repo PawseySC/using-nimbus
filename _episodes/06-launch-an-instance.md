@@ -98,9 +98,6 @@ $ ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###
 >
 > This is the body of the challenge.
 >
-> ~~~
-> it may include some code
-> ~~~
 > {: .source}
 >
 > > ## Solution
