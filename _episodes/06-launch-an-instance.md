@@ -91,3 +91,25 @@ $ ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###
 ## If it all worked...
 
 ![Successful login]({{ page.root }}/fig/nimbus_logged_in.png)
+
+
+
+> ## Challenge Title
+>
+> This is the body of the challenge.
+>
+> ~~~
+> it may include some code
+> ~~~
+> {: .source}
+>
+> > ## Solution
+> >
+> > This is the body of the solution.
+> >
+> > ~~~
+> > it may also include some code
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge}
