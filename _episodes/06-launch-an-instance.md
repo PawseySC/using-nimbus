@@ -98,15 +98,10 @@ $ ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###
 >
 > This is the body of the challenge.
 >
-> {: .source}
 >
-> > ## Solution
+> > ## Optional exercise
 > >
-> > This is the body of the solution.
+> > This is a test optional exercise
 > >
-> > ~~~
-> > it may also include some code
-> > ~~~
-> > {: .output}
 > {: .solution}
 {: .challenge}
