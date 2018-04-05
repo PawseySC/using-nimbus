@@ -28,17 +28,18 @@ Volumes are created, attached using the Nimbus interface, and then formatted and
 
 We can check that the volume is attached, but we can’t use it just yet.  If the unformatted disk is properly attached you should see (from the fdisk command):
 
-```
+~~~
 root@test-instance:~# fdisk -l /dev/vdc
 Disk /dev/vdc: 20 GiB, 21474836480 bytes, 41943040 sectors
 Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
-```
+~~~
+{: .output}
 
 First we need to format the disk.  We will do this using the mkfs command.
 
-```
+~~~
 root@test-instance:~# sudo mkfs.ext4 /dev/vdc
 mke2fs 1.42.13 (17-May-2015)
 Creating filesystem with 5242880 4k blocks and 1310720 inodes
@@ -51,13 +52,15 @@ Allocating group tables: done
 Writing inode tables: done
 Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done
-```
+~~~
+{: .output}
 
 Finally we can mount the disk:
 
-```
+~~~
 root@test-instance:~# sudo mkdir /data
 root@test-instance:~# sudo mount /dev/vdc /data
 root@test-instance:~# df -h | grep vdc
 /dev/vdc         20G   44M   19G   1% /data
-```
+~~~
+{: .output}
