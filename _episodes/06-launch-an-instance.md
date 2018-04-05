@@ -13,6 +13,7 @@ keypoints:
 ---
 
 ## The steps to launch a virtual machine
+To create a new instance (Nimbus virtual machine), click on "Instances" (on the left menu under the "Compute" section) and after that click on the "Launch instance" button, located on the right.
 
 **1. Set a name**
 
