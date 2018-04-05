@@ -36,6 +36,7 @@ keypoints:
 
 **6. Click on "Launch Instance"
 
+
 ## Let's go!
 ![Launch Instance Post Click]({{ page.root }}/fig/Launch_instance_click.png)
 
@@ -51,7 +52,7 @@ An IP address is a unique number that identify your instance and allows you to c
 ## Managing a VM
 ![Instance Actions]({{ page.root }}/fig/Instance_actions.png)
 
-## Let's log in
+## Let's log in via JupyterHub
 Now, back to your terminal window to login to your instance:
 * We will access our instances using a Secure SHell (SSH) connection.
 
@@ -66,37 +67,36 @@ What you need:
     | Debian  | **debian** |
     | Ubuntu  | **ubuntu** |
 
-3. The location and name of your private key pair (if you are using Windows and Putty)
-    My_Key_Pair.ppk
+3. The location and name of your private key pair
 
-## If you're using Linux / Mac / Unix
+> ## (optional) If you're using Linux / Mac / Unix
+> 
+> ~~~
+> $ ssh login_name@###.###.###.### 
+> ~~~
+> {: .output}
+> or (if you have more than one private key)
+> ~~~
+> $ ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###  
+> ~~~
+> {: .output}
+> If any permission errors, make sure that the private key have the correct permissions. To fix your private key permissions run:
+> ~~~
+> chmod 600 your_private_key.pem
+> ~~~
+> {: .output}
+{: .solution}
 
-```
-$ ssh login_name@###.###.###.### 
-```
-or (if you have more than one private key)
-```
-$ ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###  
-```
-
-## If you're using Windows
-  
-1. Open Putty
-2. Under "Host name (or IP address)" put: login_name@###.###.###.### 
-3. In the menu on the left, expand "SSH" and click on "Auth". 
-4. Under the section "Authentication parameters" click on "Browse...".
-5. Select your previously create .ppk private key. 
-6. Click on "Open" to start the connection to your instance. 
+> ## (optional) If you're using Windows
+>   
+> 1. Open Putty
+> 2. Under "Host name (or IP address)" put: login_name@###.###.###.### 
+> 3. In the menu on the left, expand "SSH" and click on "Auth". 
+> 4. Under the section "Authentication parameters" click on "Browse...".
+> 5. Select your previously create .ppk private key. 
+> 6. Click on "Open" to start the connection to your instance. 
+{: .solution}
 
 ## If it all worked...
 
 ![Successful login]({{ page.root }}/fig/nimbus_logged_in.png)
-
-
-
-
-> ## Optional exercise
->
-> This is a test optional exercise
->
-{: .solution}
