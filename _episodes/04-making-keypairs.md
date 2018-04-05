@@ -74,7 +74,7 @@ When done, your browser will download the .pem file.
 > |.oBo++.        . |
 > +----[SHA256]-----+
 > ~~~
-> {: .source}
+> {: .output}
 {: .solution}
 
 
@@ -102,45 +102,25 @@ From JupyterHub, click on the upload file button, select the key you just genera
 > > ~~~
 > > $ cp ~/Downloads/file_name.pem  ~/.ssh/id_rsa
 > > ~~~
-> > {: .source}
+> > {: .output}
 > > To allow the correct permissions we want to allow only the user (you) to have at least read and write privileges:
 > > ~~~
 > > $  chmod 600 ~/.ssh/id_rsa
 > > ~~~
-> > {: .source}
+> > {: .output}
 > {: .callout}
 > > ## If you created your keypair on the commandline
 > >
 > > If you created your keypair on the commandline, then you will need to get the public key data and import this into Nimbus using the "Import Key Pair" button.
 > >
 > > First get the public key data
-> > ```
+> > ~~~
 > > popocatepetl:~ markg$ more  My_Key_Pair_Name.key.pub
 > > ssh-rsa > AAAAB3NzaC1yc2EAAAADAQABAAABAQDVZTn98qxxovMDnui8L+WynWptAGS8sR2GIJ4HE+9v8lHlcSiKDze07o/SIb+RQR7FFvLchAD2xLxiF8mB+4SUhaoxWXZGhc8RBLXpSMD6tJNT9VNxd99mI7g6rq3HMpSZDE5YTxSweDy13qRmc6gBXWNGjUHV3eUv6pHKthbs1v/MjsA7nkYdINiCwpgawJ7fdyJJ61vkrO7+tjkdRFBBTn2O8ELTMYEssM/hwHZt00RWOVjXylaQK766yF6Qhog2pQc2gsUXQLown9Hzga8QVxvMxCY9cVh2lxtBVjDuv1HWwC1PZhYa9QlLf+jsITyOzEfPuNidZvyWnjxei6+P markg@popocatepetl.local
-> > ```
-> >
+> > ~~~
+> > {: .output}
 > > Then copy/paste this into the keypair import interface, as shown:
 > > 
 > > ![Import Keypairs]({{ page.root }}/fig/Nimbus_import_key_pair.png)
 > {: .callout}
 {: .solution}
-
-> ## Challenge Title
->
-> This is the body of the challenge.
->
-> ~~~
-> it may include some code
-> ~~~
-> {: .source}
->
-> > ## Solution
-> >
-> > This is the body of the solution.
-> >
-> > ~~~
-> > it may also include some code
-> > ~~~
-> > {: .output}
-> {: .solution}
-{: .challenge}
