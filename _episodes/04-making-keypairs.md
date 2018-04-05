@@ -84,6 +84,12 @@ Store your private key in a safe place! Losing your private key means losing eve
 ### Keypairs with JupyterHub
 From JupyterHub, click on the upload file button, select the key you just generated in the Nimbus web interface, and upload it. We will need this file later to connect to our instance (virtual machine).
 
+By default, once uploaded you private key permission will not be correct to be used in the next lessons with you SSH client. To fix that run:
+~~~
+chmod 600 name_of_your_key.pem
+~~~
+{: .output}
+
 > ## (optional) If you are using Windows with PuTTY
 > 
 > 1. Open PuTTYgen (All Apps -> Putty -> Puttygen)
