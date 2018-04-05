@@ -10,6 +10,12 @@ objectives:
 keypoints:
 - "Security groups and networks can be modified to meet specific needs"
 ---
+
+> ## During the training with instructor
+>
+> During the training with instructor, the security groups will be pre-populated and all these steps are purely informative.
+{: .callout}
+
 ## What are security groups?
 
 Security groups are the tool you use protect access to your virtual machine.  Remember that to access your cloud instance you will use SSH (Secure-Shell).
