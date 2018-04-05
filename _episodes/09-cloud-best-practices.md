@@ -19,7 +19,7 @@ questions:
 
 3. **Update! Every time you login!**
 
-    ```sudo apt-get update && sudo apt-get dist-upgrade```-> updates packages and security
+    ```sudo apt-get update && sudo apt-get update```-> updates packages and security
     Older versions of packages and operating systems eventually lose support from their creators
 
 4.  **Be Green and keep it elastic**
