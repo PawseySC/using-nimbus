@@ -34,7 +34,7 @@ keypoints:
 
 ![Launch Security Groups]({{ page.root }}/fig/Launch_security_groups.png)
 
-**6. Click on "Launch Instance"
+**6. Click on "Launch Instance"**
 
 
 ## Let's go!
