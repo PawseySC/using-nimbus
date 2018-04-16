@@ -9,6 +9,42 @@ objectives:
 keypoints:
 - ""
 ---
+​
+14
+**There are two types of built-in storage**
+15
+1. Root Disk- your home directory, and storage for the operating system of your virtual machine
+16
+2. Volume Storage - a 2nd hard disk you can add to your VM for working storage
+17
+​
+18
+Volumes are created, attached using the Nimbus interface, and then formatted and mounted
+19
+## First create a volume
+20
+![Nimbus Volumes]({{ page.root }}/fig/Nimbus_volumes.png)
+21
+​
+22
+![Nimbus Create Volumes]({{ page.root }}/fig/nimbus_create_volume.png)
+23
+​
+24
+## Now, manage attachements.
+25
+![Nimbus Configure Volumes]({{ page.root }}/fig/Nimbus_configure_volumes.png)
+26
+​
+27
+![Nimbus Manage Attachments]({{ page.root }}/fig/nimbus_vol_manage_attachments.png)
+28
+​
+29
+We can check that the volume is attached, but we can’t use it just yet.  If the unformatted disk is properly attached you should see (from the fdisk command):
+30
+
+
 
 | ```sudo``` | Prefix command used to allow ‘super’ privileges to make administrative changes |
 | ```sudo  apt-get  install <package_name>``` | Install packages available within your selected Linux distribution's software package repository
