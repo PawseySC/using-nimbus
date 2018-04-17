@@ -46,16 +46,19 @@ You will note that there are other images you can select.  Some of these are vis
 If you need a specific flavour of Linux that we do not offer you should know that it is possible to import external images.
 ![Launch Source]({{ page.root }}/fig/Lauch_source.png)
 
-## 3. Select a flavor (select m2.small)**
+## 3. Select a flavour
 
-A 'flavour' (or 'flavor' because our software prefers US spelling) defines the characteristics of a VM.  We permit a range of flavours that allow 
+A 'flavour' (or 'flavor' because our software prefers US spelling) defines the characteristics of a VM.  We provide a range of flavours that vary based on the number of cores available to your VM.  
+
+If you're at a training event, then select __m2.small__.  If you're self-learning, choose any flavour that you wish.
+
 ![Launch Flavor]({{ page.root }}/fig/Launch_flavor.png)
 
-## 4. Select a network (select "Private Network")**
+## 4. Select a network (select "Private Network")
 
 ![Launch Networks]({{ page.root }}/fig/Launch_networks.png)
 
-## 5. Check security groups (include previously created SSH access)**
+## 5. Check security groups (include previously created SSH access)
 
 ![Launch Security Groups]({{ page.root }}/fig/Launch_security_groups.png)
 
