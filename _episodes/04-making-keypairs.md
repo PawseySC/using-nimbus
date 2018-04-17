@@ -30,9 +30,9 @@ Our first action is to generae keypairs.  Keypairs take the form of public (thin
 There are two methods of creating keypairs.
 
 1. **From the Nimbus Dashboard**
-    This will automatically create a lock in your Dashboard and download the key to your local computer (.pem file)
+    This will automatically create a lock when selected for your instance through the Dashboard and download the private key key to your local computer (.pem file)
 
-2. **From within your Terminal Window**
+2. **(optional) From within your Terminal Window**
     This will create two separate files, your key and lock (.key and .key.pub)
     You need to import your lock (public key file) to the dashboard for Nimbus to recognize it
 
@@ -46,88 +46,87 @@ When done, your browser will download the .pem file.
 
 ![Download Keypairs]({{ page.root }}/fig/Nimbus_Download_Key_Pair.png)
 
-
-## Keypairs from your terminal
-
-This method will be very useful to you, if you wish to make a keypair that you can use with multiple systems (in addition to your Nimbus VMs).
-
-Run the command as shown below (with a useful name for "My_Key_Pair_Name");
-
-```
-popocatepetl:~ markg$ ssh-keygen  -t  rsa  -f  My_Key_Pair_Name.key
-Generating public/private rsa key pair.
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in My_Key_Pair_Name.key.
-Your public key has been saved in My_Key_Pair_Name.key.pub.
-The key fingerprint is:
-SHA256:OKdIxLawp/A6X36umLm1gT5EcE60ClzHR2ttz8z30h4 markg@popocatepetl.local
-The key's randomart image is:
-+---[RSA 2048]----+
-| .......         |
-|o +o.. .o        |
-|.*o + .o o       |
-|..o= .... =      |
-|o.. + o S  = .   |
-| o.= . +    . o  |
-| .+ = .      . E |
-|.o.B o.       o .|
-|.oBo++.        . |
-+----[SHA256]-----+
-```
-
-
-
-## Installing keypairs
-
-> ## If you are using JupyterHub
->
-> We need to move your .pem file to JupyterHub.  Your instructor will discuss at this point.
-
-> ## If you are using Putty
->
-> 1) Open PuTTYgen (All Apps -> Putty -> Puttygen)
-> 2) Click on the LOAD button.
-> 3) Select the .pem file you just downloaded from the Nimbus Dashboard. If you cannot see your .pem file , select "All Files" instead of "Putty Private Key Files" from the dropdown bottom menu.
-> 4) Set a new passphrase and confirm it for your private key.
-> 5) Click on the "Save private key" button and give it the name you prefer.
-
-> ## If you are using Linux / Mac / Unix
-> If you used Nimbus to make the keypair, you should move the downloaded .pem file somewhere where you can find it later.
+> ## (optional) Keypairs from your terminal
 > 
-> 1. Store in your .ssh/ directory and rename it id_rsa (or give it another name if you have more than a private key)
-> ```
-> $ cp ~/Downloads/file_name.pem  ~/.ssh/id_rsa
-> ```
-> 2. If using PC it will depend on the Linux emulator you are using, but creating a specific local directory is a universally acceptable procedures
-> ```
-> $ cp ~/Downloads/file_name.pem  ~/Desktop/My_Directory
-> ```
+> This method will be very useful to you, if you wish to make a keypair that you can use with multiple systems (in addition to your Nimbus instances).
+> 
+> Run the command as shown below (with a useful name for "My_Key_Pair_Name");
+> 
+> ~~~
+> popocatepetl:~ markg$ ssh-keygen  -t  rsa  -f  My_Key_Pair_Name.key
+> Generating public/private rsa key pair.
+> Enter passphrase (empty for no passphrase):
+> Enter same passphrase again:
+> Your identification has been saved in My_Key_Pair_Name.key.
+> Your public key has been saved in My_Key_Pair_Name.key.pub.
+> The key fingerprint is:
+> SHA256:OKdIxLawp/A6X36umLm1gT5EcE60ClzHR2ttz8z30h4 markg@popocatepetl.local
+> The key's randomart image is:
+> +---[RSA 2048]----+
+> | .......         |
+> |o +o.. .o        |
+> |.*o + .o o       |
+> |..o= .... =      |
+> |o.. + o S  = .   |
+> | o.= . +    . o  |
+> | .+ = .      . E |
+> |.o.B o.       o .|
+> |.oBo++.        . |
+> +----[SHA256]-----+
+> ~~~
+> {: .output}
+{: .solution}
+
+
+## Storing your keypairs
+Store your private key in a safe place! Losing your private key means losing every access to your instances. Not even the Nimbus support can give you access to your instances if you have lost your private key.
+
+### Keypairs with JupyterHub
+From JupyterHub, click on the upload file button, select the key you just generated in the Nimbus web interface, and upload it. We will need this file later to connect to our instance (virtual machine).
+
+By default, once uploaded you private key permission will not be correct to be used in the next lessons with you SSH client. To fix that run:
+~~~
+chmod 600 name_of_your_key.pem
+~~~
+{: .output}
+
+> ## (optional) If you are using Windows with PuTTY
+> 
+> 1. Open PuTTYgen (All Apps -> Putty -> Puttygen)
+> 2. Click on the LOAD button.
+> 3. Select the .pem file you just downloaded from the Nimbus Dashboard. If you cannot see your .pem file , select "All Files" instead of "Putty Private Key Files" from the dropdown bottom menu.
+> 4. Set a new passphrase and confirm it for your private key.
+> 5. Click on the "Save private key" button and give it the name you prefer.
+{: .solution}
+
+> ## (optional) If you are using a native terminal (Linux / Mac / Unix)
 >
-> If you created your keypair on the commandline, then you will need to get the public key data and import this into Nimbus using the "Import Key Pair" button.
->
-> First get the public key data
->
-> ```
-> popocatepetl:~ markg$ more  My_Key_Pair_Name.key.pub
-> ssh-rsa
-> AAAAB3NzaC1yc2EAAAADAQABAAABAQDVZTn98qxxovMDnui8L+WynWptAGS8sR2GIJ4HE+9v8lHlcSiKDze07o/SIb+RQR7FFvLchAD2xLxiF8mB+4SUhaoxWXZGhc8RBLXpSMD6tJNT9VNxd99mI7g6rq3HMpSZDE5YTxSweDy13qRmc6gBXWNGjUHV3eUv6pHKthbs1v/MjsA7nkYdINiCwpgawJ7fdyJJ61vkrO7+tjkdRFBBTn2O8ELTMYEssM/hwHZt00RWOVjXylaQK766yF6Qhog2pQc2gsUXQLown9Hzga8QVxvMxCY9cVh2lxtBVjDuv1HWwC1PZhYa9QlLf+jsITyOzEfPuNidZvyWnjxei6+P > markg@popocatepetl.local
-> ```
->
-> Then copy/paste this into the keypair import interface, as shown:
->
-> ![Import Keypairs]({{ page.root }}/fig/Nimbus_import_key_pair.png)
->
-> ## Final (Important) step
->
-> By default, Key Pairs do not have the appropriate permissions required to be used to connect (ssh) to your instances.
->
-> **Permissions = who (users, group, world) can read, write, execute a file**
->
-> To allow the correct permissions we want to allow only the user (you) to have at least read and write privileges:
->
-> ```
-> $  chmod 600 .ssh/id_rsa
-> ```
->
-> If you skip step, you will encounter errors when you try and use the key.
+> > ## If you used Nimbus to make the keypair
+> >
+> > If you used Nimbus to make the keypair, you should move the downloaded .pem file somewhere where you can find it later.
+> > Store in your .ssh/ directory and rename it id_rsa (or give it another name if you have more than a private key)
+> > ~~~
+> > $ cp ~/Downloads/file_name.pem  ~/.ssh/id_rsa
+> > ~~~
+> > {: .output}
+> > To allow the correct permissions we want to allow only the user (you) to have at least read and write privileges:
+> > ~~~
+> > $  chmod 600 ~/.ssh/id_rsa
+> > ~~~
+> > {: .output}
+> {: .callout}
+> > ## If you created your keypair on the commandline
+> >
+> > If you created your keypair on the commandline, then you will need to get the public key data and import this into Nimbus using the "Import Key Pair" button.
+> >
+> > First get the public key data
+> > ~~~
+> > popocatepetl:~ markg$ more  My_Key_Pair_Name.key.pub
+> > ssh-rsa > AAAAB3NzaC1yc2EAAAADAQABAAABAQDVZTn98qxxovMDnui8L+WynWptAGS8sR2GIJ4HE+9v8lHlcSiKDze07o/SIb+RQR7FFvLchAD2xLxiF8mB+4SUhaoxWXZGhc8RBLXpSMD6tJNT9VNxd99mI7g6rq3HMpSZDE5YTxSweDy13qRmc6gBXWNGjUHV3eUv6pHKthbs1v/MjsA7nkYdINiCwpgawJ7fdyJJ61vkrO7+tjkdRFBBTn2O8ELTMYEssM/hwHZt00RWOVjXylaQK766yF6Qhog2pQc2gsUXQLown9Hzga8QVxvMxCY9cVh2lxtBVjDuv1HWwC1PZhYa9QlLf+jsITyOzEfPuNidZvyWnjxei6+P markg@popocatepetl.local
+> > ~~~
+> > {: .output}
+> > Then copy/paste this into the keypair import interface, as shown:
+> > 
+> > ![Import Keypairs]({{ page.root }}/fig/Nimbus_import_key_pair.png)
+> {: .callout}
+{: .solution}

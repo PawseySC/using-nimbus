@@ -13,7 +13,7 @@ keypoints:
 
 ## How does it work?
 
-You will use two independant tools to manage and use Nimbus.  You will (usually) use a Secure Shell (SSH) connection to run jobs and do work on your virtual machine.  Meanwhile, you will use the Nimbus dashboard, a website we maintain, to manage your virtual machine/s.  This is shown below;
+You will use two independant tools to manage and use Nimbus.  You will (usually) use a Secure Shell (SSH) connection to run jobs and do work on your virtual machine.  Meanwhile, you will use the Nimbus dashboard, a website we maintain, to manage your virtual machine/s (instances).  This is shown below;
 
 ![The Nimbus workflow]({{ page.root }}/fig/diagram-nimbus.png)
 
@@ -38,7 +38,6 @@ There are some key terms we need to discuss before we get started
 * **Security Groups**
     these are the incoming/outgoing permissions you allow for your instance (IP addresses, ports, etc.).
     You must allow at least allow ssh connections to access your instance!
-
 * **IP Address**
     the virtual address of your instance
 * **Snapshot & Image**
