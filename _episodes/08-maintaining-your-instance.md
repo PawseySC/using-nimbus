@@ -52,14 +52,14 @@ This will keep your instance up to date.
 >   
 > Try to install the advanced text editor. This package is called 'vim' and it is not installed by default on most Linux distributions.
 >
-> > ## Solution
-> > on Ubuntu:
-> > ~~~
-> > sudo apt-get install vim
-> > ~~~
-> > or on CentOS:
-> > ~~~
-> > sudo yum install vim
-> > ~~~
+>> ## Solution
+>> on Ubuntu:
+>> ~~~
+>> sudo apt-get install vim
+>> ~~~
+>> or on CentOS:
+>> ~~~
+>> sudo yum install vim
+>> ~~~
 > {: .solution}
-{: .exercise}
+{: .challenge}
