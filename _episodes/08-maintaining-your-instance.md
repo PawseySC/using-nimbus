@@ -7,7 +7,7 @@ questions:
 objectives:
 - ""
 keypoints:
-- ""
+- "You learnt how to keep your instance up to date"
 ---
 
 To create a new instance (Nimbus virtual machine), click on "Instances" (on the left menu under the "Compute" section) and after that click on the "Launch instance" button, located on the right.
@@ -47,3 +47,19 @@ To install new software:
 Ideally, combine these commands, depending on your Linux distribution, and run them at least once a week, or every time you login. 
 
 This will keep your instance up to date.
+
+> ## Install a package on your instance
+>   
+> Try to install the advanced text editor. This package is called 'vim' and it is not installed by default on most Linux distributions.
+>
+> > ## Solution
+> > on Ubuntu:
+> > ~~~
+> > sudo apt-get install vim
+> > ~~~
+> > or on CentOS:
+> > ~~~
+> > sudo yum install vim
+> > ~~~
+> {: .solution}
+{: .exercise}
