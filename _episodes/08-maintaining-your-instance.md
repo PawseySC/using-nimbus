@@ -27,6 +27,7 @@ To maintain the already installed packages, meaning installing newer versions an
 | ```sudo  apt-get  dist-upgrade``` | Upgrade all installed packages (to new releases versions and updates the kernel as well. To be used with care. |
 
 To install new software:
+
 | ```sudo  apt-get  install <package_name>``` | Install packages available within your selected Linux distribution's software package repository |
 
 ## Maintaining an CentOS linux distribution
@@ -38,6 +39,7 @@ To maintain the already installed packages, meaning installing newer versions an
 | ```sudo  yum update``` | Upgrade all installed packages including kernel |
 
 To install new software:
+
 | ```sudo  yum install <package_name>``` | Install packages available within your selected Linux distribution's software package repository |
 
 ## Use these commands as often as possible!
