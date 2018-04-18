@@ -43,7 +43,8 @@ For training purposes you will launch a VM using the "Ubuntu LTS 16.04" image.  
 
 You will note that there are other images you can select.  Some of these are visible, but not intended for individual user deployment (the Hadoop or Spark images).  We do support the Ubuntu LTS 16.04 and Centos 7 image for you to run VMs.
 
-If you need a specific flavour of Linux that we do not offer you should know that it is possible to import external images.
+If you need a specific flavour of Linux and you find that it is not listed you do have another option; it is possible to import external images, but our support for you in this instance will be very limited.
+
 ![Launch Source]({{ page.root }}/fig/Lauch_source.png)
 
 ## 3. Select a flavour
@@ -56,18 +57,31 @@ If you're at a training event, then select __m2.small__.  If you're self-learnin
 
 ![Launch Flavor]({{ page.root }}/fig/Launch_flavor.png)
 
-## 4. Select a network (select "Private Network")
+## 4. Select a network
+
+The network tab is where you will define the networking available to your VM.
+
+Nimbus projects have networking prepared for you.  Using a training project you will select the __Private Network__.  If you are using your own project you will see a network name similar to this.  
+
+You will also see a __public external__ network.  You may be thinking that you might use this, since you are seeking external network access.  This will not work however, since this network is outside your router and cannot be used to get access to the wider internet.
 
 ![Launch Networks]({{ page.root }}/fig/Launch_networks.png)
 
 ## 5. Check security groups (include previously created SSH access)
+
+Nimbus projects are preconfigured with a security group to permit SSH access.  This is required by most users.  The security group to add is __SSH Access__.  If you have look at this security group you will see
 
 ![Launch Security Groups]({{ page.root }}/fig/Launch_security_groups.png)
 
 ## 6. Click on "Launch Instance"
 
 ## Let's go!
+
+When you click Launch Instance you should see a new instance show up in your list (probably the only item you see listed).  You will see it change state as it starts up.
+
 ![Launch Instance Post Click]({{ page.root }}/fig/Launch_instance_click.png)
+
+When complete, your entry shoukd look like this:
 
 ![Launch Instance Done]({{ page.root }}/fig/Launch_instance_click2.png)
 
@@ -75,19 +89,34 @@ If you're at a training event, then select __m2.small__.  If you're self-learnin
 
 > ## What did we do?
 >
-> - one thing
-> - two thing
+> - Selected an image and flavour
+> - Selected a network
+> - Selected a SSH security group
 >
 {: .checklist}
 
+What can go wrong?
+- If your VM does not start and gives an error message:  You might have selected the wrong network.
+
 ## Now let's give the VM an IP address
-An IP address is a unique number that identify your instance and allows you to connect to it from anywhere on the internet.
+An IP address is a unique number that identify your instance and allows you to connect to it from anywhere on the internet.  We need to select one to use in the VM, only once this is done can we actually login to a VM.
+
+Go your VM listed in the Instances view.  If you open the menu on the right side of the VM entry you will see
+
+![Instance Actions]({{ page.root }}/fig/Instance_actions.png)
+
+If you select __Associate Floating IP__ you will see this:
 
 ![Launch Manage IP]({{ page.root }}/fig/Manage_Floating_IP.png)
+
+Click the __+__ button and you will see the __Allocate Floating IP__ view, here you should click __Allocate IP__ and you will now have an IP number you can use.
 
 ![Launch Post IP]({{ page.root }}/fig/Associate_floating_IP_successful.png)
 
 ## Managing a VM
+
+Let's have another look at that instance menu, because there's a lot there.  This is where you will perform the key management activities for your VM.
+
 ![Instance Actions]({{ page.root }}/fig/Instance_actions.png)
 
 ## Let's log in
