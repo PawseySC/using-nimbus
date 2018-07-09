@@ -16,7 +16,7 @@ keypoints:
 
 If you are at a Pawsey training event, then your instructor will provide a username and password you can use for the day.  Alternatively if you have a Nimbus project you can use your project username and password.
 
-The Nimbus dashboard is at https://nimbus.pawsey.org.au
+The Nimbus dashboard is at [https://nimbus.pawsey.org.au] (https://nimbus.pawsey.org.au)
 Open this URL now in a browser window, you will see the login window (below).  As shown, for "domain", enter 'pawsey' and your user name and password.
 
 ![Login Screen]({{ page.root }}/fig/nimbus_login_screen.png)
