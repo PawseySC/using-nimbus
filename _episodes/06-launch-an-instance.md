@@ -20,6 +20,9 @@ It is easy to forget a step or misconfigure required elements.  The result maybe
 
 ### OK, let's get started...
 
+From the left hand menu select 'Compute' then 'Instances'.  Click on the 'Launch Instance' button
+
+![Launch Details]({{ page.root }}/fig/Create_instance_button.png)
 
 ## 1. Set a name
 
