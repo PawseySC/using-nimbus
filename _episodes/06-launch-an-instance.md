@@ -24,11 +24,13 @@ From the left hand menu select 'Compute' then 'Instances'.  Click on the 'Launch
 
 ![Launch Details]({{ page.root }}/fig/Create_instance_button.png)
 
+
 ## 1. Set a name
 
 The first step is to give your VM a name.  It doesn't matter what you call it, usually we recommend giving your VM a name related to the task it will be performing.
 
 ![Launch Details]({{ page.root }}/fig/Launch_details.png)
+
 
 ## 2. Choose a source image
 
@@ -50,6 +52,7 @@ If you need a specific flavour of Linux and you find that it is not listed you d
 
 ![Launch Source]({{ page.root }}/fig/Lauch_source.png)
 
+
 ## 3. Select a flavour
 
 A 'flavour' (or 'flavor' because our software prefers US spelling) defines the characteristics of a VM.  We provide a range of flavours that vary based on the number of cores available to your VM.  
@@ -59,6 +62,7 @@ If you're at a training event, then select __m2.small__.  If you're self-learnin
 
 
 ![Launch Flavor]({{ page.root }}/fig/Launch_flavor.png)
+
 
 ## 4. Select a network
 
@@ -70,11 +74,13 @@ You will also see a __public external__ network.  You may be thinking that you m
 
 ![Launch Networks]({{ page.root }}/fig/Launch_networks.png)
 
+
 ## 5. Check security groups (include previously created SSH access)
 
 Nimbus projects are preconfigured with a security group to permit SSH access.  This is required by most users.  The security group to add is __SSH Access__.  If you have look at this security group you will see
 
 ![Launch Security Groups]({{ page.root }}/fig/Launch_security_groups.png)
+
 
 ## 6. Click on "Launch Instance"
 
@@ -84,9 +90,11 @@ When you click Launch Instance you should see a new instance show up in your lis
 
 ![Launch Instance Post Click]({{ page.root }}/fig/Launch_instance_click.png)
 
+
 When complete, your entry shoukd look like this:
 
 ![Launch Instance Done]({{ page.root }}/fig/Launch_instance_click2.png)
+
 
 ## What if something went wrong?
 
@@ -101,6 +109,7 @@ When complete, your entry shoukd look like this:
 What can go wrong?
 - If your VM does not start and gives an error message:  You might have selected the wrong network.
 
+
 ## Now let's give the VM an IP address
 An IP address is a unique number that identify your instance and allows you to connect to it from anywhere on the internet.  We need to select one to use in the VM, only once this is done can we actually login to a VM.
 
@@ -108,19 +117,23 @@ Go your VM listed in the Instances view.  If you open the menu on the right side
 
 ![Instance Actions]({{ page.root }}/fig/Instance_actions.png)
 
+
 If you select __Associate Floating IP__ you will see this:
 
 ![Launch Manage IP]({{ page.root }}/fig/Manage_Floating_IP.png)
 
+
 Click the __+__ button and you will see the __Allocate Floating IP__ view, here you should click __Allocate IP__ and you will now have an IP number you can use.
 
 ![Launch Post IP]({{ page.root }}/fig/Associate_floating_IP_successful.png)
+
 
 ## Managing a VM
 
 Let's have another look at that instance menu, because there's a lot there.  This is where you will perform the key management activities for your VM.
 
 ![Instance Actions]({{ page.root }}/fig/Instance_actions.png)
+
 
 ## Let's log in
 Now, back to your terminal window to login to your instance:
@@ -139,6 +152,7 @@ What you need:
 
 3. The location and name of your private key pair (if you are using Windows and Putty)
     My_Key_Pair.ppk
+
 
 > ## If you're using Linux / Mac / Unix
 >  
