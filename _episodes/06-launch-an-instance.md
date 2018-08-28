@@ -91,7 +91,7 @@ When you click Launch Instance you should see a new instance show up in your lis
 ![Launch Instance Post Click]({{ page.root }}/fig/Launch_instance_click.png)
 
 
-When complete, your entry shoukd look like this:
+When complete, your entry should look like this:
 
 ![Launch Instance Done]({{ page.root }}/fig/Launch_instance_click2.png)
 
