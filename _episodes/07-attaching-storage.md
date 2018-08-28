@@ -29,7 +29,7 @@ Volumes are created, attached using the Nimbus interface, and then formatted and
 We can check that the volume is attached, but we can’t use it just yet.  If the unformatted disk is properly attached you should see (from the fdisk command):
 
 ~~~
-root@test-instance:~# fdisk -l /dev/vdc
+root@test-instance:~# sudo fdisk -l /dev/vdc
 Disk /dev/vdc: 20 GiB, 21474836480 bytes, 41943040 sectors
 Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
