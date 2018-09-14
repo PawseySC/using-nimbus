@@ -14,7 +14,7 @@ keypoints:
 ---
 ## Login to Nimbus
 
-If you are at a Pawsey training event, then your instructor will provide a username and password you can use for the day.  Alternatively if you have a Nimbus project you can use your project username and password.
+You need to have a Nimbus login account to proceed in this training.  If you are at a Pawsey training event, then your instructor will provide a username and password you can use for the day.  Alternatively if you have a Nimbus project you can use your project username and password.
 
 The Nimbus dashboard is at [https://nimbus.pawsey.org.au](https://nimbus.pawsey.org.au)
 Open this URL now in a browser window, you will see the login window (below).  As shown, for "domain", enter 'pawsey' and your user name and password.
@@ -25,7 +25,7 @@ Now that you are logged in you can have a look around the various panes of the u
 
 ## Generating keypairs
 
-Our first action is to generae keypairs.  Keypairs take the form of public (think: 'lock') and private (think: 'key') key files.  These files are presented together to securely authenticate (login) to a Nimbus virtual machine.  **Why do this?**  We do this because the username/password login is not set up for new VMs (by design).
+Our first action is to generate keypairs.  Keypairs take the form of public (think: 'lock') and private (think: 'key') key files.  These files are presented together to securely authenticate (login) to a Nimbus virtual machine.  **Why do this?**  We do this because the username/password login is not set up for new VMs (by design).
 
 There are two methods of creating keypairs.
 
@@ -42,56 +42,64 @@ There are two methods of creating keypairs.
 Go to the Key Pairs item under the Compute menu.  Click the button "Create Key Pair", and give your key pair a name.
 ![Create Keypairs]({{ page.root }}/fig/Nimbus_Create_Key_Pairs.png)
 
-When done, your browser will download the .pem file.
+Enter a name for your keypair and click "Create Keypair".  The window will expand to show you something called your "private key".
 
 ![Download Keypairs]({{ page.root }}/fig/Nimbus_Download_Key_Pair.png)
 
-> ## (optional) Keypairs from your terminal
-> 
-> This method will be very useful to you, if you wish to make a keypair that you can use with multiple systems (in addition to your Nimbus instances).
-> 
-> Run the command as shown below (with a useful name for "My_Key_Pair_Name");
-> 
-> ~~~
-> popocatepetl:~ markg$ ssh-keygen  -t  rsa  -f  My_Key_Pair_Name.key
-> Generating public/private rsa key pair.
-> Enter passphrase (empty for no passphrase):
-> Enter same passphrase again:
-> Your identification has been saved in My_Key_Pair_Name.key.
-> Your public key has been saved in My_Key_Pair_Name.key.pub.
-> The key fingerprint is:
-> SHA256:OKdIxLawp/A6X36umLm1gT5EcE60ClzHR2ttz8z30h4 markg@popocatepetl.local
-> The key's randomart image is:
-> +---[RSA 2048]----+
-> | .......         |
-> |o +o.. .o        |
-> |.*o + .o o       |
-> |..o= .... =      |
-> |o.. + o S  = .   |
-> | o.= . +    . o  |
-> | .+ = .      . E |
-> |.o.B o.       o .|
-> |.oBo++.        . |
-> +----[SHA256]-----+
-> ~~~
-> {: .output}
-{: .solution}
+Click the "Copy Private Key to Clipboard" button and make a new text file with the clipboard contents.  Traditionally we give this text file a ".pem" extention, so you might name it "mynewkey.pem" (for instance). We're going to use this pem file later, so keep it handy.
 
-
-## Storing your keypairs
-Store your private key in a safe place! Losing your private key means losing every access to your instances. Not even the Nimbus support can give you access to your instances if you have lost your private key.
-
-### Keypairs with JupyterHub
+### Keypairs with JupyterHub (in person training)
 From JupyterHub, click on the upload file button, select the key you just generated in the Nimbus web interface, and upload it. We will need this file later to connect to our instance (virtual machine).
 
 By default, once uploaded you private key permission will not be correct to be used in the next lessons with you SSH client. To fix that run:
 ~~~
 chmod 600 name_of_your_key.pem
 ~~~
+
+You can go to the next section now.
+
+# Keypairs: getting more complicated
+
+The process described above works well in training or when you are getting started with the use of Pawsey systems.  What if your situation is more complicated?  We will now cover specific cases around keypair usage.
+
+## Keypairs from your terminal
+
+ This method will be very useful to you, if you wish to make a keypair that you can use with multiple systems (in addition to your Nimbus instances).
+
+ Run the command as shown below (with a useful name for "My_Key_Pair_Name");
+
+ ~~~
+ popocatepetl:~ markg$ ssh-keygen  -t  rsa  -f  My_Key_Pair_Name.key
+ Generating public/private rsa key pair.
+ Enter passphrase (empty for no passphrase):
+ Enter same passphrase again:
+ Your identification has been saved in My_Key_Pair_Name.key.
+ Your public key has been saved in My_Key_Pair_Name.key.pub.
+ The key fingerprint is:
+ SHA256:OKdIxLawp/A6X36umLm1gT5EcE60ClzHR2ttz8z30h4 markg@popocatepetl.local
+ The key's randomart image is:
+ +---[RSA 2048]----+
+ | .......         |
+ |o +o.. .o        |
+ |.*o + .o o       |
+ |..o= .... =      |
+ |o.. + o S  = .   |
+ | o.= . +    . o  |
+ | .+ = .      . E |
+ |.o.B o.       o .|
+ |.oBo++.        . |
+ +----[SHA256]-----+
+ ~~~
+ {: .output}
+
+
+## Storing your keypairs
+Store your private key in a safe place! Losing your private key means losing every access to your instances. Not even the Nimbus support can give you access to your instances if you have lost your private key.
+
 {: .output}
 
 > ## (optional) If you are using Windows with PuTTY
-> 
+>
 > 1. Open PuTTYgen (All Apps -> Putty -> Puttygen)
 > 2. Click on the LOAD button.
 > 3. Select the .pem file you just downloaded from the Nimbus Dashboard. If you cannot see your .pem file , select "All Files" instead of "Putty Private Key Files" from the dropdown bottom menu.
@@ -126,7 +134,7 @@ chmod 600 name_of_your_key.pem
 > > ~~~
 > > {: .output}
 > > Then copy/paste this into the keypair import interface, as shown:
-> > 
+> >
 > > ![Import Keypairs]({{ page.root }}/fig/Nimbus_import_key_pair.png)
 > {: .callout}
 {: .solution}
