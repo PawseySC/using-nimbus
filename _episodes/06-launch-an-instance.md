@@ -50,7 +50,7 @@ You will note that there are other images you can select.  Some of these are vis
 
 If you need a specific flavour of Linux and you find that it is not listed you do have another option; it is possible to import external images, but our support for you in this instance will be very limited.
 
-![Launch Source]({{ page.root }}/fig/Lauch_source.png)
+![Launch Source]({{ page.root }}/fig/Launch_source.png)
 
 
 ## 3. Select a flavour

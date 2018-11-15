@@ -15,7 +15,7 @@ keypoints:
 ---
 
 ## About Cloud
-Cloud computing has as many applications as there are algorithms (ie: lots).  However at Pawsey Supercomputing Centre we are tasked with supporting researchers in Australia solve complex problems with computational facilities. Using Nimbus can help you scale your problems and make them solvable in a reasonable timeframe.  Is it "Supercomputing"?  We generally reserve such terms to describe our peak computing facilities.  At Pawsey our peak computer is Magnus, a 36000 core Cray XC-30.  It is intended for very large, parallelized workflows that have been specifically designed to run optimally on such hardware.
+Cloud computing has as many applications as there are algorithms (ie: lots).  However at the Pawsey Supercomputing Centre we are tasked with supporting researchers in Australia to solve complex problems with computational facilities. Using Nimbus can help you scale your problems and make them solvable in a reasonable timeframe.  Is it "Supercomputing"?  We generally reserve such terms to describe our peak computing facilities.  At Pawsey our peak computer is Magnus, a 36000 core Cray XC-30.  It is intended for very large, parallelized workflows that have been specifically designed to run optimally on such hardware.
 
 ![Magnus]({{ page.root }}/fig/magnus.png)
 
@@ -60,7 +60,7 @@ You may need to perform analysis with tools like Hadoop or Apache Spark.  With N
 
 ## The Benefits of Cloud Computing with Nimbus
 
-| Flexible       |  user configuration and management                                                               |
+| Flexible        |  user configuration and management                                                               |
 | On-demand       |  use what you need, delete what you don’t need                                                   |
 | Scalable        |  elastically respond to changes in demand                                                        |
 | Cost-effective  |  reduce your hardware investment and maintenance costs                                           |
