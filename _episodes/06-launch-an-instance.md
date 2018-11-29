@@ -193,4 +193,4 @@ When creating a private keypair from Nimbus interface, it copies it to a clipboa
 
 **Solution:** Use nano, vi directly or other non-Windows text editor, should be something like below
 
-![Launch Security Groups]({{ page.root }}/fig/example private key.png)
+![example private key]({{ page.root }}/fig/example private key.png)
