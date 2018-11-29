@@ -193,14 +193,4 @@ When creating a private keypair from Nimbus interface, it copies it to a clipboa
 
 **Solution:** Use nano, vi directly or other non-Windows text editor, should be something like 
 
-> -----BEGIN RSA PRIVATE KEY-----
-> MIIBOQIBAAJBAIOLepgdqXrM07O4dV/nJ5gSA12jcjBeBXK5mZO7Gc778HuvhJi+
-> RvqhSi82EuN9sHPx1iQqaCuXuS1vpuqvYiUCAwEAAQJATRDbCuFd2EbFxGXNxhjL
-> loj/Fc3a6UE8GeFoeydDUIJjWifbCAQsptSPIT5vhcudZgWEMDSXrIn79nXvyPy5
-> BQIhAPU+XwrLGy0Hd4Roug+9IRMrlu0gtSvTJRWQ/b7m0fbfAiEAiVB7bUMynZf4
-> SwVJ8NAF4AikBmYxOJPUxnPjEp8D23sCIA3ZcNqWL7myQ0CZ/W/oGVcQzhwkDbck
-> 3GJEZuAB/vd3AiASmnvOZs9BuKgkCdhlrtlM6/7E+y1p++VU6bh2+mI8ZwIgf4Qh
-> u+zYCJfIjtJJpH1lHZW+A60iThKtezaCk7FiAC4= 
-> -----END RSA PRIVATE KEY-----
->
-{: .callout}
+
