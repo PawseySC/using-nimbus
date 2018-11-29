@@ -175,3 +175,16 @@ What you need:
 ## If it all worked...
 
 ![Successful login]({{ page.root }}/fig/nimbus_logged_in.png)
+
+
+## If you get an error...
+
+1) ssh: Could not resolve hostname \342\200\223i name or service unknown error - [link](http://tumblr.gudge.com/post/18186353550/ssh-could-not-resolve-hostname-342200223i)
+When using MobaXTerm if you cut and paste the *ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###* example you will get the wrong hyphen in the "-i" part and throw a confusing error 
+
+**Solution:** Don't cut and paste example - manually type in ssh syntax
+
+2) Asks for passphrase when no passphrase was created.  
+When creating a private keypair from Nimbus interface, it copies it to a clipboard, which you then have to save to you computer.  You need to ensure no extra characters are added and -----BEGIN RSA PRIVATE KEY----- and -----END RSA PRIVATE KEY----- present
+
+**Solution:** Use nano, vi directly or other non-Windows text editor
