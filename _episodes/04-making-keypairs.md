@@ -48,8 +48,10 @@ Enter a name for your keypair and click "Create Keypair".  The window will expan
 
 Click the "Copy Private Key to Clipboard" button and make a new text file with the clipboard contents.  Traditionally we give this text file a ".pem" extention, so you might name it "mynewkey.pem" (for instance). We're going to use this pem file later, so keep it handy.
 
+Note if you are using JupyterHub in a Pawsey Training session, just run nano to create a new file e.g. "nano mynewkey.pem" and paste the private key into the new file - see here for info on nano [https://pawseysc.github.io/shell-hpc/03-create/index.html](https://pawseysc.github.io/shell-hpc/03-create/index.html)
+
 ### Keypairs with JupyterHub (in person training)
-From JupyterHub, click on the upload file button, select the key you just generated in the Nimbus web interface, and upload it. We will need this file later to connect to our instance (virtual machine).
+From JupyterHub, click on the upload file button, select the key you just generated in the Nimbus web interface, and upload it (or if created into nano it should already be there). We will need this file later to connect to our instance (virtual machine).
 
 By default, once uploaded you private key permission will not be correct to be used in the next lessons with you SSH client. To fix that run:
 ~~~
