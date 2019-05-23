@@ -30,7 +30,7 @@ Our first action is to generate keypairs.  Keypairs take the form of public (thi
 There are two methods of creating keypairs.
 
 1. **From the Nimbus Dashboard**
-    This will automatically create a lock when selected for your instance through the Dashboard and download the private key key to your local computer (.pem file)
+    This will automatically create a lock when selected for your instance through the Dashboard, and download the private key to your local computer (.pem file)
 
 2. **(optional) From within your Terminal Window**
     This will create two separate files, your key and lock (.key and .key.pub)

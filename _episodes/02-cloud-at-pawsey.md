@@ -37,7 +37,7 @@ Cloud computing has as many applications as there are algorithms (ie: lots).  Ho
 > Analyse projects carefully constructed to most effectively utilize high-end computing infrastructure
 {: .callout}
 
-The horizontal scalability here is different from vertical scalability.  Imagine a process that runs on a single compute core;  You could achieve horizontal scalability by running 100 instances of this algorithm, of course trhat might be a lot to manage.  There would be many input files and many output files; you might need to combine these outputs at some point.  An equivalent process tackled with vertical scalability would mean running a single algorithm on 100 cores.  This might result in algorithm that runs 100 times faster (it also might not do so; parallel programming is hard).
+The horizontal scalability here is different from vertical scalability.  Imagine a process that runs on a single compute core;  You could achieve horizontal scalability by running 100 instances of this algorithm, of course that might be a lot to manage.  There would be many input files and many output files; you might need to combine these outputs at some point.  An equivalent process tackled with vertical scalability would mean running a single algorithm on 100 cores.  This might result in algorithm that runs 100 times faster (it also might not do so; parallel programming is hard).
 
 
 At Pawsey Supercomputing Centre we operate a range of computing facilities for a range of computational workflows. Nimbus is well suited to a range of problems in the area of smaller scale problems and horizontally scaled problems.
