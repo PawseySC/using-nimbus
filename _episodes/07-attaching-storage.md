@@ -37,7 +37,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 ~~~
 {: .output}
 
-First we need to format the disk.  We will do this using the mkfs command.
+First we need to format the disk.  We will do this using the mkfs command. __Warning: Use mkfs only once for each volume. It wipes any data already on it.__
 
 ~~~
 root@test-instance:~# sudo mkfs.ext4 /dev/vdc
