@@ -189,7 +189,7 @@ When using MobaXTerm if you cut and paste the *ssh –i ~/.ssh/My_Key_Pair.pem l
 
 2) Asks for passphrase when no passphrase was created.  
 
-When creating a private keypair from Nimbus interface, it copies it to a clipboard, which you then have to save to you computer.  You need to ensure no extra characters are added and -----BEGIN RSA PRIVATE KEY----- and -----END RSA PRIVATE KEY----- present
+When creating a private keypair from Nimbus interface, it copies it to a clipboard, which you then have to save to your computer.  You need to ensure no extra characters are added and -----BEGIN RSA PRIVATE KEY----- and -----END RSA PRIVATE KEY----- present
 
 **Solution:** Use nano, vi directly or other non-Windows text editor, should be something like below
 
