@@ -39,7 +39,7 @@ Conda is an open source package management system and environment management sys
 
 You can get started by downloading the installer suitable for your instance.  Miniconda installer page is given below [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
 
-Further info on [Linux installation] (https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
+Further info on [Linux installation](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
 
 
 **Machine learning**
