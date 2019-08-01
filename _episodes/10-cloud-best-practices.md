@@ -33,17 +33,22 @@ questions:
 ## Ideas for using your VM
 Once you have your shiny new VM, you are now the master of your own destiny.  You can start downloading software to start doing science.  Listed below are some tips on installing some common software packages that you might like to use.
 
-- Conda
+**Conda**
+
 Conda is an open source package management system and environment management system.   that runs on Windows, macOS, and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads, and switches between environments on your local computer. It was created for Python programs but it can package and distribute software for any language.
 
 You can get started by downloading the installer suitable for your instance.  Miniconda installer page is given below [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
 
 Further info on [Linux installation] (https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
 
-- Machine learning
+
+**Machine learning**
+
 If you are interested in machine learning the following site has many good resources (from beginner to advanced) [https://towardsdatascience.com/](https://towardsdatascience.com/)
+
+---
 
 ## Applying for a VM
 Compared to applying for time on one of our supercomputers, the process for applying for an allocation on Nimbus is less demanding.  You can apply at any time of the year by visiting the link below
 
-**To get access visit: [https://apply.pawsey.org.au](https://apply.pawsey.org.au)** 
+### To get access visit: [https://apply.pawsey.org.au](https://apply.pawsey.org.au) ### 
