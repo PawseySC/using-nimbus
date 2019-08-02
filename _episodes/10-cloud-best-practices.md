@@ -10,6 +10,9 @@ objectives:
 - "Learn best practices for the cloud"
 - "Understand how to install software on my VM"
 - "Know the process to get an allocation"
+keypoints:
+- "Snapshot and update your VM"
+- "Google is your friend"
 ---
 
 ## Best practices 
