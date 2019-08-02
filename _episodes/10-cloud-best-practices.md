@@ -38,15 +38,15 @@ keypoints:
 ---
 
 ## Ideas for using your VM
-Once you have your shiny new VM, you are now the master of your own destiny.  You can start downloading software to start doing science.  Listed below are some tips on installing some common software packages that you might like to use.
+Once you have your shiny new VM, you are now the master of your own destiny.  You have flexibility to download software to start doing science.  Listed below are some tips on installing some common software packages that you might like to use however "Googling" your linux flavour / version along with the software will often give you success.
 
 **Conda**
 
 Conda is an open source package management system and environment management system.   that runs on Windows, macOS, and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads, and switches between environments on your local computer. It was created for Python programs but it can package and distribute software for any language.
 
-You can get started by downloading the installer suitable for your instance.  Miniconda installer page is given below [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
+You can get started by downloading the installer suitable for your instance.  Miniconda installer page is given here [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 
-Further info on [Linux installation](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
+Further information on installation here [Linux installation](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
 
 
 **Machine learning**
