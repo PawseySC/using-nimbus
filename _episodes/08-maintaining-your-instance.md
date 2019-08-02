@@ -5,7 +5,7 @@ exercises: 0
 questions:
 - "How do you keep your instance up to date and safe?"
 objectives:
-- ""
+- "Learn the commands to keep your VM up-to-date"
 keypoints:
 - "You learnt how to keep your instance up to date"
 ---
