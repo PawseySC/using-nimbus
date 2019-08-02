@@ -17,12 +17,18 @@ keypoints:
 
 Volumes are created, attached using the Nimbus interface, and then formatted and mounted
 ## First create a volume
+Go to "Compute" then "Volumes".  Click on "Create Volume".  A pop-up will appear (see screenshot below).  There is no need to enter any information (unless you want to) in the pop-up, just click "Create Volume" button again at the bottom of the window.
+
 ![Nimbus Volumes]({{ page.root }}/fig/Nimbus_volumes.png)
 
 ![Nimbus Create Volumes]({{ page.root }}/fig/nimbus_create_volume.png)
 
+
+
 ## Now, manage attachements.
 ![Nimbus Configure Volumes]({{ page.root }}/fig/Nimbus_configure_volumes.png)
+
+Select the "Manage Attachments" from the drop-down menu of the volume you just created
 
 ![Nimbus Manage Attachments]({{ page.root }}/fig/nimbus_vol_manage_attachments.png)
 
