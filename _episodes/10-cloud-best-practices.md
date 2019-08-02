@@ -6,8 +6,12 @@ questions:
 - "What's the best way to use cloud?"
 - "What can I use my VM for?"
 - "How do I apply for a Nimbus allocation?"
-
+objectives:
+- "Learn best practices for the cloud"
+- "Understand how to install software on my VM"
+- "Know the process to get an allocation"
 ---
+
 ## Best practices 
 1. **Snapshot your instance!**
 
