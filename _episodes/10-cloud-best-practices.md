@@ -48,6 +48,16 @@ You can get started by downloading the installer suitable for your instance.  Mi
 
 Further information on installation here [Linux installation](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
 
+**R**
+You can install R or Rstudio easily for most Linux flavours
+
+for Debian/Ubuntu run *sudo apt-get install r-base* and or Fedora run *sudo yum install R* then type *R* to run
+
+RStudio is an IDE (Integrated Development Environment) that makes R easier to use.  Go to RStudio download page - [https://www.rstudio.com/products/rstudio/download-server/](https://www.rstudio.com/products/rstudio/download-server/) and enter the following for Ubuntu
+
+$ sudo apt-get install gdebi-core
+$ wget https://download2.rstudio.org/server/trusty/amd64/rstudio-server-1.2.1335-amd64.deb
+$ sudo gdebi rstudio-server-1.2.1335-amd64.deb
 
 **Machine learning**
 
