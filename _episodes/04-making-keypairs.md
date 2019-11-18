@@ -25,7 +25,7 @@ Now that you are logged in you can have a look around the various panes of the u
 
 ## Generating keypairs
 
-Our first action is to generate keypairs.  Keypairs take the form of public (think: 'lock') and private (think: 'key') key files.  These files are presented together to securely authenticate (login) to a Nimbus virtual machine.  **Why do this?**  We do this because the username/password login is not set up for new VMs (by design).
+Our first action is to generate keypairs.  Keypairs take the form of public (think: 'lock') and private (think: 'key') key files.  These files are presented together to securely authenticate (login) to a Nimbus virtual machine.  **Why do this?**  We do this because the username and password login is not set up for new VMs (by design).
 
 There are two methods of creating keypairs.
 
@@ -96,7 +96,7 @@ The process described above works well in training or when you are getting start
 
 
 ## Storing your keypairs
-Store your private key in a safe place! Losing your private key means losing every access to your instances. Not even the Nimbus support can give you access to your instances if you have lost your private key.
+Store your private key in a safe place! Losing your private key means losing all access to your instances. Not even the Nimbus support can give you access to your instances if you have lost your private key.
 
 {: .output}
 
@@ -114,12 +114,18 @@ Store your private key in a safe place! Losing your private key means losing eve
 > > ## If you used Nimbus to make the keypair
 > >
 > > If you used Nimbus to make the keypair, you should move the downloaded .pem file somewhere where you can find it later.
+> >
+> > Ensure the .ssh/ directory exists with the right permissions.
+> > ~~~
+> > $ mkdir -p ~/.ssh
+> > $ chmod 700 ~/.ssh
+> > ~~~
 > > Store in your .ssh/ directory and rename it id_rsa (or give it another name if you have more than a private key)
 > > ~~~
-> > $ cp ~/Downloads/file_name.pem  ~/.ssh/id_rsa
+> > $ cp -i ~/Downloads/file_name.pem  ~/.ssh/id_rsa
 > > ~~~
 > > {: .output}
-> > To allow the correct permissions we want to allow only the user (you) to have at least read and write privileges:
+> > Ensure that only you (the user) have read and write permissions:
 > > ~~~
 > > $  chmod 600 ~/.ssh/id_rsa
 > > ~~~
@@ -131,7 +137,7 @@ Store your private key in a safe place! Losing your private key means losing eve
 > >
 > > First get the public key data
 > > ~~~
-> > popocatepetl:~ markg$ more  My_Key_Pair_Name.key.pub
+> > popocatepetl:~ markg$ cat My_Key_Pair_Name.key.pub
 > > ssh-rsa > AAAAB3NzaC1yc2EAAAADAQABAAABAQDVZTn98qxxovMDnui8L+WynWptAGS8sR2GIJ4HE+9v8lHlcSiKDze07o/SIb+RQR7FFvLchAD2xLxiF8mB+4SUhaoxWXZGhc8RBLXpSMD6tJNT9VNxd99mI7g6rq3HMpSZDE5YTxSweDy13qRmc6gBXWNGjUHV3eUv6pHKthbs1v/MjsA7nkYdINiCwpgawJ7fdyJJ61vkrO7+tjkdRFBBTn2O8ELTMYEssM/hwHZt00RWOVjXylaQK766yF6Qhog2pQc2gsUXQLown9Hzga8QVxvMxCY9cVh2lxtBVjDuv1HWwC1PZhYa9QlLf+jsITyOzEfPuNidZvyWnjxei6+P markg@popocatepetl.local
 > > ~~~
 > > {: .output}
