@@ -120,6 +120,7 @@ Store your private key in a safe place! Losing your private key means losing all
 > > $ mkdir -p ~/.ssh
 > > $ chmod 700 ~/.ssh
 > > ~~~
+> > {: .output}
 > > Store in your .ssh/ directory and rename it id_rsa (or give it another name if you have more than a private key)
 > > ~~~
 > > $ cp -i ~/Downloads/file_name.pem  ~/.ssh/id_rsa
