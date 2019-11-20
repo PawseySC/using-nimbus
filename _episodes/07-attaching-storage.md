@@ -3,12 +3,12 @@ title: "Attaching volume storage"
 teaching: 30
 exercises: 0
 questions:
-- "How do you setup volumes and store data?"
+- "How do you set up volumes and store data?"
 objectives:
 - "Attach and use a data volume with your instance."
 keypoints:
 - "You learned how to create a new volume and attach it to your instance."
-- "You learned how to create a new filesystem and mount it to your instance"
+- "You learned how to create a new filesystem and mount it in your instance."
 ---
 
 **There are two types of built-in storage**
