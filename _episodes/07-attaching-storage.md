@@ -3,36 +3,38 @@ title: "Attaching volume storage"
 teaching: 30
 exercises: 0
 questions:
-- "How do you setup disks and store data?"
+- "How do you setup volumes and store data?"
 objectives:
-- "Attach and use an external data volume to your instance."
+- "Attach and use a data volume with your instance."
 keypoints:
-- "You learnt how to create a new volume and attach it to your instance."
-- "You learnt how to create a new filesystem and mount it to your instance"
+- "You learned how to create a new volume and attach it to your instance."
+- "You learned how to create a new filesystem and mount it to your instance"
 ---
 
 **There are two types of built-in storage**
-1. Root Disk- your home directory, and storage for the operating system of your virtual machine
-2. Volume Storage - a 2nd hard disk you can add to your VM for working storage
+1. Root Volume - your home directory, and storage for the operating system of your virtual machine
+2. Data Volume - a second hard drive you can add to your VM for working storage
 
-Volumes are created, attached using the Nimbus interface, and then formatted and mounted
-## First create a volume
-Go to "Compute" then "Volumes".  Click on "Create Volume".  A pop-up will appear (see screenshot below).  There is no need to enter any information (unless you want to) in the pop-up, just click "Create Volume" button again at the bottom of the window.
+Volumes are created and attached using the Nimbus web interface, then formatted and mounted.
+
+## Create a volume
+Go to **Compute** then **Volumes**.  Click on **Create Volume**.  A pop-up will appear (see screenshot below).
 
 ![Nimbus Volumes]({{ page.root }}/fig/Nimbus_volumes.png)
+
+Enter a **Volume Name** and **Size (GiB)** for the volume, then click **Create Volume** at the bottom of the pop-up.
 
 ![Nimbus Create Volumes]({{ page.root }}/fig/nimbus_create_volume.png)
 
 
-
-## Now, manage attachements.
+## Manage attachements
 ![Nimbus Configure Volumes]({{ page.root }}/fig/Nimbus_configure_volumes.png)
 
-Select the "Manage Attachments" from the drop-down menu of the volume you just created
+Select the **Manage Attachments** from the drop-down menu of the volume you just created
 
 ![Nimbus Manage Attachments]({{ page.root }}/fig/nimbus_vol_manage_attachments.png)
 
-We can check that the volume is attached, but we can’t use it just yet.  If the unformatted disk is properly attached you should see (from the fdisk command):
+We can check that the volume is attached, but we can’t use it just yet.  If the unformatted volume is properly attached you should see:
 
 ~~~
 root@test-instance:~# sudo fdisk -l /dev/vdc
@@ -43,7 +45,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 ~~~
 {: .output}
 
-First we need to format the disk.  We will do this using the mkfs command. __Warning: Use mkfs only once for each volume. It wipes any data already on it.__
+We need to format and create a filesystem on the volume.  We will do this using the mkfs command. __Warning: Use mkfs only once for each volume.  It wipes any data already on it._
 
 ~~~
 root@test-instance:~# sudo mkfs.ext4 /dev/vdc
@@ -61,12 +63,16 @@ Writing superblocks and filesystem accounting information: done
 ~~~
 {: .output}
 
-Finally we can mount the disk:
+Then we can mount the volume, and create a subdirectory to store files in:
 
 ~~~
 root@test-instance:~# sudo mkdir /data
 root@test-instance:~# sudo mount /dev/vdc /data
 root@test-instance:~# df -h | grep vdc
 /dev/vdc         20G   44M   19G   1% /data
+root@test-instance:~# sudo mkdir /data/my_files
+root@test-instance:~# sudo chown ubuntu /data/my_files
 ~~~
 {: .output}
+
+You can now store files and subdirectories in the /data/my_files/ directory.
