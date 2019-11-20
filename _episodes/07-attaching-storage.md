@@ -30,7 +30,7 @@ Enter a **Volume Name** and **Size (GiB)** for the volume, then click **Create V
 ## Manage attachements
 ![Nimbus Configure Volumes]({{ page.root }}/fig/Nimbus_configure_volumes.png)
 
-Select the **Manage Attachments** from the drop-down menu of the volume you just created
+Select **Manage Attachments** from the drop-down menu of the volume you just created
 
 ![Nimbus Manage Attachments]({{ page.root }}/fig/nimbus_vol_manage_attachments.png)
 
@@ -45,7 +45,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 ~~~
 {: .output}
 
-We need to format and create a filesystem on the volume.  We will do this using the mkfs command. __Warning: Use mkfs only once for each volume.  It wipes any data already on it._
+We need to format and create a filesystem on the volume.  We will do this using the mkfs command.  __Warning: Use mkfs only once for each volume.  It wipes any data already on it.__
 
 ~~~
 root@test-instance:~# sudo mkfs.ext4 /dev/vdc
