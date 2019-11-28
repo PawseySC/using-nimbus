@@ -42,7 +42,7 @@ There are two methods of creating keypairs.
 Go to the Key Pairs item under the Compute menu.  Click the button **Create Key Pair**, and give your key pair a name.
 ![Create Keypairs]({{ page.root }}/fig/Nimbus_Create_Key_Pairs.png)
 
-Enter a name for your keypair and click **Create Keypair**.  The popup will close and your browser will download the private key file, named something like `my_key.pem`.  Save it somewhere you can access it later.  This file is private, and should be treated like a password.  Do not share it with anyone, or lose it.
+Enter a name for your keypair and click **Create Keypair**.  The popup will close and your browser will download the private key file, named something like `my_key.pem`.  Save it somewhere safe so you can access it later.  This file is private, and should be treated like a password.  Do not share it with anyone, or lose it.
 
 **Note** - If you are using JupyterHub in a Pawsey Training session, just run nano to create a new file e.g. "nano mynewkey.pem" and paste the private key into the new file - see [here](https://pawseysc.github.io/shell-hpc/03-create/index.html) for further info on nano from the Pawsey "Intro to Unix" course.
 
@@ -88,19 +88,12 @@ The process described above works well in training or when you are getting start
  ~~~
  {: .output}
 
-
-## Storing your keypairs
-Store your private key in a safe place! Losing your private key means losing all access to your instances.  Not even the Nimbus support can give you access to your instances if you have lost your private key.
-
-{: .output}
-
 > ## (optional) If you are using Windows with PuTTY
->
 > 1. Open PuTTYgen (All Apps -> Putty -> Puttygen)
 > 2. Click on the LOAD button.
-> 3. Select the .pem file you just downloaded from the Nimbus Dashboard. If you cannot see your .pem file , select "All Files" instead of "Putty Private Key Files" from the dropdown bottom menu.
+> 3. Select the .pem file you just downloaded from the Nimbus Dashboard. If you cannot see your .pem file , select __All Files__ instead of __Putty Private Key Files__ from the dropdown bottom menu.
 > 4. Set a new passphrase and confirm it for your private key.
-> 5. Click on the "Save private key" button and give it the name you prefer.
+> 5. Click on the __Save private key__ button and give it the name you prefer.
 {: .solution}
 
 > ## (optional) If you are using a native terminal (Linux / Mac / Unix)

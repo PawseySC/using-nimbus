@@ -9,6 +9,7 @@ objectives:
 keypoints:
 - "You learned how to create a new volume and attach it to your instance."
 - "You learned how to create a new filesystem and mount it in your instance."
+- "You learned how to unmount and detach your volume, and reuse it."
 ---
 
 ### Two types of built-in storage
