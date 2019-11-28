@@ -15,7 +15,7 @@ keypoints:
 - "Google is your friend"
 ---
 
-## Best practices 
+## Best practices
 1. **Snapshot your instance!**
 
     This saves your Root Disk and allows you to launch a fully configured instance with all packages already installed
@@ -34,7 +34,7 @@ keypoints:
 4.  **Be Green and keep it elastic**
 
     The cloud still uses electricity and is shared, when you’re no longer using it -> turn it off!
-    
+
 ---
 
 ## Ideas for using your VM
@@ -69,4 +69,4 @@ If you are interested in machine learning the following site has many good resou
 ## Applying for a VM
 Compared to applying for time on one of our supercomputers, the process for applying for an allocation on Nimbus is less demanding.  You can apply at any time of the year by visiting the link below
 
-### To get access visit: [https://apply.pawsey.org.au](https://apply.pawsey.org.au) ### 
+### To get access visit: [https://apply.pawsey.org.au](https://apply.pawsey.org.au) ###

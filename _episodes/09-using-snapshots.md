@@ -34,7 +34,7 @@ To start with, shut off your instance so you will get a clean snapshot. Consider
 ---
 
 ## 2. __Create Snapshot__ of your instance
-Take a snapshot of your instance, and give it a name.  
+Take a snapshot of your instance, and give it a name.
 ![Instance Shutdown]({{ page.root }}/fig/Instance_snapshot.png)
 Once it is created, you will be taken to the Images page where you will see it listed.
 

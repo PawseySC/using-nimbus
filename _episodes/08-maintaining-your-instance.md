@@ -44,12 +44,12 @@ To install new software:
 
 ## Use these commands as often as possible!
 
-Ideally, combine these commands, depending on your Linux distribution, and run them at least once a week, or every time you login. 
+Ideally, combine these commands, depending on your Linux distribution, and run them at least once a week, or every time you login.
 
 This will keep your instance up to date.
 
 > ## Install a package on your instance
->   
+>
 > Try to install the advanced text editor. This package is called 'vim' and it is not installed by default on most Linux distributions.
 >
 >> ## Solution

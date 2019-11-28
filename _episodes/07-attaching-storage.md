@@ -11,9 +11,9 @@ keypoints:
 - "You learned how to create a new filesystem and mount it in your instance."
 ---
 
-**There are two types of built-in storage**
-1. Root Volume - your home directory, and storage for the operating system of your virtual machine
-2. Data Volume - a second hard drive you can add to your VM for working storage
+### Two types of built-in storage
+1. Root Volume - includes your home directory, and storage for the operating system of your virtual machine
+2. Data Volume - a second hard drive you can add to your instance for working storage
 
 Volumes are created and attached using the Nimbus web interface, then formatted and mounted.
 
@@ -45,6 +45,8 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 ~~~
 {: .output}
 
+## Format and mount a filesystem
+
 We need to format and create a filesystem on the volume.  We will do this using the mkfs command.  __Warning: Use mkfs only once for each volume.  It wipes any data already on it.__
 
 ~~~
@@ -66,13 +68,47 @@ Writing superblocks and filesystem accounting information: done
 Then we can mount the volume, and create a subdirectory to store files in:
 
 ~~~
-root@test-instance:~# sudo mkdir /data
-root@test-instance:~# sudo mount /dev/vdc /data
-root@test-instance:~# df -h | grep vdc
+test-instance:~$ sudo mkdir /data
+test-instance:~$ sudo mount /dev/vdc /data
+test-instance:~$ df -h | grep vdc
 /dev/vdc         20G   44M   19G   1% /data
-root@test-instance:~# sudo mkdir /data/my_files
-root@test-instance:~# sudo chown ubuntu /data/my_files
+test-instance:~$ sudo mkdir /data/my_files
+test-instance:~$ sudo chown ubuntu /data/my_files
 ~~~
 {: .output}
 
 You can now store files and subdirectories in the /data/my_files/ directory.
+
+~~~
+test-instance:~$ nano /data/my_files/my-data-file
+# type some made up data into the file, save and quit (^X)
+test-instance:~$ ls /data/my_files/
+my-data-file
+~~~
+{: .output}
+
+## Unmount and reuse the volume
+
+Once you have stored some data in your volume, you may wish to __unmount__ it __detach__ it from your instance.
+
+~~~
+test-instance:~$ sudo umount /data/my_files
+~~~
+{: .output}
+
+Next, select __Manage Attachments__ from the drop-down menu of the volume, then __Detach Volume__, and again to confirm.  Warning: If you detach a volume before you unmount it, you may lose data.
+
+Now you could delete your instance and recreate it, then attach this data volume to the new one. For now, we will just reattach it to the same instance.  Click __Manage Attachments__ again, select your instance, and __Attach Volume__.
+
+This time, let's mount the volume somewhere different. Remember, you do __not__ need to create a filesystem again, because that would wipe your data.
+~~~
+test-instance:~$ sudo mkdir /data2
+test-instance:~$ sudo mount /dev/vdc /data2
+test-instance:~$ df -h | grep vdc
+/dev/vdc         20G   44M   19G   1% /data2
+test-instance:~$ ls /data2/
+my_files
+test-instance:~$ ls /data2/my_files/
+my-data-file
+~~~
+{: .output}
