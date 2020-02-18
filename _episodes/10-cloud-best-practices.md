@@ -38,7 +38,7 @@ keypoints:
 ---
 
 ## Ideas for using your VM
-Once you have your shiny new VM, you are now the master of your own destiny.  You have flexibility to download software to start doing science.  Listed below are some tips on installing some common software packages that you might like to use however "Googling" your linux flavour / version along with the software will often give you success.
+Once you have your shiny new VM, you are now the master of your own destiny.  You have flexibility to download software to start doing science.  Listed below are some tips on installing some common software packages that you might like to use however "Googling" your linux flavour / version along with the software will often give you success.  Also listed as details on moving data to your instance
 
 **Conda**
 
@@ -63,6 +63,11 @@ RStudio is an IDE (Integrated Development Environment) that makes R easier to us
 **Machine learning**
 
 If you are interested in machine learning the following site has many good resources (from beginner to advanced) [https://towardsdatascience.com/](https://towardsdatascience.com/)
+
+
+**Copying files**
+Courtsey of NeCTAR training materials - [Copying files](http://training.nectar.org.au/package07/sections/copyFiles.html)
+
 
 ---
 
