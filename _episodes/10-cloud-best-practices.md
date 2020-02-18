@@ -40,6 +40,7 @@ keypoints:
 ## Ideas for using your VM
 Once you have your shiny new VM, you are now the master of your own destiny.  You have flexibility to download software to start doing science.  Listed below are some tips on installing some common software packages that you might like to use however "Googling" your linux flavour / version along with the software will often give you success.  Also listed as details on moving data to your instance
 
+
 **Conda**
 
 Conda is an open source package management system and environment management system.   that runs on Windows, macOS, and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads, and switches between environments on your local computer. It was created for Python programs but it can package and distribute software for any language.
@@ -47,6 +48,7 @@ Conda is an open source package management system and environment management sys
 You can get started by downloading the installer suitable for your instance.  Miniconda installer page is given here [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 
 Further information on installation here [Linux installation](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
+
 
 **R**
 
@@ -60,12 +62,15 @@ RStudio is an IDE (Integrated Development Environment) that makes R easier to us
 - *wget https://download2.rstudio.org/server/trusty/amd64/rstudio-server-1.2.1335-amd64.deb*
 - *sudo gdebi rstudio-server-1.2.1335-amd64.deb*
 
+
 **Machine learning**
 
 If you are interested in machine learning the following site has many good resources (from beginner to advanced) [https://towardsdatascience.com/](https://towardsdatascience.com/)
 
 
+
 **Copying files**
+
 Courtsey of NeCTAR training materials - [Copying files](http://training.nectar.org.au/package07/sections/copyFiles.html)
 
 
