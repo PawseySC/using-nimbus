@@ -70,7 +70,7 @@ The **Networks** tab is where you will define the networking available to your i
 
 Nimbus projects have networking prepared for you.  Using a training project you will select the network named something like __cou050-network__.  If you are using your own project you will see a network name similar to this.
 
-You will also see a __Public external__ network.  You may be thinking that you might use this, since you are seeking external network access.  This will not work however, since this network is outside your router and cannot be used to get access to the wider Internet.
+You will also see a __Public external__ network.  Cloud admins have recently changed it so you can use this and get a public IP address automatically.  As a user, you can use either method to get a public IP to SSH into.
 
 ![Launch Networks]({{ page.root }}/fig/Launch_networks.png)
 
