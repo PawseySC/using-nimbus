@@ -19,7 +19,7 @@ keypoints:
 ---
 
 ## Best practices
-1. **Keep your instance up-to-date** 
+1. **Keep your instance up-to-date**
 To create a new instance (Nimbus virtual machine), click on "Instances" (on the left menu under the "Compute" section) and after that click on the "Launch instance" button, located on the right.
 
 There are many types and flavours of Linux distribution. The most widely used are often the Debian based linux distributions such as Ubuntu, and the Red Hat/Fedora based distribution such as CentOS. Other distributions have different methods to do updates that will not be covered for the purpose of this training.
