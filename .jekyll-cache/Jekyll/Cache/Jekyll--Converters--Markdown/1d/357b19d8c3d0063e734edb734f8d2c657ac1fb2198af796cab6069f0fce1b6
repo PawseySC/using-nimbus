@@ -1,0 +1,48 @@
+I"Q<h2 id="how-does-it-work">How does it work?</h2>
+
+<p>You will use two independent tools to manage and use Nimbus.  You will (usually) use a Secure Shell (SSH) connection to run jobs and do work on your instance.  Meanwhile, you will use the Nimbus dashboard, its web interface, to manage your instances(virtual machines).</p>
+
+<p><img src="../fig/diagram-nimbus.png" alt="The Nimbus workflow" /></p>
+
+<h2 id="login-to-nimbus">Login to Nimbus</h2>
+
+<p>You need to have a Nimbus login account to proceed in this training.  If you are at a Pawsey training event, then your instructor will provide a username and password you can use for the day.  Alternatively if you have a Nimbus project you can use your project username and password.</p>
+
+<p>The Nimbus dashboard is at <a href="https://nimbus.pawsey.org.au">https://nimbus.pawsey.org.au</a>
+Open this URL now in a browser window, you will see the login window (below).  As shown, for “domain”, enter ‘pawsey’ and your user name and password.</p>
+
+<p><img src="../fig/nimbus_login_screen.png" alt="Login Screen" /></p>
+
+<p>Now that you are logged in we’ll explore the various facets of the user interface.</p>
+
+<h3 id="the-nimbus-dashboard">The Nimbus Dashboard</h3>
+<p>Let’s take a closer look at the dashboard and the main components we’ll be using:</p>
+
+<p><img src="../fig/Overview_dashboard.png" alt="The Nimbus Dashboard" /></p>
+
+<p>You’ll see there is a menu on the left side of the view, where you can manage different aspects of your Nimbus project. When you login you start in the “Overview” panel of the “Compute” tab. So on the right you can see the various plots that show current quota and usage. The two other panels of the Compute tab we will be using are “Instances” and “Key Pairs”. Both of these panels are empty at the moment, so click on the “Network” tab and select the “Security Groups” panel. You’ll see two groups already exist and each has a ‘Manage Rules’ button on the far right under the Actions heading. The second of these buttons also has a downward pointing arrow indicating a pull-down menu. This is a common and useful way of selecting actions you want to perform when managing your instance.</p>
+
+<h2 id="key-terminology">Key Terminology</h2>
+
+<p>There are some key terms we need to discuss before we get started:</p>
+
+<ul>
+  <li><strong>Allocation</strong> or <strong>Quota</strong>:
+  The infrastructure specifications you have been allocated for a specific project (# of instances, RAM, steorage space, etc)</li>
+  <li><strong>Instance</strong>:
+  A virtual machine (located on Nimbus servers, you access via the SSH)</li>
+  <li><strong>Instance Flavor</strong>:
+  The size of your instance (RAM, VCPUs, root disk, ephemeral disk)</li>
+  <li><strong>Key Pair</strong>:
+  This is a key you generate which allows you to login to your instance</li>
+  <li><strong>Security Groups</strong>:
+  These are the incoming and outgoing connection permissions you allow for your instance (IP addresses, ports, etc.).
+  You must allow at least allow SSH connections to access your instance!</li>
+  <li><strong>IP Address</strong>:
+  The virtual address of your instance</li>
+  <li><strong>Snapshot &amp; Image</strong>:
+  A snapshot is a copy of a volume you can create before deleting your instance. You can launch this image later as a new instance (useful for booting a fully configured virtual machine with all required applications pre-installed)</li>
+  <li><strong>Volume &amp; Object Storage</strong>:
+  Similar to an external hard drive you attach and detach to one or multiple instances (useful for big and important data).</li>
+</ul>
+:ET

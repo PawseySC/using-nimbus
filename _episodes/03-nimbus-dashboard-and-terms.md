@@ -31,9 +31,13 @@ Now that you are logged in we'll explore the various facets of the user interfac
 ### The Nimbus Dashboard
 Let's take a closer look at the dashboard and the main components we'll be using:
 
-![The Nimbus Dashboard]({{ page.root }}/fig/Overview_dasboard.png)
+![The Nimbus Dashboard]({{ page.root }}/fig/Overview_dashboard.png)
 
-You'll see there is a menu on the left side of the view, where you can manage different aspects of your Nimbus project. When you login you start in the "Overview" panel of the "Compute" tab. So on the right you can see the various plots that show current quota and usage. The two other panels of the Compute tab we will be using are "Instances" and "Key Pairs". Both of these panels are empty at the moment, so click on the "Network" tab and select the "Security Groups" panel. You'll see two groups already exist and each has a 'Manage Rules' button on the far right under the Actions heading. The second of these buttons also has a downward pointing arrow indicating a pull-down menu. This is a common and useful way of selecting actions you want to perform when managing your instance.
+You'll see there is a menu on the left side of the view, where you can manage different aspects of your Nimbus project. When you login you start in the **Overview** panel of the **Compute** tab. So on the right you can see the various plots that show current quota and usage. The two other panels of the Compute tab we will be using are **Instances** and **Key Pairs**. Both of these panels are empty at the moment, so click on the **Network** tab and select the **Security Groups** panel.
+
+![Security groups]({{ page.root }}/fig/Security_dashboard.png)
+
+ You'll see two groups already exist and each has a 'Manage Rules' button on the far right under the 'Actions' heading. The second of these buttons also has a downward pointing arrow indicating a pull-down menu. This is a common and useful way of selecting actions you want to perform when managing your instance.
 
 
 ## Key Terminology

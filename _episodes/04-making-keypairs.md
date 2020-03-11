@@ -31,10 +31,10 @@ Enter a name for your keypair and click **Create Keypair**.  The popup will clos
 > ### Keypairs with JupyterHub (Pawsey Training sessions)
 > From JupyterHub, click on the upload file button, select the key you just generated in the Nimbus web interface, and upload it.  We will need this file later to connect to our instance.
 >
-> Once uploaded your private key file permission will need to be changed to work with your SSH client in the next lessons. Run this command in your JupyterHub terminal:
-> ~~~
-> chmod 600 name_of_your_key.pem
-> ~~~
+>![Upload Key]({{ page.root }}/fig/Jupyter_upload_arrow.png)
+>
+
+
 
 # Keypairs: getting more complicated
 

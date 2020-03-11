@@ -1,0 +1,107 @@
+I"Z<h2 id="the-steps-to-launch-an-instance">The steps to launch an instance</h2>
+
+<p>This lesson will step you through the process of launching an instance on Nimbus.  You will be making decisions on the specifications of your instance.  When you are doing this for the first time it can seem like a lot of information to take in before you can start an instance. As you become more familiar with this process it will become less intimidating.</p>
+
+<p>It is easy to forget a step or misconfigure required elements.  The result may be errors on starting the instance, or you may be unable to connect once the instance is up and running.  If this happens, don’t worry (we’ve all made the same mistakes when we were getting started).  If you’re working through this lesson with an instructor, they can come and advise you on where you might have gone wrong.  Whether you are working through this in a class, or by yourself, we find that (usually) the easiest fix is to delete the instance and make a new one, paying close attention to each step.</p>
+
+<h3 id="ok-lets-get-started">OK, let’s get started…</h3>
+
+<p>From the left hand menu select <strong>Compute</strong> then <strong>Instances</strong>.  Click on the <strong>Launch Instance</strong> button.</p>
+
+<p><img src="../fig/Create_instance_button.png" alt="Launch Details" /></p>
+
+<h2 id="1-set-a-name">1. Set a name</h2>
+
+<p>The first step is to give your instance a name.  It doesn’t matter what you call it; usually we recommend giving your instance a name related to the task it will be performing.</p>
+
+<p><img src="../fig/Launch_details.png" alt="Launch Details" /></p>
+
+<h2 id="2-choose-a-source-image">2. Choose a source image</h2>
+
+<p>The selection of the Source Image defines the operating system that will be used to launch your instance.  We include some images directly from upstream providers, as well as curating some of our own (marked with Pawsey in the name).</p>
+
+<p>Make sure that Boot Source is set to <strong>Image</strong>, and <strong>Delete Volume on Instance Delete</strong> should set to No.</p>
+
+<blockquote class="callout">
+  <h2 id="delete-volume-on-instance-delete">Delete Volume on Instance Delete?</h2>
+
+  <p>We suggest that you set this to No.  This does mean that if you delete your instance, its root volume will stay behind and will continue to use up your quota until you delete it.  On the other hand, it means you can recreate your instance without losing its configuration.</p>
+
+</blockquote>
+
+<p>For training purposes you will launch an instance using the latest Pawsey curated Ubuntu image, named something like <strong>Ubuntu 18.04 - 2019-09 - Pawsey</strong>.  Click the up-arrow to the right of the image name so that it is listed under <strong>allocated</strong>.</p>
+
+<p>Note that there are other images you can select, and you can create your own custom images for certain purposes.</p>
+
+<p>If you need a specific flavour of Linux and you find that it is not listed you do have another option; it is possible to import external images, but our support for you in this instance will be very limited.  It is also possible to take one of the existing images or an external image and modify it before creating an instance from that custom iamge.</p>
+
+<p><img src="../fig/Instance_source.png" alt="Launch Source" /></p>
+
+<h2 id="3-select-a-flavour">3. Select a flavour</h2>
+
+<p>A ‘flavour’ (or ‘flavor’ because our software prefers US spelling) defines the characteristics of an instance.  We provide a range of flavours that vary based on the number of cores available to your instance.</p>
+
+<p>If you’re at a training event, then select <strong>m2.small</strong>.  If you’re self-learning, choose any flavour that you wish.</p>
+
+<p><img src="../fig/Instance_flavour.png" alt="Launch Flavor" /></p>
+
+<h2 id="4-select-a-network">4. Select a network</h2>
+
+<p>The <strong>Networks</strong> tab is where you will define the networking available to your instance.</p>
+
+<p>Nimbus projects have networking prepared for you.  Using a training account you will see a network named something like <strong>cou010-network</strong>.  If you are using your own project you will see a network name similar to this.</p>
+
+<p>You will also see a <strong>Public external</strong> network.  We will use this now since you get a public IP address automatically.</p>
+
+<p><img src="../fig/Instance_network.png" alt="Launch Networks" /></p>
+
+<h2 id="5-check-security-groups-include-previously-created-ssh-access">5. Check security groups (include previously created SSH access)</h2>
+<h4 id="include-the-default-security-group">Include the <strong>default</strong> security group</h4>
+<p>The security group called <strong>default</strong> is selected already, and you should leave it like that.  It allows outgoing connections from your instance, and communication between your instances if you need more than one.</p>
+
+<p>Nimbus projects are preconfigured with a security group to permit incoming SSH access.  This is required by most users.  The security group to add is named something like __cou050-SSH __.</p>
+
+<p><img src="../fig/Launch_security_groups.png" alt="Launch Security Groups" /></p>
+
+<h2 id="6-click-on-launch-instance">6. Click on <strong>Launch Instance</strong></h2>
+
+<h2 id="lets-go">Let’s go!</h2>
+
+<p>When you click <strong>Launch Instance</strong> you should see a new instance show up in your list (probably the only item you see listed).  You will see it change state as it starts up.</p>
+
+<p><img src="../fig/Launch_instance_click.png" alt="Launch Instance Post Click" /></p>
+
+<p>When complete, your entry should look like this:</p>
+
+<p><img src="../fig/Launch_instance_click2.png" alt="Launch Instance Done" /></p>
+
+<h2 id="what-if-something-went-wrong">What if something went wrong?</h2>
+
+<blockquote class="checklist">
+  <h2 id="what-did-we-do">What did we do?</h2>
+
+  <ul>
+    <li>Selected an image and flavour</li>
+    <li>Selected a network</li>
+    <li>Selected a SSH security group</li>
+  </ul>
+
+</blockquote>
+
+<p>What can go wrong?</p>
+<ul>
+  <li>If your instance does not start and gives an error message:  You might have selected the wrong network.</li>
+</ul>
+
+<h2 id="managing-your-instance">Managing your instance</h2>
+
+<p>Let’s have another look at that instance menu, because there’s a lot there.  This is where you will perform management activities for your instance.</p>
+
+<p><img src="../fig/Instance_actions.png" alt="Instance Actions" /></p>
+
+<h2 id="manage-attachements">Manage attachements</h2>
+
+<p>Select <strong>Manage Attachments</strong> from the drop-down menu of the data volume you created</p>
+
+<p><img src="../fig/nimbus_vol_manage_attachments.png" alt="Nimbus Manage Attachments" /></p>
+:ET
