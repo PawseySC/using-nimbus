@@ -35,24 +35,17 @@ The first step is to give your instance a name.  It doesn't matter what you call
 
 The selection of the Source Image defines the operating system that will be used to launch your instance.  We include some images directly from upstream providers, as well as curating some of our own (marked with Pawsey in the name).
 
-Make sure that Boot Source is set to **Image**, and **Delete Volume on Instance Delete** should set to No.
+> **_NOTE:_**  There are other images you can select, and you can create your own custom images for certain purposes. At this stage you should only consider the default OS images, seek advice from Cloud team for more advanced usage. **NB** Selecting a GPU image will not allocate you a GPU :)
 
-> ## Delete Volume on Instance Delete?
->
-> We suggest that you set this to No.  This does mean that if you delete your instance, its root volume will stay behind and will continue to use up your quota until you delete it.  On the other hand, it means you can recreate your instance without losing its configuration.
->
-{: .callout}
+Make sure that Boot Source is set to **Image**, and **Delete Volume on Instance Delete** should be set to Yes.
 
-For training purposes you will launch an instance using the latest Pawsey curated Ubuntu image, named something like **Ubuntu 18.04 - 2019-09 - Pawsey**.  Click the up-arrow to the right of the image name so that it is listed under **allocated**.
+Click the up-arrow to the right of the image name so that it is listed under **allocated**.
 
-Note that there are other images you can select, and you can create your own custom images for certain purposes.
-
-If you need a specific flavour of Linux and you find that it is not listed you do have another option; it is possible to import external images, but our support for you in this instance will be very limited.  It is also possible to take one of the existing images or an external image and modify it before creating an instance from that custom iamge.
 
 ![Launch Source]({{ page.root }}/fig/Instance_source.png)
 
 
-## 3. Select a flavour
+## 3. Select a flavor
 
 A 'flavour' (or 'flavor' because our software prefers US spelling) defines the characteristics of an instance.  We provide a range of flavours that vary based on the number of cores available to your instance.
 
@@ -82,8 +75,12 @@ Nimbus projects are preconfigured with a security group to permit incoming SSH a
 
 ![Launch Security Groups]({{ page.root }}/fig/Instance_security.png)
 
+## 6. Select a keypair
 
-## 6. Click on **Launch Instance**
+![Launch Keypairs]({{ page.root }}/fig/Instance_keypairs.png)
+
+
+## 7. Click on **Launch Instance**
 
 ## Let's go!
 
