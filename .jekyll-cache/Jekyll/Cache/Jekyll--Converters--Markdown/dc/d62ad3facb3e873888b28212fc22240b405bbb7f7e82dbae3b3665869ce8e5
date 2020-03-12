@@ -1,0 +1,173 @@
+I"�<h2 id="best-practices">Best practices</h2>
+<ol>
+  <li><strong>Keep your instance up-to-date</strong>
+To create a new instance (Nimbus virtual machine), click on “Instances” (on the left menu under the “Compute” section) and after that click on the “Launch instance” button, located on the right.</li>
+</ol>
+
+<p>There are many types and flavours of Linux distribution. The most widely used are often the Debian based linux distributions such as Ubuntu, and the Red Hat/Fedora based distribution such as CentOS. Other distributions have different methods to do updates that will not be covered for the purpose of this training.</p>
+
+<p>All modern Linux distribution do not allow the superuser (root) to connect directly to perform administrative task. What is used is a “service” user that does not have administrative permissions, but that can access those privileges by executing the command “sudo” before administrative like commands.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sudo</code></td>
+      <td>Prefix command used to allow ‘super’ privileges to make administrative changes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="maintaining-an-ubuntu-linux-distribution">Maintaining an Ubuntu linux distribution</h2>
+
+<p>To maintain the already installed packages, meaning installing newer versions and security patches:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  apt-get  update</code></td>
+      <td>Update the list of repositories (sources with available new software)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  apt-get  upgrade</code></td>
+      <td>Upgrade all installed packages</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  apt-get  dist-upgrade</code></td>
+      <td>Upgrade all installed packages (to new releases versions and updates the kernel as well. To be used with care.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To install new software:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  apt-get  install &lt;package_name&gt;</code></td>
+      <td>Install packages available within your selected Linux distribution’s software package repository</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="maintaining-an-centos-linux-distribution">Maintaining an CentOS linux distribution</h2>
+
+<p>To maintain the already installed packages, meaning installing newer versions and security patches:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  yum check-update</code></td>
+      <td>UUpdate the list of repositories and display available updates</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  yum update --exclude=kernel*</code></td>
+      <td>Upgrade all installed packages minus the kernel</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  yum update</code></td>
+      <td>Upgrade all installed packages including kernel</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To install new software:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  yum install &lt;package_name&gt;</code></td>
+      <td>Install packages available within your selected Linux distribution’s software package repository</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="use-these-commands-as-often-as-possible">Use these commands as often as possible!</h2>
+
+<p>Ideally, combine these commands, depending on your Linux distribution, and run them at least once a week, or every time you login.</p>
+
+<p>This will keep your instance up to date.</p>
+
+<blockquote class="challenge">
+  <h2 id="install-a-package-on-your-instance">Install a package on your instance</h2>
+
+  <p>Try to install the advanced text editor. This package is called ‘vim’ and it is not installed by default on most Linux distributions.</p>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <p>on Ubuntu:</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install vim
+</code></pre></div>    </div>
+    <p>or on CentOS:</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install vim
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<ol>
+  <li>
+    <p><strong>Snapshot your instance!</strong></p>
+
+    <p>This saves your Root Disk and allows you to launch a fully configured instance with all packages already installed</p>
+  </li>
+  <li>
+    <p><strong>Document your steps so you know what you did</strong></p>
+
+    <p>Create a configuration script, save a copy out of the cloud and keep it up to date
+ history -&gt; prints all previous commands
+ history  |  keyword -&gt; searches a specific command</p>
+  </li>
+  <li>
+    <p><strong>Update! Every time you login!</strong></p>
+
+    <p><code class="highlighter-rouge">sudo apt-get update &amp;&amp; sudo apt-get update</code>-&gt; updates packages and security
+ Older versions of packages and operating systems eventually lose support from their creators</p>
+  </li>
+  <li>
+    <p><strong>Be Green and keep it elastic</strong></p>
+
+    <p>The cloud still uses electricity and is shared, when you’re no longer using it -&gt; turn it off!</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="ideas-for-using-your-vm">Ideas for using your VM</h2>
+<p>Once you have your shiny new VM, you are now the master of your own destiny.  You have flexibility to download software to start doing science.  Listed below are some tips on installing some common software packages that you might like to use however “Googling” your linux flavour / version along with the software will often give you success.  Also listed as details on moving data to your instance</p>
+
+<p><strong>Conda</strong></p>
+
+<p>Conda is an open source package management system and environment management system.   that runs on Windows, macOS, and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads, and switches between environments on your local computer. It was created for Python programs but it can package and distribute software for any language.</p>
+
+<p>You can get started by downloading the installer suitable for your instance.  Miniconda installer page is given here <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a></p>
+
+<p>Further information on installation here <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html">Linux installation</a></p>
+
+<p><strong>R</strong></p>
+
+<p>You can install R or Rstudio easily for most Linux flavours</p>
+
+<p>for Debian/Ubuntu run <em>sudo apt-get install r-base</em> and or Fedora run <em>sudo yum install R</em> then type <em>R</em> to run</p>
+
+<p>RStudio is an IDE (Integrated Development Environment) that makes R easier to use.  Go to RStudio download page - <a href="https://www.rstudio.com/products/rstudio/download-server/">https://www.rstudio.com/products/rstudio/download-server/</a> and enter the following for Ubuntu</p>
+
+<ul>
+  <li><em>sudo apt-get install gdebi-core</em></li>
+  <li><em>wget https://download2.rstudio.org/server/trusty/amd64/rstudio-server-1.2.1335-amd64.deb</em></li>
+  <li><em>sudo gdebi rstudio-server-1.2.1335-amd64.deb</em></li>
+</ul>
+
+<p><strong>Machine learning</strong></p>
+
+<p>If you are interested in machine learning the following site has many good resources (from beginner to advanced) <a href="https://towardsdatascience.com/">https://towardsdatascience.com/</a></p>
+
+<p><strong>Copying files</strong></p>
+
+<p>Courtsey of NeCTAR training materials - <a href="http://training.nectar.org.au/package07/sections/copyFiles.html">Copying files</a></p>
+
+<hr />
+
+<h2 id="applying-for-a-vm">Applying for a VM</h2>
+<p>Compared to applying for time on one of our supercomputers, the process for applying for an allocation on Nimbus is less demanding.  You can apply at any time of the year by visiting the link below</p>
+
+<h3 id="to-get-access-visit-httpsapplypawseyorgau">To get access visit: <a href="https://apply.pawsey.org.au">https://apply.pawsey.org.au</a></h3>
+:ET

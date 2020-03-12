@@ -1,41 +1,92 @@
 ---
-title: "Attaching volume storage"
-teaching: 30
+title: "Access and Use an Instance"
+teaching: 45
 exercises: 0
 questions:
-- "How do you set up volumes and store data?"
+- "How do we access an instance?"
+- "What are the first things we do on an instance?"
 objectives:
-- "Attach and use a data volume with your instance."
+- "Connect to an instance with ssh"
+- "Attach and use a data volume with your instance"
 keypoints:
-- "You learned how to create a new volume and attach it to your instance."
+- "You learned how to connect with an SSH client to a Linux instance."
 - "You learned how to create a new filesystem and mount it in your instance."
 - "You learned how to unmount and detach your volume, and reuse it."
 ---
 
-### Two types of built-in storage
-1. Root Volume - includes your home directory, and storage for the operating system of your virtual machine
-2. Data Volume - a second hard drive you can add to your instance for working storage
+## Let's log in
+Head to your terminal window to login to your instance:
+* We will access our instances using a Secure SHell (SSH) connection.
 
-Volumes are created and attached using the Nimbus web interface, then formatted and mounted.
+What you need:
+1. __Your instance’s IP address__: get this from the instance overview in your dashboard
 
-## Create a volume
-Go to **Compute** then **Volumes**.  Click on **Create Volume**.  A pop-up will appear (see screenshot below).
+    ###.###.###.###
 
-![Nimbus Volumes]({{ page.root }}/fig/Nimbus_volumes.png)
+2. __Your login name__: this depends on the name of the Linux OS image you selected
 
-Enter a **Volume Name** and **Size (GiB)** for the volume, then click **Create Volume** at the bottom of the pop-up.
+    Login names:
 
-![Nimbus Create Volumes]({{ page.root }}/fig/nimbus_create_volume.png)
+    | Ubuntu  | **ubuntu** |
+    | Centos | **centos** |
+    | Fedora | **fedora** |
+    | Scientific Linux | **root** |
+    | Debian  | **debian** |
+
+3. The location and name of your private key pair (if you are using Windows and Putty)
+    My_Key_Pair.ppk
+
+    Once saved (or saved and uploaded) your private key file permission will need to be changed to work with your SSH client in the next lessons. Run this command in your terminal:
+~~~
+     chmod 600 name_of_your_key.pem
+~~~
+
+----
+
+> ## If you're using Linux / Mac / Unix
+>
+>  $ ssh login_name@###.###.###.###
+>
+> or (if you have more than one private key)
+>
+>  $ ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###
+{: .callout}
+
+> ## If you're using Windows
+>
+> 1) Open Putty
+>
+> 2) Under "Host name (or IP address)" put: login_name@###.###.###.###
+>
+> 3) In the menu on the left, expand "SSH" and click on "Auth".
+>
+> 4) Under the section "Authentication parameters" click on "Browse...".
+>
+> 5) Select your previously create .ppk private key.
+>
+> 6) Click on "Open" to start the connection to your instance.
+{: .callout}
 
 
-## Manage attachements
-![Nimbus Configure Volumes]({{ page.root }}/fig/Nimbus_configure_volumes.png)
+## If it all worked...
 
-Select **Manage Attachments** from the drop-down menu of the volume you just created
+![Successful login]({{ page.root }}/fig/nimbus_logged_in.png)
 
-![Nimbus Manage Attachments]({{ page.root }}/fig/nimbus_vol_manage_attachments.png)
 
-We can check that the volume is attached, but we can’t use it just yet.  If the unformatted volume is properly attached you should see:
+## If you get an error...
+
+1) ssh: Could not resolve hostname \342\200\223i name or service unknown error - [link](http://tumblr.gudge.com/post/18186353550/ssh-could-not-resolve-hostname-342200223i)
+
+When using MobaXTerm if you cut and paste the *ssh –i ~/.ssh/My_Key_Pair.pem login_name@###.###.###.###* example you will get the wrong hyphen in the "-i" part and throw a confusing error
+
+**Solution:** Don't cut and paste example - manually type in ssh syntax
+
+----
+
+
+## Volume Storage
+
+We can check that our data volume is attached, but we can’t use it just yet.  If the unformatted volume is properly attached you should see:
 
 ~~~
 root@test-instance:~# sudo fdisk -l /dev/vdc

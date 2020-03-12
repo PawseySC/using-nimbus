@@ -10,32 +10,15 @@ objectives:
 keypoints:
 - "Create keypairs using the Nimbus dashboard."
 - "Keypairs can be imported using the dashboard"
-- "Functional keypairs are required for starting a virtual machine"
+- "Functional keypairs are required for starting an instance"
 ---
-## Login to Nimbus
 
-You need to have a Nimbus login account to proceed in this training.  If you are at a Pawsey training event, then your instructor will provide a username and password you can use for the day.  Alternatively if you have a Nimbus project you can use your project username and password.
-
-The Nimbus dashboard is at [https://nimbus.pawsey.org.au](https://nimbus.pawsey.org.au)
-Open this URL now in a browser window, you will see the login window (below).  As shown, for "domain", enter 'pawsey' and your user name and password.
-
-![Login Screen]({{ page.root }}/fig/nimbus_login_screen.png)
-
-Now that you are logged in you can have a look around the various panes of the user interface.
 
 ## Generating keypairs
 
-Our first action is to generate keypairs.  Keypairs take the form of public (think: 'lock') and private (think: 'key') key files.  These files are presented together to securely authenticate (login) to a Nimbus virtual machine.
+Our first action is to generate keypairs.  Keypairs take the form of public (think: 'lock') and private (think: 'key') key files.  These files are presented together to securely authenticate (login) to a Nimbus instance.
 
-**Why do this?**  We do this because the username and password login is not set up for new VMs (by design).
-
-There are two methods of creating keypairs.
-
-#### 1. **From the Nimbus Dashboard**
-    When you click **Create Key Pair**, a public and private key pair will be automatically created for you, and you will download the private key to your computer (.pem file).
-
-#### 2. **(optional) From within your Terminal Window**
-    This will create two separate files, your public key (.key.pub, the lock) and your private key (.key, the key).  You need to **Import Public Key** to the Nimbus dashboard for Nimbus to recognize it.
+**Why do this?**  We do this because the username and password login is not set up for new instances (by design).
 
 
 ## Keypairs from the Nimbus dashboard
@@ -44,49 +27,20 @@ Go to the Key Pairs item under the Compute menu.  Click the button **Create Key 
 
 Enter a name for your keypair and click **Create Keypair**.  The popup will close and your browser will download the private key file, named something like `my_key.pem`.  Save it somewhere safe so you can access it later.  This file is private, and should be treated like a password.  Do not share it with anyone, or lose it.
 
-**Note** - If you are using JupyterHub in a Pawsey Training session, just run nano to create a new file e.g. "nano mynewkey.pem" and paste the private key into the new file - see [here](https://pawseysc.github.io/shell-hpc/03-create/index.html) for further info on nano from the Pawsey "Intro to Unix" course.
 
 > ### Keypairs with JupyterHub (Pawsey Training sessions)
-> From JupyterHub, click on the upload file button, select the key you just generated in the Nimbus web interface, and upload it.  We will need this file later to connect to our instance (virtual machine).
+> From JupyterHub, click on the upload file button, select the key you just generated in the Nimbus web interface, and upload it.  We will need this file later to connect to our instance.
 >
-> Once uploaded your private key file permission will need to be changed to work with your SSH client in the next lessons. Run this command in your JupyterHub terminal:
-> ~~~
-> chmod 600 name_of_your_key.pem
-> ~~~
+>![Upload Key]({{ page.root }}/fig/Jupyter_upload_arrow.png)
+>
+
+
 
 # Keypairs: getting more complicated
 
 The process described above works well in training or when you are getting started with the use of Pawsey systems.  What if your situation is more complicated?  We will now cover specific cases around keypair usage.
 
-## Keypairs from your terminal
 
- This method will be very useful to you, if you wish to make a keypair that you can use with multiple systems (in addition to your Nimbus instances).
-
- Run the command as shown below (with a useful name for "My_Key_Pair_Name");
-
- ~~~
- popocatepetl:~ markg$ ssh-keygen  -t  rsa  -f  My_Key_Pair_Name.key
- Generating public/private rsa key pair.
- Enter passphrase (empty for no passphrase):
- Enter same passphrase again:
- Your identification has been saved in My_Key_Pair_Name.key.
- Your public key has been saved in My_Key_Pair_Name.key.pub.
- The key fingerprint is:
- SHA256:OKdIxLawp/A6X36umLm1gT5EcE60ClzHR2ttz8z30h4 markg@popocatepetl.local
- The key's randomart image is:
- +---[RSA 2048]----+
- | .......         |
- |o +o.. .o        |
- |.*o + .o o       |
- |..o= .... =      |
- |o.. + o S  = .   |
- | o.= . +    . o  |
- | .+ = .      . E |
- |.o.B o.       o .|
- |.oBo++.        . |
- +----[SHA256]-----+
- ~~~
- {: .output}
 
 > ## (optional) If you are using Windows with PuTTY
 > 1. Open PuTTYgen (All Apps -> Putty -> Puttygen)
