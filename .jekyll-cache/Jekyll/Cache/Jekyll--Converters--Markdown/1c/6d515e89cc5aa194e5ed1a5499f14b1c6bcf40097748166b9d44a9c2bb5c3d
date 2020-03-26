@@ -1,0 +1,101 @@
+I"1<h2 id="managing-software">Managing software</h2>
+
+<p>Unlike on your laptop or desktop computer, you interact with your Nimbus instance remotely using the command line, ie. via a terminal. This means managing software is also done via the terminal, which might be an unfamiliar experience for many. In this episode we cover some of the basics you’ll need to manage software on your instances via the command line interface.</p>
+
+<h2 id="keep-your-instance-up-to-date">Keep your instance up-to-date</h2>
+
+<p>There are many types and flavours of Linux distribution. The most widely used are often the Debian based linux distributions such as Ubuntu, and the Red Hat/Fedora based distribution such as CentOS. Other distributions have different methods to do updates that will not be covered for the purpose of this training.</p>
+
+<p>All modern Linux distribution do not allow the superuser (root) to connect directly to perform administrative tasks. What is used is a “service” user that does not have administrative permissions, but that can access those privileges by executing the command “sudo” before administrative like commands.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sudo</code></td>
+      <td>Prefix command used to allow ‘super’ privileges to make administrative changes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="maintaining-an-ubuntu-linux-distribution">Maintaining an Ubuntu linux distribution</h2>
+
+<p>To maintain the already installed packages, meaning installing newer versions and security patches:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  apt-get  update</code></td>
+      <td>Update the list of repositories (sources with available new software)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  apt-get  upgrade</code></td>
+      <td>Upgrade all installed packages</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  apt-get  dist-upgrade</code></td>
+      <td>Upgrade all installed packages (to new releases versions and updates the kernel as well. To be used with care.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="maintaining-an-centos-linux-distribution">Maintaining an CentOS linux distribution</h2>
+
+<p>To maintain the already installed packages, meaning installing newer versions and security patches:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  yum check-update</code></td>
+      <td>UUpdate the list of repositories and display available updates</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  yum update --exclude=kernel*</code></td>
+      <td>Upgrade all installed packages minus the kernel</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  yum update</code></td>
+      <td>Upgrade all installed packages including kernel</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="use-these-commands-as-often-as-possible">Use these commands as often as possible!</h2>
+
+<p>Ideally, combine these commands, depending on your Linux distribution, and run them at least once a week, or every time you login.</p>
+
+<p>This will keep your instance up to date.</p>
+
+<h2 id="package-managers">Package managers</h2>
+
+<p>Package managers are a collection of software tools that automate the process of installing, upgrading, configuring, and removing computer programs for a computer’s operating system in a consistent manner.</p>
+
+<p>Package managers are designed to eliminate the need for manual installs and updates. There are a range of different package managers available for different operating systems, as well as those for specific languages that work across different systems, such as the conda package manager for Python.</p>
+
+<p>To install new software on Ubuntu you use apt:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  apt-get  install &lt;package_name&gt;</code></td>
+      <td>Install packages available within your selected Linux distribution’s software package repository</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To install new software on CentOS you use yum:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sudo  yum install &lt;package_name&gt;</code></td>
+      <td>Install packages available within your selected Linux distribution’s software package repository</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote class="exercise">
+  <h2 id="exercise">Exercise</h2>
+  <p>Update your system using the commands appropriate for your Linux distribution, and then we’ll install<br />
+a Python package using the conda package manager.</p>
+</blockquote>
+:ET
