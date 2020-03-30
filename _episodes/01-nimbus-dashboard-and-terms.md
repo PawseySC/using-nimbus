@@ -3,61 +3,67 @@ title: "Dashboard"
 teaching: 20
 exercises: 0
 questions:
-- "A quick overview of the Nimbus Interface"
+- "How do you interact with Nimbus?"
 objectives:
-- "Get an overview of the mechanics of using Nimbus"
-- "Learn some key language of cloud computing"
+- "Learn some key language of cloud computing."
+- "Get an overview of the mechanics of using the Nimbus dashboard."
 keypoints:
-- "We use ssh to connect to instances and the nimbus web interface to create and manage instances."
+- "We use the Nimbus dashboard to create and manage instances."
+- "You log on to the dashboard at https://nimbus.pawsey.org.au using your project username and password."
 ---
-
-## How does it work?
-
-You will use two independent tools to manage and use Nimbus.  You will (usually) use a Secure Shell (SSH) connection to run jobs and do work on your instance.  Meanwhile, you will use the Nimbus dashboard, its web interface, to manage your instances(virtual machines).
-
-![The Nimbus workflow]({{ page.root }}/fig/diagram-nimbus.png)
-
-## Login to Nimbus
-
-You need to have a Nimbus login account to proceed in this training.  If you are at a Pawsey training event, then your instructor will provide a username and password you can use for the day.  Alternatively if you have a Nimbus project you can use your project username and password.
-
-The Nimbus dashboard is at [https://nimbus.pawsey.org.au](https://nimbus.pawsey.org.au)
-Open this URL now in a browser window, you will see the login window (below).  As shown, for "domain", enter 'pawsey' and your user name and password.
-
-![Login Screen]({{ page.root }}/fig/nimbus_login_screen.png)
-
-Now that you are logged in we'll explore the various facets of the user interface.
-
-### The Nimbus Dashboard
-Let's take a closer look at the dashboard and the main components we'll be using:
-
-![The Nimbus Dashboard]({{ page.root }}/fig/Overview_dashboard.png)
-
-You'll see there is a menu on the left side of the view, where you can manage different aspects of your Nimbus project. When you login you start in the **Overview** panel of the **Compute** tab. So on the right you can see the various plots that show current quota and usage. The two other panels of the Compute tab we will be using are **Instances** and **Key Pairs**. Both of these panels are empty at the moment, so click on the **Network** tab and select the **Security Groups** panel.
-
-![Security groups]({{ page.root }}/fig/Security_dashboard.png)
-
- You'll see two groups already exist and each has a 'Manage Rules' button on the far right under the 'Actions' heading. The second of these buttons also has a downward pointing arrow indicating a pull-down menu. This is a common and useful way of selecting actions you want to perform when managing your instance.
-
 
 ## Key Terminology
 
 There are some key terms we need to discuss before we get started:
 
 * **Allocation** or **Quota**:
-    The infrastructure specifications you have been allocated for a specific project (# of instances, RAM, steorage space, etc)
+    The infrastructure limits you have been allocated for a specific project (# of instances, RAM, storage space, etc). You select an allocation when you request Nimbus access through the application portal.  
 * **Instance**:
-    A virtual machine (located on Nimbus servers, you access via the SSH)
+    A virtual machine located on Nimbus servers, that you use in place of your laptop or desktop computer.
 * **Instance Flavor**:
-    The size of your instance (RAM, VCPUs, root disk, ephemeral disk)
+    On your application, you request the instance “flavor” or configuration that you want your instance to have (memory, storage, processing power).
 * **Key Pair**:
-    This is a key you generate which allows you to login to your instance
+    Key pairs allow access to your instance, think of them as a more secure username and password.
 * **Security Groups**:
     These are the incoming and outgoing connection permissions you allow for your instance (IP addresses, ports, etc.).
-    You must allow at least allow SSH connections to access your instance!
+    You must allow at least allow SSH connections to access your instance – so YOU can access it.
 * **IP Address**:
-    The virtual address of your instance
-* **Snapshot & Image**:
-    A snapshot is a copy of a volume you can create before deleting your instance. You can launch this image later as a new instance (useful for booting a fully configured virtual machine with all required applications pre-installed)
-* **Volume & Object Storage**:
-    Similar to an external hard drive you attach and detach to one or multiple instances (useful for big and important data).
+    The virtual address of your instance.
+* **Volume Storage**:
+    Similar to an external hard drive you attach to one or multiple instances. Includes both the root volume (where the OS and programs are installed) and any data volumes that you’ll create where you store your data.  
+    **Snapshot & Image**:
+    A snapshot is a copy of a volume. You can take a snapshot of your root volume before deleting your instance. You can then launch this copied image later as a new instance, which is useful for recreating a previously fully configured instance that contains all required applications pre-installed.
+
+
+## How does it work?
+
+You will use two independent tools when working on Nimbus.  You will use a Secure Shell (SSH) connection to run jobs and do work on your instance.  Meanwhile, you will use the Nimbus dashboard, its web interface, to manage your instances.
+
+![The Nimbus workflow]({{ page.root }}/fig/diagram-nimbus.png)
+
+## Activity: Login to Nimbus
+
+1.	Go to https://nimbus.pawsey.org.au. This is the URL for the Nimbus login.
+2.	Log in, by either:
+* Using your project username and password, if you are a current Nimbus user
+* Using the username and password sent to you, if you are a new Nimbus user
+
+    As shown below, for "domain", enter 'pawsey' and your user name and password.
+
+![Login Screen]({{ page.root }}/fig/nimbus_login_screen.png)
+
+
+### Activity: Explore the Nimbus Dashboard
+Become familiar with navigating the Nimbus dashboard. You'll see there is a menu on the left side with a number of different tabs. You can use these tabs to monitor and manage different aspects of your project.
+* **Compute**
+    1. Start by exploring the 'Compute' tab. Note that when you log in, you start in the 'Overview' panel of the 'Compute' tab.
+    2. Review the current quota and usage of your instance (right plots).
+    3. Locate and click on 'Instances' and 'Key Pairs' within the 'Compute' tab. We will be using these in later episodes. Both of these panels are empty at the moment however.
+
+
+* **Network**
+    1. Click the 'Network' tab, then select the 'Security Groups' panel.
+    2. You can implement new, or modify existing, network access rules from within this panel.  
+    3. By default there is at least one security group for your project. There is an action button on the right which allows you to manage the rules for each of your security groups.
+
+![The Nimbus Dashboard]({{ page.root }}/fig/Overview_dashboard.png)
