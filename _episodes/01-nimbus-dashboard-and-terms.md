@@ -60,10 +60,11 @@ Become familiar with navigating the Nimbus dashboard. You'll see there is a menu
     2. Review the current quota and usage of your instance (right plots).
     3. Locate and click on 'Instances' and 'Key Pairs' within the 'Compute' tab. We will be using these in later episodes. Both of these panels are empty at the moment however.
 
+![The Nimbus Dashboard]({{ page.root }}/fig/Overview_dashboard.png)
 
 * **Network**
     1. Click the 'Network' tab, then select the 'Security Groups' panel.
     2. You can implement new, or modify existing, network access rules from within this panel.  
     3. By default there is at least one security group for your project. There is an action button on the right which allows you to manage the rules for each of your security groups.
 
-![The Nimbus Dashboard]({{ page.root }}/fig/Overview_dashboard.png)
+![The Nimbus Dashboard]({{ page.root }}/fig/Security_dashboard.png)
