@@ -1,4 +1,4 @@
-I"�<h2 id="key-terminology">Key Terminology</h2>
+I"V<h2 id="key-terminology">Key Terminology</h2>
 
 <p>There are some key terms we need to discuss before we get started:</p>
 
@@ -45,29 +45,28 @@
 <p><img src="../fig/nimbus_login_screen.png" alt="Login Screen" /></p>
 
 <h3 id="activity-explore-the-nimbus-dashboard">Activity: Explore the Nimbus Dashboard</h3>
-<p>Look around the Nimbus dashboard. You’ll see there is a menu on the left side with a number of different tabs. You can use these tabs to monitor and manage different aspects of your project.</p>
+<p>Become familiar with navigating the Nimbus dashboard. You’ll see there is a menu on the left side with a number of different tabs. You can use these tabs to monitor and manage different aspects of your project.</p>
 <ul>
   <li><strong>Compute</strong>
     <ol>
-      <li>Start by exploring the Compute tab. Note that when you log in, you start in the Overview panel of the Compute tab.</li>
+      <li>Start by exploring the ‘Compute’ tab. Note that when you log in, you start in the ‘Overview’ panel of the ‘Compute’ tab.</li>
       <li>Review the current quota and usage of your instance (right plots).</li>
-      <li>Locate and click on Instances and Key Pairs within the Compute tab. We will be using these. Both of these panels are empty at the moment however.</li>
-    </ol>
-  </li>
-  <li><strong>Network</strong>
-    <ol>
-      <li>Click the Network tab, then select the Security Groups panel.</li>
+      <li>Locate and click on ‘Instances’ and ‘Key Pairs’ within the ‘Compute’ tab. We will be using these in later episodes. Both of these panels are empty at the moment however.</li>
     </ol>
   </li>
 </ul>
 
 <p><img src="../fig/Overview_dashboard.png" alt="The Nimbus Dashboard" /></p>
 
-<p>You’ll see there is a menu on the left side of the view, where you can manage different aspects of your Nimbus project. When you login you start in the <strong>Overview</strong> panel of the <strong>Compute</strong> tab. So on the right you can see the various plots that show current quota and usage. The two other panels of the Compute tab we will be using are <strong>Instances</strong> and <strong>Key Pairs</strong>. Both of these panels are empty at the moment, so click on the <strong>Network</strong> tab and select the <strong>Security Groups</strong> panel.</p>
+<ul>
+  <li><strong>Network</strong>
+    <ol>
+      <li>Click the ‘Network’ tab, then select the ‘Security Groups’ panel.</li>
+      <li>You can implement new, or modify existing, network access rules from within this panel.</li>
+      <li>By default there is at least one security group for your project. There is an action button on the right which allows you to manage the rules for each of your security groups.</li>
+    </ol>
+  </li>
+</ul>
 
-<p><img src="../fig/Security_dashboard.png" alt="Security groups" /></p>
-
-<p>You’ll see two groups already exist and each has a ‘Manage Rules’ button on the far right under the ‘Actions’ heading. The second of these buttons also has a downward pointing arrow indicating a pull-down menu. This is a common and useful way of selecting actions you want to perform when managing your instance.</p>
-
-<p><img src="../fig/Security_groups_manage.png" alt="Security groups" /></p>
+<p><img src="../fig/Security_dashboard.png" alt="The Nimbus Dashboard" /></p>
 :ET
