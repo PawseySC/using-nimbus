@@ -1,0 +1,69 @@
+I"@<script>
+  window.onload = function() {
+    var lesson_episodes = [
+    
+    "/01-nimbus-dashboard-and-terms/index.html",
+    
+    "/02-making-keypairs/index.html",
+    
+    "/03-launch-an-instance/index.html",
+    
+    "/04-access-and-use-instance/index.html",
+    
+    "/05-security-groups/index.html",
+    
+    "/06-installing-software/index.html",
+    
+    "/07-moving-data/index.html",
+    
+    "/08-volume-storage/index.html",
+    
+    "/09-cloud-best-practices/index.html",
+    
+    "/10-mobaXterm/index.html"
+    
+    ];
+    var xmlHttp = [];  /* Required since we are going to query every episode. */
+    for (i=0; i < lesson_episodes.length; i++) {
+      xmlHttp[i] = new XMLHttpRequest();
+      xmlHttp[i].episode = lesson_episodes[i];  /* To enable use this later. */
+      xmlHttp[i].onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var article_here = document.getElementById(this.episode);
+          var parser = new DOMParser();
+          var htmlDoc = parser.parseFromString(this.responseText,"text/html");
+          var htmlDocArticle = htmlDoc.getElementsByTagName("article")[0];
+          article_here.appendChild(htmlDocArticle.getElementsByTagName("h1")[0]);
+          for (let image of htmlDocArticle.getElementsByTagName("img")) {
+            article_here.appendChild(image);
+          }
+        }
+      }
+      episode_url = ".." + lesson_episodes[i];
+      xmlHttp[i].open("GET", episode_url);
+      xmlHttp[i].send(null);
+    }
+  }
+</script>
+
+<article id="/01-nimbus-dashboard-and-terms/index.html"></article>
+
+<article id="/02-making-keypairs/index.html"></article>
+
+<article id="/03-launch-an-instance/index.html"></article>
+
+<article id="/04-access-and-use-instance/index.html"></article>
+
+<article id="/05-security-groups/index.html"></article>
+
+<article id="/06-installing-software/index.html"></article>
+
+<article id="/07-moving-data/index.html"></article>
+
+<article id="/08-volume-storage/index.html"></article>
+
+<article id="/09-cloud-best-practices/index.html"></article>
+
+<article id="/10-mobaXterm/index.html"></article>
+
+:ET

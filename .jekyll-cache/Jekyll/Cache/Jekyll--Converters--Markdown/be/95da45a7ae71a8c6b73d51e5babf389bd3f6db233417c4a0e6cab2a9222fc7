@@ -1,0 +1,78 @@
+I"<p>You will use two independent tools when working on Nimbus.  You will use a Secure Shell (SSH) connection to run jobs and do work on your instance.  Meanwhile, you will use the Nimbus dashboard, its web interface, to manage your instances. This episode focuses on getting you familiar with the dashboard.</p>
+
+<p><kbd><img src="../fig/diagram-nimbus.png" /></kbd></p>
+
+<blockquote class="keypoints">
+  <h2 id="terminology">Terminology</h2>
+
+  <p>There are some key terms we need to discuss before we get started:</p>
+
+  <ul>
+    <li><strong>Allocation</strong> or <strong>Quota</strong>:
+  The infrastructure limits you have been allocated for a specific project (# of instances, RAM, storage space, etc). You select an allocation when you request Nimbus access through the application portal.</li>
+    <li><strong>Instance</strong>:
+ A virtual machine located on Nimbus servers, that you use in place of your laptop or desktop computer.</li>
+    <li><strong>Instance Flavor</strong>:
+ On your application, you request the instance “flavor” or configuration that you want your instance to have (memory, storage, processing power).</li>
+    <li><strong>Key Pair</strong>:
+ Key pairs allow access to your instance, think of them as a more secure username and password.</li>
+    <li><strong>Security Groups</strong>:
+ These are the incoming and outgoing connection permissions you allow for your instance (IP addresses, ports, etc.).
+ You must allow at least allow SSH connections to access your instance – so YOU can access it.</li>
+    <li><strong>IP Address</strong>:
+ The virtual address of your instance.</li>
+    <li><strong>Volume Storage</strong>:
+ Similar to an external hard drive you attach to one or multiple instances. Includes both the root volume (where the OS and programs are installed) and any data volumes that you’ll create where you store your data.</li>
+    <li><strong>Snapshot &amp; Image</strong>:
+A snapshot is a copy of a volume. You can take a snapshot of your root volume before deleting your instance. You can then launch this copied image later as a new instance, which is useful for recreating a previously fully configured instance that contains all required applications pre-installed.</li>
+  </ul>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="activity-login-to-nimbus">Activity: Login to Nimbus</h2>
+
+  <ol>
+    <li>Go to https://nimbus.pawsey.org.au. This is the URL for the Nimbus login.</li>
+    <li>Log in, by either:
+      <ul>
+        <li>Using your project username and password, if you are a current Nimbus user</li>
+        <li>Using the username and password sent to you, if you are a new Nimbus user</li>
+      </ul>
+
+      <p>As shown below, for “domain”, enter ‘pawsey’ and your user name and password.</p>
+    </li>
+  </ol>
+
+  <p><kbd><img src="../fig/nimbus_login_screen.png" /></kbd></p>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="activity-explore-the-nimbus-dashboard">Activity: Explore the Nimbus Dashboard</h2>
+
+  <p>Become familiar with navigating the Nimbus dashboard. You’ll see there is a menu on the left side with a number of different tabs. You can use these tabs to monitor and manage different aspects of your project.</p>
+
+  <ul>
+    <li><strong>Compute</strong>
+      <ol>
+        <li>Start by exploring the ‘Compute’ tab. Note that when you log in, you start in the ‘Overview’ panel of the ‘Compute’ tab.</li>
+        <li>Review the current quota and usage of your instance (right plots).</li>
+        <li>Locate and click on ‘Instances’ and ‘Key Pairs’ within the ‘Compute’ tab. We will be using these in later episodes. Both of these panels are empty at the moment however.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <p><kbd><img src="../fig/Overview_dashboard.png" /></kbd></p>
+
+  <ul>
+    <li><strong>Network</strong>
+      <ol>
+        <li>Click the ‘Network’ tab, then select the ‘Security Groups’ panel.</li>
+        <li>You can implement new, or modify existing, network access rules from within this panel.</li>
+        <li>By default there is at least one security group for your project. There is an action button on the right which allows you to manage the rules for each of your security groups.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <p><kbd><img src="../fig/Security_dashboard.png" /></kbd></p>
+</blockquote>
+:ET
