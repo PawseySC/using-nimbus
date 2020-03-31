@@ -1,0 +1,16 @@
+I"�<h2 id="windows-terminal-client">Windows terminal client</h2>
+
+<p>A popular terminal client for Windows users is MobaXTerm, which includes an integrated X server
+with SSH client to run any graphical applications.</p>
+
+<p>You can download MobaXterm Home Edition from the following link:
+http://mobaxterm.mobatek.net/download-home-edition.html .</p>
+
+<p>For the “installer edition” (recommended) you might need administration rights on your Windows OS.
+Double-click the downloaded Microsoft Installer file (.msi), and the Windows wizard will automatically
+guide you through the installation process. Also make sure to check whether Windows Firewall hasn’t blocked
+any features of this program after installation.
+If you do not have installation rights, you can try the “portable edition”.</p>
+
+<p>You may see a security alert saying the firewall has blocked some of the featues of MobaXTerm. Select the option to allow communication on private networks.</p>
+:ET

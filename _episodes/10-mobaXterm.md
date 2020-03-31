@@ -24,3 +24,5 @@ Double-click the downloaded Microsoft Installer file (.msi), and the Windows wiz
 guide you through the installation process. Also make sure to check whether Windows Firewall hasn't blocked
 any features of this program after installation.
 If you do not have installation rights, you can try the "portable edition".
+
+You may see a security alert saying the firewall has blocked some of the featues of MobaXTerm. Select the option to allow communication on private networks.

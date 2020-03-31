@@ -1,0 +1,14 @@
+I"j<p>To maintain a secure system, we require all Nimbus users to have a keypair. Keypairs take the form of public (think: ‘lock’) and private (think: ‘key’) key files.  These files are presented together to securely authenticate (login) to a Nimbus instance. Without a keypair you cannot access your instance, as the username/password login option is disabled by default.</p>
+
+<blockquote class="keypoints">
+  <h2 id="secure-access">Secure access</h2>
+  <p>The username/password login is not set up for new instances, as it is a less secure method of authentication than keypairs.</p>
+</blockquote>
+
+<h3 id="generating-a-key-pair">Generating a Key Pair</h3>
+<p>Login to the Nimbus dashboard and naivgate to the Key Pairs item under the Compute menu.  Click the button <strong>Create Key Pair</strong>, and a popup window will appear.</p>
+
+<p><kbd><img src="../fig/Nimbus_Create_Key_Pairs.png" /></kbd></p>
+
+<p>Enter a name - this can be anything, but try to make it meaningful - then click the <strong>Create Keypair</strong> button.  The popup will close and your browser will download the private key file with the name you gave it and a .pem extension, for eg <code class="highlighter-rouge">my_first_key.pem</code>.  Save it somewhere safe so you can access it later.  This file is private, and should be treated like a password.  Do not share it with anyone, or lose it.</p>
+:ET

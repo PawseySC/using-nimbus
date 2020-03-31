@@ -1,4 +1,4 @@
-I"V<h2 id="key-terminology">Key Terminology</h2>
+I"�<h2 id="key-terminology">Key Terminology</h2>
 
 <p>There are some key terms we need to discuss before we get started:</p>
 
@@ -26,25 +26,29 @@
 
 <p>You will use two independent tools when working on Nimbus.  You will use a Secure Shell (SSH) connection to run jobs and do work on your instance.  Meanwhile, you will use the Nimbus dashboard, its web interface, to manage your instances.</p>
 
-<p><img src="../fig/diagram-nimbus.png" alt="The Nimbus workflow" /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+![The Nimbus workflow](../fig/diagram-nimbus.png)
 
-<h2 id="activity-login-to-nimbus">Activity: Login to Nimbus</h2>
+</code></pre></div></div>
 
-<ol>
-  <li>Go to https://nimbus.pawsey.org.au. This is the URL for the Nimbus login.</li>
-  <li>Log in, by either:
-    <ul>
-      <li>Using your project username and password, if you are a current Nimbus user</li>
-      <li>Using the username and password sent to you, if you are a new Nimbus user</li>
-    </ul>
+<blockquote class="exercise">
+  <h2 id="activity-login-to-nimbus">Activity: Login to Nimbus</h2>
+  <ol>
+    <li>Go to https://nimbus.pawsey.org.au. This is the URL for the Nimbus login.</li>
+    <li>Log in, by either:
+      <ul>
+        <li>Using your project username and password, if you are a current Nimbus user</li>
+        <li>Using the username and password sent to you, if you are a new Nimbus user</li>
+      </ul>
 
-    <p>As shown below, for “domain”, enter ‘pawsey’ and your user name and password.</p>
-  </li>
-</ol>
+      <p>As shown below, for “domain”, enter ‘pawsey’ and your user name and password.</p>
+    </li>
+  </ol>
 
-<p><img src="../fig/nimbus_login_screen.png" alt="Login Screen" /></p>
+  <p><img src="../fig/nimbus_login_screen.png" alt="Login Screen" /></p>
+</blockquote>
 
-<h3 id="activity-explore-the-nimbus-dashboard">Activity: Explore the Nimbus Dashboard</h3>
+<h2 id="activity-explore-the-nimbus-dashboard">Activity: Explore the Nimbus Dashboard</h2>
 <p>Become familiar with navigating the Nimbus dashboard. You’ll see there is a menu on the left side with a number of different tabs. You can use these tabs to monitor and manage different aspects of your project.</p>
 <ul>
   <li><strong>Compute</strong>
