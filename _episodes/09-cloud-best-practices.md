@@ -95,6 +95,8 @@ The process described in Episode 2 works well in training or when you are gettin
 {: .solution}
 
 ---
+**_NOTE:_**  There are other images you can select, and you can create your own custom images for certain purposes. At this stage you should only consider the default OS images, seek advice from Cloud team for more advanced usage.
+
 
 ## Ideas for using your VM
 Once you have your shiny new VM, you are now the master of your own destiny.  You have flexibility to download software to start doing science.  Listed below are some tips on installing some common software packages that you might like to use however "Googling" your linux flavour / version along with the software will often give you success.  Also listed as details on moving data to your instance
