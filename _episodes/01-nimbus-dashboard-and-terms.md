@@ -40,7 +40,7 @@ You will use two independent tools when working on Nimbus.  You will use a Secur
 <br>
 > ## Activity: Login to Nimbus
 >
-> 1.	Go to https://nimbus.pawsey.org.au. This is the URL for the Nimbus login.
+> 1.	Go to [https://nimbus.pawsey.org.au](https://nimbus.pawsey.org.au). This is the URL for the Nimbus login.
 > 2.	Log in, by either:
 > * Using your project username and password, if you are a current Nimbus user
 > * Using the username and password sent to you, if you are a new Nimbus user

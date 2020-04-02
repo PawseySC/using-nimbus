@@ -3,15 +3,19 @@ title: "Creation"
 teaching: 5
 exercises: 30
 questions:
-- "How do we create an instance?"
+- "How do I set instance preferences and options?"
+- "How do I launch a configured Nimbus instance?"
 objectives:
-- "Review all instance options"
-- "Launch an instance"
+- "Describe the overall process of launching a Nimbus instance."
+- "Be able to successfully reproduce the steps to create an instance."
 keypoints:
-- "You use the Nimbus dashboard to configure an instance how you wish before creating it."
+- "You use the Nimbus dashboard to select preferences and options for your instance based on project needs."
+- "It is important to select a key pair for which you have the private key file, as you require it to access your instance."
+- "It is important to select the default security group as well as one which enables incoming SSH access (your access)."
+
 ---
 
-This episode will step you through the process of launching an instance on Nimbus.  You will be making decisions on the specifications of your instance.  When you are doing this for the first time it can seem like a lot of information to take in before you can start an instance. As you become more familiar with this process it will become less intimidating.
+This episode steps you through the process of launching an instance on Nimbus. You use the Nimbus dashboard to complete the process, navigating to various panels from the lefthand menu. Prior to launching the instance at the end of the process, you will determine instance preferences and options, including the “flavor” most suited to your project.
 <br><br>
 
 
@@ -33,9 +37,11 @@ This episode will step you through the process of launching an instance on Nimbu
 >
 > The selection of the Source Image defines the operating system that will be used to launch your instance.  We include some images directly from upstream providers, as well as curating some of our own (marked with Pawsey in the name).
 >
-> **NB:** Selecting a GPU image will not allocate you a GPU :)
+> *Note: Selecting a GPU image will not allocate you a GPU if you were not allocated one as part of your project.*
 >
 > Make sure that Boot Source is set to **Image**, set **Volume Size** to 10GB, and **Delete Volume on Instance Delete** should be set to Yes.
+>
+>*Note: Volume Size just has to be sufficient to accommodate the Image you allocate.*
 >
 > <kbd><img src="{{ page.root }}/fig/Instance_source_selection.png" /></kbd><br>
 >
@@ -47,15 +53,15 @@ This episode will step you through the process of launching an instance on Nimbu
 >
 > A 'flavour' (or 'flavor' because our software prefers US spelling) defines the characteristics of an instance.  We provide a range of flavors that vary based on the number of virtual CPUs, memory, and storage available to your instance.
 >
-> If you're at a training event, then select __m2.small__.  If you're self-learning, choose any flavour that you wish.
+> In our example we select __m2.small__.
 >
 ><kbd><img src="{{ page.root }}/fig/Instance_flavour2.png" /></kbd><br><br>
 >
 > ### 5. Select a network
 >
-> The **Networks** tab is where you will define the networking available to your instance.
+> The **Network** tab is where you will define the networking available to your instance.
 >
-> Nimbus projects have networking prepared for you.  Using a training account you will see a network named something like  __cou010-network__.  If you are using your own project you will see a network name similar to this.
+> Nimbus projects have networking choices pre-configured.  Using a training account you will see a network named something like  __cou010-network__.  If you are using your own project you will see a network name similar to this.
 >
 > You will also see a __Public external__ network.  We will use this now since you get a public IP address automatically.
 >
@@ -76,13 +82,13 @@ This episode will step you through the process of launching an instance on Nimbu
 >
 > The key pair provides secure access to your instance. When selected for an instance, the public key is installed during creation of the instance, thereby ensuring access is only given when you have the corresponding private key.
 >
-> **NB:** If you select a key pair for which you do not have, or have lost, the private key, it is not possible to gain access to the instance.
+> *Note: If you select a key pair for which you do not have, or have lost, the private key, it is not possible to gain access to the instance.*
 >
 ><kbd><img src="{{ page.root }}/fig/Instance_keypairs.png" /></kbd><br><br>
 >
 >
 > ### 8. Launch instance
-> Selecting the key pair is the last step necessary for creation of your instance. So you should now click __Launch Instance__. The launch window will close, and you should see a new instance show up in your instances panel (probably the only item you see listed). You will see it change state as it starts up.
+> Having completed your selection of instance preferences, click the __Launch Instance__ buton. The launch window will close, and you should see a new instance show up in your instances panel (probably the only item you see listed). You will see it change state as it starts up.
 >
 ><kbd><img src="{{ page.root }}/fig/Launch_instance_click.png" /></kbd><br>
 >
@@ -91,10 +97,6 @@ This episode will step you through the process of launching an instance on Nimbu
 ><kbd><img src="{{ page.root }}/fig/Launch_instance_click2.png" /></kbd><br>
 >
 {: .challenge}
-<br>
-> ## Problems
-> It is easy to forget a step or misconfigure required elements.  The result may be errors on starting the instance, or you may be unable to connect once the instance is up and running. Whether you are working through this in a class, or by yourself, we find that (usually) the easiest fix is to delete the instance and make a new one, paying close attention to each step.
-{: .keypoints}
 
 > ## What did we do?
 >
