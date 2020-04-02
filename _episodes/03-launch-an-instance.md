@@ -1,5 +1,5 @@
 ---
-title: "Creation"
+title: "Instance Creation"
 teaching: 5
 exercises: 30
 questions:
