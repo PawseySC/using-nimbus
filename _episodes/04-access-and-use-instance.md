@@ -1,5 +1,5 @@
 ---
-title: "Access"
+title: "Instance Access"
 teaching: 10
 exercises: 10
 questions:
