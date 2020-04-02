@@ -20,12 +20,12 @@ Access to an instance is achieved using using a Secure SHell (SSH) connection. F
 > ## Activity: Access an instance
 >
 > Head to your terminal window to login to your instance.<br>
-> ### 1. You will need
-> * __Your instance’s IP address__: get this from the instance overview in your dashboard
+> ### You will need
+> 1. __Your instance’s IP address__: get this from the instance overview in your dashboard
 >
 >    ###.###.###.###
 ><br><br>
-> * __Your login name__: this depends on the name of the Linux OS image you selected
+> 2. __Your login name__: this depends on the name of the Linux OS image you selected
 >
 >    Login names:
 >
@@ -35,12 +35,13 @@ Access to an instance is achieved using using a Secure SHell (SSH) connection. F
 >    | Scientific Linux | **root** |
 >    | Debian  | **debian** |
 >
-> * __The location and name of your private key pair__:<br>
+> 3. __The location and name of your private key pair__:<br>
 >    Your private key file permissions will need to be changed to work with your SSH client. As a security precaution, SSH will not work unless the key file is only readable by you. To make sure this is the case, run this command in your terminal, making sure you are in the directory which contains your key file:
 >~~~
 >     chmod 600 name_of_your_key.pem
 >~~~
-> ### 2. Login
+>
+> ### Login
 > Type the following into your terminal, using your login name and the instance's IP address:
 >~~~
 >  $ ssh -i name_of_your_key.pem login_name@###.###.###.###
