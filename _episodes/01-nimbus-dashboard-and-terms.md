@@ -11,7 +11,7 @@ objectives:
 - "Discuss how to use plots and graphs to manage your Nimbus instance/s."
 keypoints:
 - "Use the Nimbus dashboard, available from a web browser, to manage your instance, including to help you determine whether you need more/less resources."
-- "Log on to the dashboard at https://nimbus.pawsey.org.au using your project username and password."
+- "Log on to the [Nimbus dashboard](https://nimbus.pawsey.org.au) using your project username and password."
 ---
 
 
