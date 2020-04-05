@@ -53,7 +53,7 @@ This episode steps you through the process of launching an instance on Nimbus. Y
 >
 > A 'flavour' (or 'flavor' because our software prefers US spelling) defines the characteristics of an instance.  We provide a range of flavors that vary based on the number of virtual CPUs, memory, and storage available to your instance.
 >
-> In our example we select __m2.small__.
+> In our example we select __n3.1c4r__.
 >
 ><kbd><img src="{{ page.root }}/fig/Instance_flavour2.png" /></kbd><br><br>
 >
@@ -65,7 +65,7 @@ This episode steps you through the process of launching an instance on Nimbus. Y
 >
 > You will also see a __Public external__ network.  We will use this now since you get a public IP address automatically.
 >
-><kbd><img src="{{ page.root }}/fig/Instance_network.png" /></kbd><br><br>
+><kbd><img src="{{ page.root }}/fig/Instance_network2.png" /></kbd><br><br>
 >
 >
 > ### 6. Check security groups
