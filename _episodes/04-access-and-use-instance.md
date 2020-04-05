@@ -47,13 +47,26 @@ Access to an instance is achieved using a Secure SHell (SSH) connection. For thi
 >  $ ssh -i `name_of_your_key`.pem `login_name`@###.###.###.###
 >~~~
 ><br>
-> For example, if I used an Ubuntu image for my instance, and the instance IP is 146.118.66.157, and my key pair is `my_first_key.pem`, I would enter:
+> For example, if I used an Ubuntu image for my instance, and the instance IP is 146.118.67.137, and my key pair is `test-instance.pem`, I would enter:
 >~~~
->  $ ssh -i my_first_key.pem ubuntu@146.118.66.157
+>  $ ssh -i test-instance.pem ubuntu@146.118.67.137
 >~~~
 ><br>
-> Your terminal should then display something like that shown in the figure below:<br><br>
-><kbd><img src="{{ page.root }}/fig/nimbus_logged_in.png" /></kbd><br><br>
+>You will receive a message saying
+>~~~
+> The authenticity of host '146.118.67.137 (146.118.67.137)' can't be established.
+>~~~
+> It will then give a key fingerprint, and ask
+>~~~
+> Are you sure you want to continue connecting (yes/no)?
+>~~~
+>If you are sure (and/or confirm the fingerprint), answer 'yes' to continue. It will then give a warning,
+>~~~
+> Warning: Permanently added '146.118.67.137' (ECDSA) to the list of known hosts.
+>~~~
+> meaning that next time you log in using this key and IP address you won't receive this message.
+> Having done that, your terminal should then display something like that shown in the figure below:<br><br>
+><kbd><img src="{{ page.root }}/fig/nimbus_logged_in2.png" /></kbd><br><br>
 > **Congratulations, you have now successfully logged in to your instance!**
 {: .challenge}
 
