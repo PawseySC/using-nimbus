@@ -21,7 +21,7 @@ keypoints:
 
 Volumes are created and attached using the Nimbus web interface, then formatted and mounted.
 
-> ## Activity: Create a volume
+> ## Activity: Create and attach a volume
 > Go to **Volumes** then **Volumes**.  
 >
 > <kbd><img src="{{ page.root }}/fig/Volumes_dashboard.png" /></kbd><br><br>
@@ -33,15 +33,17 @@ Volumes are created and attached using the Nimbus web interface, then formatted 
 > You will now see the created data volume listed, and later we will attach this to our instance and  prepare it for accepting data.
 >
 > <kbd><img src="{{ page.root }}/fig/Volumes_manage.png" /></kbd><br><br>
-{: .challenge}
-
-> ## Activity: Attach a volume to an instance
 >
 > Select **Manage Attachments** from the drop-down menu of the data volume you created
 >
 ><kbd><img src="{{ page.root }}/fig/nimbus_vol_manage_attachments.png" /></kbd><br><br>
+> Using the drop-down menu on the right, select your instance to attach the volume to, then click the Attach Volume button. You should then see your data volume attached to your instance in the volumes panel.
+> <kbd><img src="{{ page.root }}/fig/Volumes_attached.png" /></kbd><br><br>
+{: .challenge}
+
+> ## Activity: Format and mount a filesystem
 >
->We can check that our data volume is attached from the terminal logged into our instance, but we can’t use it just yet.  If the unformatted volume is properly attached you should see:
+>We can check that our data volume is attached from the terminal logged into our instance.  If the unformatted volume is properly attached you should see:
 >
 >~~~
 >root@test-instance:~# sudo fdisk -l /dev/vdc
@@ -50,13 +52,7 @@ Volumes are created and attached using the Nimbus web interface, then formatted 
 >Sector size (logical/physical): 512 bytes / 512 bytes
 >I/O size (minimum/optimal): 512 bytes / 512 bytes
 >~~~
->{: .output}
-{: .challenge}
-
-> ## Activity: Format and mount a filesystem
->
 > We need to format and create a filesystem on the volume.  We will do this using the mkfs command.   __Warning: Use mkfs only once for each volume.  It wipes any data already on it.__
->
 > ~~~
 >root@test-instance:~# sudo mkfs.ext4 /dev/vdc
 >mke2fs 1.42.13 (17-May-2015)
@@ -110,7 +106,7 @@ Volumes are created and attached using the Nimbus web interface, then formatted 
 
 > ## Recovery Challenge
 > Practice everything you've learned by deleting your instance, creating another one, and attaching  
-> your data volume to the new instance. Only this time, mount the volume somewhere different, say /data2.
+> your data volume to the new instance.
 > > ## Solution
 > > Remember, you do __not__ need to create a filesystem again, because that would wipe your data.
 > {: .solution}
