@@ -41,7 +41,7 @@ Volumes are created and attached using the Nimbus web interface, then formatted 
 > <kbd><img src="{{ page.root }}/fig/Volumes_attached.png" /></kbd><br><br>
 {: .challenge}
 
-> ## Activity: Format and mount a filesystem
+> ## Activity: Create a filesystem and copy some data
 >
 >We can check that our data volume is attached from the terminal logged into our instance.  If the unformatted volume is properly attached you should see:
 >
@@ -89,9 +89,6 @@ Volumes are created and attached using the Nimbus web interface, then formatted 
 >my-data-file
 >~~~
 >{: .output}
-{: .challenge}
-
-> ## Activity: Unmount the volume
 >
 >Once you have stored some data in your volume, you may wish to __unmount__ it __detach__ it from your instance.
 >
@@ -103,11 +100,3 @@ Volumes are created and attached using the Nimbus web interface, then formatted 
 >Next, select __Manage Attachments__ from the drop-down menu of the volume, then __Detach Volume__, and > again to confirm.  
 >**Warning: If you detach a volume before you unmount it, you may lose data.**
 {: .challenge}
-
-> ## Recovery Challenge
-> Practice everything you've learned by deleting your instance, creating another one, and attaching  
-> your data volume to the new instance.
-> > ## Solution
-> > Remember, you do __not__ need to create a filesystem again, because that would wipe your data.
-> {: .solution}
-{: .exercise}

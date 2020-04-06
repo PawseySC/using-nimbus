@@ -1,0 +1,10 @@
+I"Ç<blockquote class="challenge">
+  <h2 id="recovery-challenge">Recovery Challenge</h2>
+  <p>Practice everything youâ€™ve learned by deleting your instance, creating another one, and attaching<br />
+your data volume to the new instance.</p>
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <p>Remember, you do <strong>not</strong> need to create a filesystem again, because that would wipe your data.</p>
+  </blockquote>
+</blockquote>
+:ET
