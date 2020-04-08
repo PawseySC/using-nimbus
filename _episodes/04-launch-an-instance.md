@@ -29,23 +29,23 @@ This episode steps you through the process of launching an instance on Nimbus. Y
 > ### 2. Choose a Name
 >
 > Clicking on **Lauch Instance** brings up the __Launch Instance__ window. Configuration options are listed by topic in the menu on the left. These can be progressed through sequentially via the navigation buttons on the bottom right, or can be selected by clicking directly on the desired topic. The initial step is to give your instance a name.  It doesn't matter what you call it; usually we recommend giving your instance a name related to the task it will be performing.
-> Then click __next__.
+> Then click __Next__.
 >
 ><kbd><img src="{{ page.root }}/fig/Launch_details2.png" /></kbd><br><br>
 >
 > ### 3. Choose a source image
 >
-> The selection of the Source Image defines the operating system that will be used to launch your instance.  We include some images directly from upstream providers, as well as curating some of our own (marked with Pawsey in the name).
+> The selection of the Source Image defines the operating system that will be used to launch your instance.  We include a selection of commonly used images, as well as curating some of our own (marked with Pawsey in the name).
 >
 > *Note: Selecting a GPU image will not allocate you a GPU if you were not allocated one as part of your project.*
 >
-> Make sure that Boot Source is set to **Image**, set **Volume Size** to 10GB, and **Delete Volume on Instance Delete** should be set to Yes.
+> Make sure that Boot Source is set to **Image**, set **Volume Size** to 10GB, and **Delete Volume on Instance Delete** should be set to **Yes**.
 >
 >*Note: Volume Size just has to be sufficient to accommodate the Image you allocate.*
 >
 > <kbd><img src="{{ page.root }}/fig/Instance_source_selection.png" /></kbd><br>
 >
-> For training purposes we will be using the Pawsey Ubuntu 18.04 image. Click the up-arrow to the right of the image name so that it is listed under **allocated** as shown below. Then click __Next__.  
+> For training purposes we will be using the Pawsey Ubuntu 18.04 image. Click the up-arrow to the right of the image name so that it moves from the **Available** section to the **Allocated** section as shown below. Then click __Next__.  
 >
 ><kbd><img src="{{ page.root }}/fig/Instance_source_selection2.png" /></kbd><br><br>
 >
@@ -61,7 +61,9 @@ This episode steps you through the process of launching an instance on Nimbus. Y
 >
 > The **Network** tab is where you will define the networking available to your instance.
 >
-> Nimbus projects have networking choices pre-configured.  Using a training account you will see a network named something like  __cou010-network__.  If you are using your own project you will see a network name similar to this.
+> If you remember, when we talked about the Nimbus dashboard in episode 2, we saw that the Network area had usage, even before we set up or launched a new instance. This is because Nimbus projects come with a pre-configured network, meaning you are not required to configure a network yourself in order to have a working instance. If you require a custom configuration for more advanced use, you can configure your own or ask for our assistance.
+>
+> When using a training account you will see a default network named something like __cou010-network__.  If you are using your own project you will see a network name similar to this.
 >
 > You will also see a __Public external__ network.  We will use this now since you get a public IP address automatically.
 >
@@ -82,13 +84,13 @@ This episode steps you through the process of launching an instance on Nimbus. Y
 >
 > The key pair provides secure access to your instance. When selected for an instance, the public key is installed during creation of the instance, thereby ensuring access is only given when you have the corresponding private key.
 >
-> *Note: If you select a key pair for which you do not have, or have lost, the private key, it is not possible to gain access to the instance.*
+> *Note: If you select a key pair for which you do not have, or have lost, the private key, it is not possible to gain access to the instance. Your only option is to delete the instance, create a new key pair, and begin again.*
 >
 ><kbd><img src="{{ page.root }}/fig/Instance_keypairs.png" /></kbd><br><br>
 >
 >
 > ### 8. Launch instance
-> Having completed your selection of instance preferences, click the __Launch Instance__ buton. The launch window will close, and you should see a new instance show up in your instances panel (probably the only item you see listed). You will see it change state as it starts up.
+> Having completed your selection of instance preferences, click the __Launch Instance__ button. The launch window will close, and you should see a new instance show up in your instances panel (probably the only item you see listed). You will see it change state as it starts up.
 >
 ><kbd><img src="{{ page.root }}/fig/Launch_instance_click.png" /></kbd><br>
 >

@@ -3,6 +3,9 @@ layout: page
 title: Setup
 root: .
 ---
-- You will need a Nimbus username and password.  This could be your own Nimbus account, or a training account username and password provided by an instructor.
+### In order to be ready for the training, you need to:
+- Have a web browser (Chrome or Firefox). Microsoft Internet Explorer and Microsoft Edge are not supported.
 
-- You will need a web browser (Chrome or Firefox). Microsoft internet explorer or Microsoft edge is not supported.
+- Have on-hand your Nimbus username and password. This can be your own Nimbus project username and password, or one received during the registration process.
+
+- Have access on your laptop to the command line.
