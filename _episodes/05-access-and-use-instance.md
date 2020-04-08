@@ -13,7 +13,7 @@ keypoints:
 
 ---
 
-Access to an instance is achieved using a Secure SHell (SSH) connection. For this you need a terminal, a Command Line Interface (CLI), either the native terminal app on Linux/Mac OS systems, clients like Putty or MobaXTerm on Windows systems, or even a web-based terminal.
+Access to an instance is achieved using a Secure SHell (SSH) connection. For this you need a terminal, either the native terminal app on Linux/Mac OS systems, clients like Putty or MobaXTerm on Windows systems, or even a web-based terminal.
 
 <br>
 
@@ -67,7 +67,7 @@ Access to an instance is achieved using a Secure SHell (SSH) connection. For thi
 > meaning that next time you log in using this key and IP address you won't receive this message.
 > Having done that, your terminal should then display something like that shown in the figure below:<br><br>
 ><kbd><img src="{{ page.root }}/fig/nimbus_logged_in2.png" /></kbd><br><br>
-> **Congratulations, you have now successfully logged in to your instance!**
+> #### Congratulations, you have now successfully logged on to your instance!
 {: .challenge}
 
 <br>
@@ -84,4 +84,6 @@ Access to an instance is achieved using a Secure SHell (SSH) connection. For thi
 >    Most often the result of not including a security group which allows ssh access on port 22.
 >
 >    **Solution:** Go to the Nimbus dashboard and allocate an ssh access security group to your instance.
+>
+> For more, see the [Nimbus Documentation](https://support.pawsey.org.au/documentation/display/US/Common+Issues).
 {: .keypoints}
