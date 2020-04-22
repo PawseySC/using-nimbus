@@ -1,7 +1,7 @@
 ---
 title: "Getting Started: Housekeeping"
-teaching: 5
-exercises:
+teaching: 3
+exercises: 2
 
 objectives:
 - "Use Zoom features for this training."
@@ -9,16 +9,17 @@ objectives:
 keypoints:
 - "Being respectful online is important because the social cues that we use face-to-face may be missing and/or more difficult to pick up on in the online environment."
 - "Questions are an important part of learning. Ask. Ask. Ask."
+start: true
 ---
 
 Like most other institutions globally, we’re using online as our main teaching mode. There are several good practices we’ll use during this training. We ask you to please:
 
-*	Put yourself on mute to eliminate background noise.
-*	If you have a question:
-*	Place your question in the chat.
-*	Raise your hand virtually in the chat using “hand/” if you’d like to speak. (If small class)
-*	At the end of each episode, se will address posted questions.
-*	Be respectful of all participants through language choice and actions, both in the main room and breakout rooms.  
+1.	Put yourself on mute to eliminate background noise.
+2.	If you have a question:
+   * Place your question in the chat.
+   * Raise your hand virtually in the chat using “hand/” if you’d like to speak. (If small class)
+3.	At the end of each episode, we will address posted questions.
+4.	Be respectful of all participants through language choice and actions, both in the main room and breakout rooms.  
 <br>
 
 > ## Activity: Zoom features
@@ -32,9 +33,7 @@ Like most other institutions globally, we’re using online as our main teaching
 > For this session, we request that you place your question in the chat window. We will address your posted questions as we go through each episode. We will open the floor for spoken questions at the end of the overall session; to ask a question, type ‘hand/’ in the chat window.
 {: .challenge}
 
-Now, a question. How many of you have used Zoom previously, for online training or meeting? Raise your hand in the chat if you have, by typing ‘hand/’.
-
-In this session, we will not be using an external document.
+**IMPORTANT:** If one or more of us lose connection with Zoom during the training, please go to the Google Doc here:  https://tinyurl.com/ycu8gsr4   
 
 We will use the features of Zoom to talk as a group in the main area, where we are now. And we’ll use Breakout rooms for small group discussions (if applicable).
 

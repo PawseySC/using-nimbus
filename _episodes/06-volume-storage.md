@@ -3,11 +3,14 @@ title: "Storage"
 teaching: 30
 exercises: 0
 questions:
-- "How do you set up volumes to store data?"
-- "How do we move data to and from a volume?"
+- "What’s the difference between root and data volumes?"
+- "How do I set up a volume to store my working data?"
+- "What do I do with my data volume if I want to delete my instance?"
+- "How many data volumes can I create?"
 objectives:
-- "Create and configure a data volume for your instance."
-- "Attach and use a data volume with your instance."
+- "Create and configure a data volume for an instance."
+- "Attach and use a data volume with an instance."
+- "Remove a data volume before deleting an instance."
 keypoints:
 - "You learned how to create a new volume for your instance."
 - "You learned how to create a new filesystem and mount it in your instance."
@@ -17,8 +20,8 @@ keypoints:
 
 
 Nimbus gives access to two types of storage by default, both of which can be considered like the Hard-disk drive of your desktop or laptop:
-  1. Root Volume - includes your home directory, and storage for the operating system of your instance
-  2. Data Volume - a second, independent volume you can attach to your instance for working storage
+  1. Root Volume - includes your home directory, and storage for the operating system of your instance, and has the device name `/dev/vda`
+  2. Data Volume - a second, independent volume you can attach to your instance for working storage, and has the device name `/dev/vdc`
 
 > ## Best practice
 > We recommend you use the Root Volume strictly as the home for your operating software, and that all data and documents are kept on a Data Volume. This allows you to take full advantage of the flexible nature of cloud computing, so for example if your instance develops a problem, you can quickly destroy and recreate the instance (destroying the original Root Volume in the process) and attach your Data Volume to the new instance.
@@ -36,7 +39,7 @@ This episode goes through setting-up and using Data Volumes with your instance.
 >
 > <kbd><img src="{{ page.root }}/fig/Volumes_create.png" /></kbd><br><br>
 >
-> Once this is done, you will return to the **Volumes** panel, where you will now see the created data volume listed. In order to attach this volume to your instance, use it's drop down menu on the right to select **Manage Attachments**.
+> Once this is done, you will return to the **Volumes** panel, where you will now see the created data volume listed. In order to attach this volume to your instance, use its drop down menu on the right to select **Manage Attachments**.
 >
 > <kbd><img src="{{ page.root }}/fig/Volumes_manage.png" /></kbd><br><br>
 >
@@ -52,7 +55,7 @@ This episode goes through setting-up and using Data Volumes with your instance.
 You have created and attached a new data volume to your instance, which means at this point it is not formatted, and is therefore not useable. In order to be able to use it, you need to create a filesystem on the volume and mount it.<br><br>
 
 
-> ## Activity: Create a filesystem and copy some data
+> ## Activity: Create a filesystem
 >
 > Log in to your instance from the terminal using SSH. Once logged in, test the unformatted volume is properly attached by entering the following command:
 >
@@ -139,4 +142,8 @@ You should see output like below:
 >~~~
 ><br>
 >Next, from the Nimbus dashboard select **Volumes** from the **Volumes** tab, use it's drop down menu on the right to select **Manage Attachments**, then click the __Detach Volume__ button, and then again to confirm. **Note: If you detach a volume before you unmount it, you may lose data.**
+{: .challenge}
+
+> ## Moving Data
+>
 {: .challenge}
