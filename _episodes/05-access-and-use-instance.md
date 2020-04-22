@@ -35,14 +35,23 @@ Access to an instance is achieved using a Secure SHell (SSH) connection. For thi
 >    | Scientific Linux | **root** |
 >    | Debian  | **debian** |
 >
-> * __The location and name of your private key pair__:<br>
->    If you haven't done so previously, your private key file permissions will need to be changed to work with your SSH client. As a security precaution, SSH will not work unless the key file is only readable by you. To do so, run this command in your terminal, making sure you are in the directory which contains your key file:
+> * __The location and name of your private key__:<br>
+>    In episode 3 you created your keypair and wrote down the location where you saved the private key. For the following exercises you should either `cd` to that location, or provide the path to that location in your commands. So, for example, if you are in the directory where key is located, the command would look like:
 >~~~
->     chmod 600 `name_of_your_key`.pem
+>    $ `command` `name_of_your_key`.pem
+>~~~
+> or alternatively, you could use:
+>~~~
+>    $ `command` `path/name_of_your_key`.pem
 >~~~
 >
 > ### Login
-> Type the following into your terminal, using your login name and the instance's IP address:
+> If you haven't done so previously, your private key file permissions will need to be changed to work with your SSH client. As a security precaution, SSH will not work unless the key file is only readable by you. To do so, run this command in your terminal:
+>~~~
+>   $  chmod 600 `name_of_your_key`.pem
+>~~~
+><br>
+> Then type the following into your terminal, using your login name and the instance's IP address:
 >~~~
 >  $ ssh -i `name_of_your_key`.pem `login_name`@###.###.###.###
 >~~~
@@ -52,18 +61,21 @@ Access to an instance is achieved using a Secure SHell (SSH) connection. For thi
 >  $ ssh -i test-instance.pem ubuntu@146.118.67.137
 >~~~
 ><br>
->You will receive a message saying
+>You will receive a message saying:
 >~~~
 > The authenticity of host '146.118.67.137 (146.118.67.137)' can't be established.
 >~~~
+><br>
 > It will then give a key fingerprint, and ask
 >~~~
 > Are you sure you want to continue connecting (yes/no)?
 >~~~
+><br>
 >If you are sure (and/or confirm the fingerprint), answer 'yes' to continue. It will then give a warning,
 >~~~
 > Warning: Permanently added '146.118.67.137' (ECDSA) to the list of known hosts.
 >~~~
+><br>
 > meaning that next time you log in using this key and IP address you won't receive this message.
 > Having done that, your terminal should then display something like that shown in the figure below:<br><br>
 ><kbd><img src="{{ page.root }}/fig/nimbus_logged_in2.png" /></kbd><br><br>
