@@ -10,7 +10,7 @@ objectives:
 
 keypoints:
 - "You can securely log in to your Nimbus instance from Linux, Mac, Unix, or Windows, using Secured Shell (SSH)."
-
+start: true
 ---
 
 Access to an instance is achieved using a Secure SHell (SSH) connection. For this you need a terminal, either the native terminal app on Linux/Mac OS systems, clients like Putty or MobaXTerm on Windows systems, or even a web-based terminal.
