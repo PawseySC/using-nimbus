@@ -1,0 +1,13 @@
+I"w<p>This course will introduce you to the use of Nimbus, the research cloud at Pawsey Supercomputing Centre.</p>
+
+<blockquote class="prereq">
+  <h2 id="requirements">Requirements</h2>
+
+  <ul>
+    <li>Have access on your laptop to the command line. For example, if you are on a Windows machine, you may want to install MobaXTerm (<a href="https://support.pawsey.org.au/documentation/display/US/Access+and+Use+Your+Nimbus+Instance">instructions here</a>).</li>
+    <li>Have a working knowledge of the Linux command line, including such commands as mv, chmod, sudo, grep, etc. There are numerous online courses which give a good basic introduction (<a href="https://www.linkedin.com/learning/search?keywords=linux%20command%20line&amp;u=74770930">LinkedIn</a>, <a href="https://www.udemy.com/courses/search/?src=ukw&amp;q=linux%20command%20line">Udemy</a> and others).</li>
+    <li>Have registered for this Pawsey training in order to be able to receive your Nimbus username and password.</li>
+    <li>Have an up-to-date web browser (Chrome or Firefox). Microsoft Internet Explorer and Microsoft Edge are not supported.</li>
+  </ul>
+</blockquote>
+:ET

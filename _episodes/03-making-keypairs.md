@@ -24,7 +24,8 @@ To maintain a secure system, we require all Nimbus users to have a key pair. Key
 > ## Activity: Generating a Key Pair
 >  1. Log in to the Nimbus dashboard and navigate to the **Key Pairs** panel under the **Compute** menu.  
 >  2. Click the **Create Key Pair** button. The **Create Key Pair** dialog box will appear.
->  3. Enter a name - this can be anything, but try to make it meaningful - then click the **Create Keypair** button.  The dialog box will close and your browser will download the private key file with the name you gave it and a .pem extension, for eg `my_first_key.pem`. Make sure to save your private key file somewhere safe so you can access it later.
+>  3. Enter a name - this can be anything, but try to make it meaningful - then click the **Create Keypair** button.  The dialog box will close and your browser will download the private key file with the name you gave it and a .pem extension, for eg `my_first_key.pem`.
+>  4. Make sure to write down where you saved your private key file so you can access it later. Normal practice is to save it to the hidden .ssh directory in your home folder, but for the temporary training key this is not vital.
 >
 > <kbd><img src="{{ page.root }}/fig/Nimbus_Create_Key_Pairs.png" /></kbd>
 >
