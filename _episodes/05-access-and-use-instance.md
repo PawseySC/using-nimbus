@@ -10,17 +10,17 @@ objectives:
 
 keypoints:
 - "You can securely log in to your Nimbus instance from Linux, Mac, Unix, or Windows, using Secured Shell (SSH)."
-start: true
+
 ---
 
-Access to an instance is achieved using a Secure SHell (SSH) connection. For this you need a terminal, either the native terminal app on Linux/Mac OS systems, clients like Putty or MobaXTerm on Windows systems, or even a web-based terminal.
+Access to an instance is achieved using a Secure SHell (SSH) connection. For this you need a terminal, either the native terminal app on Linux/Mac OS systems, clients like Windows Terminal or  MobaXTerm on Windows systems, or even a web-based terminal.
 
 <br>
 
 
-> ## Activity: Access an instance
-> ### Before you start
-> There are three items to make sure you have on hand to sign into your instance:
+
+> ## Before you start
+> There are three items you need to make sure you have on hand to sign into your instance:
 > * __Your instance’s IP address__: get this from the instance overview in the Nimbus dashboard (__Compute>Instance__)
 >
 >    ###.###.###.###
@@ -36,22 +36,61 @@ Access to an instance is achieved using a Secure SHell (SSH) connection. For thi
 >    | Debian  | **debian** |
 >
 > * __The location and name of your private key__:<br>
->    In episode 3 you created your keypair and wrote down the location where you saved the private key. For the following exercises you should either `cd` to that location, or provide the path to that location in your commands. So, for example, if you are in the directory where key is located, the command would look like:
+>    In episode 3 you created your keypair and wrote down the location where you saved the private key. For the following exercises you should either `cd` to that location, or provide the path to that location in your commands. So, for example, if you are in the directory where your key is located, the command would look like:
 >~~~
 >    $ `command` `name_of_your_key`.pem
 >~~~
+> <br>
 > or alternatively, you could use:
 >~~~
 >    $ `command` `path/name_of_your_key`.pem
 >~~~
 >
-> ### Login
-> If you haven't done so previously, your private key file permissions will need to be changed to work with your SSH client. As a security precaution, SSH will not work unless the key file is only readable by you. To do so, run this command in your terminal:
->~~~
->   $  chmod 600 `name_of_your_key`.pem
->~~~
 ><br>
-> Then type the following into your terminal, using your login name and the instance's IP address:
+> When you have all these things, the last thing you need to do is make sure your private key is secure. To do this you will modify its permissions so that only you have access to it. This is achieved differently depending upon the operating system you are using. Select your system below and follow the instructions:
+><br><br>
+> > ## Linux, Unix, or Mac OS
+> > On Unix based systems SSH will not work unless the key file is only readable by you. To make it so, run this command in your terminal:
+> >~~~
+> >  $  chmod 600 `name_of_your_key`.pem
+> >~~~
+> > To check that the permissions are now set correctly, now type
+> >~~~
+> >  $  ls -l `name_of_your_key`.pem
+> >~~~
+> > and you should see an output like the following:
+> ><br>
+> ><kbd><img src="{{ page.root }}/fig/Private_key_lsl2.png" /></kbd>
+> {: .solution}
+> > ## Windows
+> > On Windows, SSH will work regardless of whether the key file is only readable by you. To modify the key's permissions, locate it in Windows Explorer, right-click on it then 
+> > select **Properties**. Navigate to the **Security** tab and click **Advanced**.
+> ><br><br>
+> ><kbd><img src="{{ page.root }}/fig/Private_key_properties2.png" /></kbd>
+> ><br><br>
+> > Disable inheritance and remove all permissions. Then add a new permissions entry.
+> ><br>
+> ><kbd><img src="{{ page.root }}/fig/Private_key_no_permissions2.png" /></kbd>
+> ><br><br>
+> > Click **Select a principal** and enter your user name.
+> ><br>
+> ><kbd><img src="{{ page.root }}/fig/Private_key_select_principal2.png" /></kbd>
+> ><kbd><img src="{{ page.root }}/fig/Private_key_selected_principal2.png" /></kbd>
+><br><br>
+> > Clear all permissions then grant yourself **Full Control** and apply the changes.
+> ><br>
+> ><kbd><img src="{{ page.root }}/fig/Private_key_full_control2.png" /></kbd>
+> ><br><br>
+> > Your key file should now have security settings that look like those shown below.
+> ><br>
+> ><kbd><img src="{{ page.root }}/fig/Private_key_modified_control.png" /></kbd>
+> ><br>
+> {: .solution}
+> #### Now you are ready to access your instance for the first time.
+{: .callout}
+
+> ## Activity: Access an instance
+> Type the following into your terminal, using your login name and the instance's IP address:
 >~~~
 >  $ ssh -i `name_of_your_key`.pem `login_name`@###.###.###.###
 >~~~
@@ -82,7 +121,6 @@ Access to an instance is achieved using a Secure SHell (SSH) connection. For thi
 > #### Congratulations, you have now successfully logged on to your instance!
 {: .challenge}
 
-<br>
 > ## Troubleshooting
 > It is easy to forget a step or misconfigure required elements. Whether you are working through this in a class, or by yourself, we find that (usually) the easiest fix is to delete the instance and make a new one, paying close attention to each step.<br><br>
 > There are some common errors which we detail below:
@@ -98,4 +136,4 @@ Access to an instance is achieved using a Secure SHell (SSH) connection. For thi
 >    **Solution:** Go to the Nimbus dashboard and allocate an ssh access security group to your instance.
 >
 > For more, see the [Nimbus Documentation](https://support.pawsey.org.au/documentation/display/US/Common+Issues).
-{: .keypoints}
+{: .callout}
