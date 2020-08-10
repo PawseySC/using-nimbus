@@ -20,36 +20,32 @@ This episode steps you through the process of launching an instance on Nimbus. Y
 
 
 > ## Activity: Create an Instance
-> ### 1. Start the process
+> #### 1. Start the process
 >
 > Login to the Nimbus dashboard. From the left hand menu select **Compute** then **Instances**. Click on the **Launch Instance** button.
 >
 > <kbd><img src="{{ page.root }}/fig/Create_instance_button.png" /></kbd><br><br>
 >
-> ### 2. Choose a Name
+> #### 2. Choose a Name
 >
 > Clicking on **Lauch Instance** brings up the __Launch Instance__ window. Configuration options are listed by topic in the menu on the left. These can be progressed through sequentially via the navigation buttons on the bottom right, or can be selected by clicking directly on the desired topic. The initial step is to give your instance a name.  It doesn't matter what you call it; usually we recommend giving your instance a name related to the task it will be performing.
 > Then click __Next__.
 >
 ><kbd><img src="{{ page.root }}/fig/Launch_details2.png" /></kbd><br><br>
 >
-> ### 3. Choose a source image
+> #### 3. Choose a source image
 >
 > The selection of the Source Image defines the operating system that will be used to launch your instance.  We include a selection of commonly used images, as well as curating some of our own (marked with Pawsey in the name).
 >
 > *Note: Selecting a GPU image will not allocate you a GPU if you were not allocated one as part of your project.*
 >
-> Make sure that Boot Source is set to **Image**, set **Volume Size** to 10GB, and **Delete Volume on Instance Delete** should be set to **Yes**.
+> **Boot Source** should be **Image**, and **Delete Volume on Instance Delete** should be set to **Yes**.
 >
->*Note: Volume Size just has to be sufficient to accommodate the Image you allocate.*
+> For training we will be using the Pawsey Ubuntu 18.04 image. Click the up-arrow to the right of the image name so that it moves from the **Available** section to the **Allocated** section as shown below. The **Volume Size** will be set by default to match your choice of image. Then click __Next__.  
 >
-> <kbd><img src="{{ page.root }}/fig/Instance_source_selection.png" /></kbd><br>
+><kbd><img src="{{ page.root }}/fig/Instance_source_selection3.png" /></kbd><br><br>
 >
-> For training purposes we will be using the Pawsey Ubuntu 18.04 image. Click the up-arrow to the right of the image name so that it moves from the **Available** section to the **Allocated** section as shown below. Then click __Next__.  
->
-><kbd><img src="{{ page.root }}/fig/Instance_source_selection2.png" /></kbd><br><br>
->
-> ### 4. Select a flavor
+> #### 4. Select a flavor
 >
 > A 'flavour' (or 'flavor' because our software prefers US spelling) defines the characteristics of an instance.  We provide a range of flavors that vary based on the number of virtual CPUs, memory, and storage available to your instance.
 >
@@ -57,7 +53,7 @@ This episode steps you through the process of launching an instance on Nimbus. Y
 >
 ><kbd><img src="{{ page.root }}/fig/Instance_flavour2.png" /></kbd><br><br>
 >
-> ### 5. Select a network
+> #### 5. Select a network
 >
 > The **Network** tab is where you will define the networking available to your instance.
 >
@@ -70,7 +66,7 @@ This episode steps you through the process of launching an instance on Nimbus. Y
 ><kbd><img src="{{ page.root }}/fig/Instance_network2.png" /></kbd><br><br>
 >
 >
-> ### 6. Check security groups
+> #### 6. Check security groups
 >
 > We skip over __Network Ports__ at this stage, as they are only for more advanced use of an instance. Instead go straight to __Security Groups__.
 >
@@ -80,7 +76,7 @@ This episode steps you through the process of launching an instance on Nimbus. Y
 >
 ><kbd><img src="{{ page.root }}/fig/Instance_security.png" /></kbd><br><br>
 >
-> ### 7. Select a key pair
+> #### 7. Select a key pair
 >
 > The key pair provides secure access to your instance. When selected for an instance, the public key is installed during creation of the instance, thereby ensuring access is only given when you have the corresponding private key.
 >
@@ -89,7 +85,7 @@ This episode steps you through the process of launching an instance on Nimbus. Y
 ><kbd><img src="{{ page.root }}/fig/Instance_keypairs.png" /></kbd><br><br>
 >
 >
-> ### 8. Launch instance
+> #### 8. Launch instance
 > Having completed your selection of instance preferences, click the __Launch Instance__ button. The launch window will close, and you should see a new instance show up in your instances panel (probably the only item you see listed). You will see it change state as it starts up.
 >
 ><kbd><img src="{{ page.root }}/fig/Launch_instance_click.png" /></kbd><br>

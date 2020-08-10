@@ -1,0 +1,51 @@
+I"�<p>To maintain a secure system, we require all Nimbus users to have a key pair. Key pairs take the form of public (think: ‘lock’) and private (think: ‘key’) key files.  These files are presented together to securely authenticate on a Nimbus instance. Without a key pair you cannot access your instance, as the username/password login option is disabled by default.</p>
+
+<blockquote class="callout">
+  <h2 id="secure-access">Secure access</h2>
+  <p>The username/password login is not set up for new instances, as it is a less secure method of authentication than key pairs.
+<br /><br />
+<em>Question: Why are key pairs more secure than username and password?</em></p>
+  <blockquote class="solution">
+    <h2 id="answer">Answer</h2>
+    <p>A key is much longer than a password and is completely randomly generated so  it is harder to brute force; the key is not transmitted or typed on a keyboard, so it cannot be intercepted.</p>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="activity-log-in-to-nimbus">Activity: Log in to Nimbus</h2>
+
+  <ol>
+    <li>Go to <a href="https://nimbus.pawsey.org.au">https://nimbus.pawsey.org.au</a>. This is the URL for the Nimbus login.</li>
+    <li>Log in, by either:
+      <ul>
+        <li>Using your project username and password, if you are a current Nimbus user</li>
+        <li>Using the username and password sent to you, if you are a new Nimbus user</li>
+      </ul>
+
+      <p>As shown below, for <strong>Domain</strong>, type <strong>pawsey</strong>. Then type your user name and password.</p>
+    </li>
+  </ol>
+
+  <p><kbd><img src="../fig/nimbus_login_screen.png" /></kbd></p>
+
+  <ol>
+    <li>Once logged in you will find yourself in the <strong>Overview</strong> page of the <strong>Compute</strong> tab. Explore the dashboard by selecting different pages from the tabs in the menu on the left.</li>
+    <li>You should be able to locate <strong>Instances</strong> and <strong>Key Pairs</strong> (shown below) - both under the <strong>Compute</strong> tab. We will be using these in creating our first instance, however both are empty at the moment.</li>
+  </ol>
+
+  <p><kbd><img src="../fig/Nimbus_key_pairs_export.png" /></kbd></p>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="activity-generating-a-key-pair">Activity: Generating a Key Pair</h2>
+  <ol>
+    <li>You should be in the <strong>Key Pairs</strong> panel under the <strong>Compute</strong> menu if you followed the activity above, if not then navigate there now..</li>
+    <li>Click the <strong>Create Key Pair</strong> button. The <strong>Create Key Pair</strong> dialog box will appear.</li>
+    <li>Enter a name - this can be anything, but try to make it meaningful - then click the <strong>Create Keypair</strong> button.  The dialog box will close and your browser will download the private key file with the name you gave it and a .pem extension, for eg <code class="highlighter-rouge">my_first_key.pem</code>.</li>
+    <li>Make sure to write down where you saved your private key file so you can access it later. Normal practice is to save it to the hidden .ssh directory in your home folder, but for the temporary training key this is not vital.</li>
+  </ol>
+
+  <p><kbd><img src="../fig/Nimbus_Create_Key_Pairs_new.png" /></kbd></p>
+
+</blockquote>
+:ET
