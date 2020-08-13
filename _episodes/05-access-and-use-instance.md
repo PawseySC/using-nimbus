@@ -58,7 +58,7 @@ Access to an instance is achieved using a Secure SHell (SSH) connection. For thi
 > >~~~
 > >  $  ls -l `name_of_your_key`.pem
 > >~~~
-> > and you should see an output like the following:
+> > and you should see an output like the following, showing that the file is read and write accessible only by the user (ie. you):
 > ><br>
 > ><kbd><img src="{{ page.root }}/fig/Private_key_lsl2.png" /></kbd>
 > {: .solution}
@@ -68,11 +68,15 @@ Access to an instance is achieved using a Secure SHell (SSH) connection. For thi
 > ><br><br>
 > ><kbd><img src="{{ page.root }}/fig/Private_key_properties2.png" /></kbd>
 > ><br><br>
-> > Disable inheritance and remove all permissions. Then add a new permissions entry.
+> > Disable inheritance and remove all permissions. 
+> ><br>
+> ><kbd><img src="{{ page.root }}/fig/Private_key_remove_permissions.png" /></kbd>
+> ><br><br>
+> > Then add a new permissions entry.
 > ><br>
 > ><kbd><img src="{{ page.root }}/fig/Private_key_no_permissions2.png" /></kbd>
 > ><br><br>
-> > Click **Select a principal** and enter your user name.
+> > Click **Select a principal** and enter your user name. The easiest way to do this seems to be to enter the email address associated with your Microsoft account (the one listed under your profile information on the computer you are using), and then press **Check Names**. Otherwise, you can select the advanced option and it reveals a more comprehensive search engine for you to use.
 > ><br>
 > ><kbd><img src="{{ page.root }}/fig/Private_key_select_principal2.png" /></kbd>
 > ><kbd><img src="{{ page.root }}/fig/Private_key_selected_principal2.png" /></kbd>
@@ -124,16 +128,24 @@ Access to an instance is achieved using a Secure SHell (SSH) connection. For thi
 > ## Troubleshooting
 > It is easy to forget a step or misconfigure required elements. Whether you are working through this in a class, or by yourself, we find that (usually) the easiest fix is to delete the instance and make a new one, paying close attention to each step.<br><br>
 > There are some common errors which we detail below:
-> 1. *ssh: Could not resolve hostname \342\200\223i name or service unknown error - [link](http://tumblr.gudge.com/post/18186353550/ssh-could-not-resolve-hostname-342200223i)*
->
->     When using MobaXTerm if you cut and paste the *ssh –i my_first_key.pem ubuntu@###.###.###.###* example, the pasted command will include an incorrect character for the hypen, which the system will not understand and will result in an error.
->
->    **Solution:** Do not cut and paste the example - manually type in the ssh command.
-> 2. *ssh: Timeout*
+> 1. *ssh: Timeout*
 >
 >    Most often the result of not including a security group which allows ssh access on port 22.
 >
 >    **Solution:** Go to the Nimbus dashboard and allocate an ssh access security group to your instance.
+> <br><br>
+> 2. *ssh: Permissions error* 
+> 
+> 	  On a Unix based system this is the result of not changing the permissions of the private key file. On a Windows system it means you have changed the permissions
+>    but have not selected the correct user.
+> 
+>    **Solution:** Go to the *Before you start* section in the lesson above, and make sure you follow the steps outlined for your operating system.
+> <br><br>
+> 3. *ssh: Could not resolve hostname \342\200\223i name or service unknown error - [link](http://tumblr.gudge.com/post/18186353550/ssh-could-not-resolve-hostname-342200223i)*
+>
+>     When using MobaXTerm if you cut and paste the *ssh –i my_first_key.pem ubuntu@###.###.###.###* example, the pasted command will include an incorrect character for the hypen, which the system will not understand and will result in an error.
+>
+>    **Solution:** Do not cut and paste the example - manually type in the ssh command.
 >
 > For more, see the [Nimbus Documentation](https://support.pawsey.org.au/documentation/display/US/Common+Issues).
 {: .callout}
