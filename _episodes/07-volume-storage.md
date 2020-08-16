@@ -17,15 +17,6 @@ keypoints:
 - "If you need to disconnect an attached and mounted data volume from your instance, first unmount and then detach it, or you may lose data during the process. "
 start: true
 ---
-> ## Before you start
-> If you don't have an instance created for training, create one now, and then log in and perform the following commands. If you do have a training instance, log in and perform the following:
->~~~
->    $ sudo apt update && sudo apt upgrade -y
->~~~
-> <br>
-> We will be explaining what these commands do later in episode 9.
-{: .callout}
-
 
 > ## Best practice
 > Nimbus gives access to two types of storage by default, both of which can be considered like the hard-disk drive of your desktop or laptop:
