@@ -94,6 +94,27 @@ There are many graphical file management tools which have transfer protocols lik
 ><kbd><img src="{{ page.root }}/fig/Data_sftp_remote.png" /></kbd><br><br>
 >
 > We can direct commands towards the local file system by preceding them with an “l” for local.
+> 
+> If we would like to download files from our instance, we can do so by issuing the following command:
+>~~~
+>  get `instance_file_path` `local_file_path`
+>~~~
+> <br>
+> If you omit the local file name, the command downloads the file to a file with the same name on the local file system.
+>  <br>
+> 
+><kbd><img src="{{ page.root }}/fig/Data_sftp_get.png" /></kbd><br><br>
+>
+><br>
+> When you need to transfer from your local machine to your instance, you use:
+>~~~
+>  put `local_file_path` `instance_file_path` 
+>~~~
+> <br>
+> <kbd><img src="{{ page.root }}/fig/Data_sftp_put.png" /></kbd><br><br>
+> 
+>  Just as with `scp` you can copy entire directories using the recursive flag -r. 
+> 
 {: .challenge}
 
 
