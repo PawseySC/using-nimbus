@@ -33,7 +33,7 @@ There are many graphical file management tools which have transfer protocols lik
 >  For example, in the figure below you can see the setup page for the Software Carpentry lesson on the Unix Shell. By right-clicking on the data-shell.zip link you can copy the URL to the clipboard.
 > <br>
 > 
-><kbd><img src="{{ page.root }}/fig/Data_copy_link.png" /></kbd><br><br>
+><kbd><img src="{{ page.root }}/fig/Data_copy_link2.png" /></kbd><br><br>
 > Then, from the terminal logged into your instance, type the wget command, paste the link and then hit enter. You should see output like that below:
 > <br>
 ><kbd><img src="{{ page.root }}/fig/Data_wget_file.png" /></kbd><br><br>
