@@ -1,6 +1,6 @@
 ---
 title: "Software"
-teaching: 10
+teaching: 30
 exercises: 0
 questions:
 - "How do you maintain the software on your instance?"
@@ -118,6 +118,7 @@ Apt is not the only useful package manager, another is conda, a package manager 
 > import pandas as pd
 >
 >data = pd.read_csv('data/gapminder_gdp_americas.csv')
+>print(data.describe())
 >~~~
 > <br>
 >

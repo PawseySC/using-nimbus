@@ -1,6 +1,6 @@
 ---
 title: "Data"
-teaching: 10
+teaching: 20
 exercises: 0
 questions:
 - "How do we move data to and from an instance?"
@@ -19,9 +19,7 @@ HTTP is the protocol used to fetch data from web servers. It is a very simple pr
 
 SCP is a network protocol which ensures the authenticity, encryption, and confidentiality of data by making use of SSH for transferring files. In SCP you do not need to start an FTP session or log into the remote host explicitly for transfer.
 
-SFTP is another protocol packaged with SSH. Like SCP it uses a secure connection to transfer files, however unlike SCP it allows you to traverse the filesystem on both the local and remote systems.
-
-There are many graphical file management tools which have transfer protocols like SFTP integrated into them (for eg cyberduck or filezilla), but in this lesson we will only be introducing command line tools.
+SFTP is another protocol packaged with SSH. Like SCP it uses a secure connection to transfer files, however unlike SCP it allows you to traverse the filesystem on both the local and remote systems. There are many graphical file management tools which have transfer protocols like SFTP integrated into them (for eg cyberduck or filezilla), but in this lesson we will only be introducing command line tools.
 
 
 > ## Activity: Copying files with HTTP
@@ -79,6 +77,7 @@ There are many graphical file management tools which have transfer protocols lik
 
 
 
+<!--
 > ## Activity: Managing data via SFTP
 > SCP is a popular solution that can prove helpful if you simply need to transfer files. However, if you need to list remote directories, create new directories, remove files, or do other administrative tasks, SFTP can do the job.
 > 
@@ -116,6 +115,7 @@ There are many graphical file management tools which have transfer protocols lik
 >  Just as with `scp` you can copy entire directories using the recursive flag -r. 
 > 
 {: .challenge}
+-->
 
 
 

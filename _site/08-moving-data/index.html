@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-09-01 21:49:01 +0800">
+    <meta http-equiv="last-modified" content="2020-09-08 11:19:46 +0800">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -155,7 +155,7 @@
 
   <div class="row">
     <div class="col-md-3">
-      <strong>Teaching:</strong> 10 min
+      <strong>Teaching:</strong> 20 min
       <br/>
       <strong>Exercises:</strong> 0 min
     </div>
@@ -194,9 +194,7 @@
 
 <p>SCP is a network protocol which ensures the authenticity, encryption, and confidentiality of data by making use of SSH for transferring files. In SCP you do not need to start an FTP session or log into the remote host explicitly for transfer.</p>
 
-<p>SFTP is another protocol packaged with SSH. Like SCP it uses a secure connection to transfer files, however unlike SCP it allows you to traverse the filesystem on both the local and remote systems.</p>
-
-<p>There are many graphical file management tools which have transfer protocols like SFTP integrated into them (for eg cyberduck or filezilla), but in this lesson we will only be introducing command line tools.</p>
+<p>SFTP is another protocol packaged with SSH. Like SCP it uses a secure connection to transfer files, however unlike SCP it allows you to traverse the filesystem on both the local and remote systems. There are many graphical file management tools which have transfer protocols like SFTP integrated into them (for eg cyberduck or filezilla), but in this lesson we will only be introducing command line tools.</p>
 
 <blockquote class="challenge">
   <h2 id="activity-copying-files-with-http">Activity: Copying files with HTTP</h2>
@@ -250,41 +248,45 @@ The -C in the second command stands for enable compression. By using this option
   </blockquote>
 </blockquote>
 
-<blockquote class="challenge">
-  <h2 id="activity-managing-data-via-sftp">Activity: Managing data via SFTP</h2>
-  <p>SCP is a popular solution that can prove helpful if you simply need to transfer files. However, if you need to list remote directories, create new directories, remove files, or do other administrative tasks, SFTP can do the job.</p>
-
-  <p>We can open up an SFTP session, just like when logging in via ssh, by issuing the following command:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sftp -i `name_of_your_key`.pem `login_name`@###.###.###.###
-</code></pre></div>  </div>
-  <p><br />
-You will connect to your instance and your prompt will change to an SFTP prompt.</p>
-
-  <p>We can navigate through our instance’s file hierarchy using a number of commands that function similarly to their shell counterparts. 
-<br />
-<kbd><img src="../fig/Data_sftp_remote.png" /></kbd><br /><br /></p>
-
-  <p>We can direct commands towards the local file system by preceding them with an “l” for local.</p>
-
-  <p>If we would like to download files from our instance, we can do so by issuing the following command:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> get `instance_file_path` `local_file_path`
-</code></pre></div>  </div>
-  <p><br />
-If you omit the local file name, the command downloads the file to a file with the same name on the local file system.
- <br /></p>
-
-  <p><kbd><img src="../fig/Data_sftp_get.png" /></kbd><br /><br /></p>
-
-  <p><br />
-When you need to transfer from your local machine to your instance, you use:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> put `local_file_path` `instance_file_path` 
-</code></pre></div>  </div>
-  <p><br />
-<kbd><img src="../fig/Data_sftp_put.png" /></kbd><br /><br /></p>
-
-  <p>Just as with <code class="highlighter-rouge">scp</code> you can copy entire directories using the recursive flag -r.</p>
-
-</blockquote>
+<!--
+> ## Activity: Managing data via SFTP
+> SCP is a popular solution that can prove helpful if you simply need to transfer files. However, if you need to list remote directories, create new directories, remove files, or do other administrative tasks, SFTP can do the job.
+> 
+> We can open up an SFTP session, just like when logging in via ssh, by issuing the following command:
+>~~~
+>  $ sftp -i `name_of_your_key`.pem `login_name`@###.###.###.###
+>~~~
+><br>
+> You will connect to your instance and your prompt will change to an SFTP prompt. 
+> 
+> We can navigate through our instance's file hierarchy using a number of commands that function similarly to their shell counterparts. 
+> <br>
+><kbd><img src="../fig/Data_sftp_remote.png" /></kbd><br><br>
+>
+> We can direct commands towards the local file system by preceding them with an “l” for local.
+> 
+> If we would like to download files from our instance, we can do so by issuing the following command:
+>~~~
+>  get `instance_file_path` `local_file_path`
+>~~~
+> <br>
+> If you omit the local file name, the command downloads the file to a file with the same name on the local file system.
+>  <br>
+> 
+><kbd><img src="../fig/Data_sftp_get.png" /></kbd><br><br>
+>
+><br>
+> When you need to transfer from your local machine to your instance, you use:
+>~~~
+>  put `local_file_path` `instance_file_path` 
+>~~~
+> <br>
+> <kbd><img src="../fig/Data_sftp_put.png" /></kbd><br><br>
+> 
+>  Just as with `scp` you can copy entire directories using the recursive flag -r. 
+> 
+{: .challenge}
+-->
 
 
 

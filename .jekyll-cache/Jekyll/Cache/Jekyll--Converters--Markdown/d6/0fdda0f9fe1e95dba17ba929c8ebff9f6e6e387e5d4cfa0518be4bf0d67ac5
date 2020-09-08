@@ -1,4 +1,4 @@
-I"<h2 id="managing-software">Managing software</h2>
+I")<h2 id="managing-software">Managing software</h2>
 
 <p>Unlike on your laptop or desktop computer, you interact with your Nimbus instance remotely using the command line, ie. via a terminal. This means managing software is also done via the terminal, which might be an unfamiliar experience for many. In this episode we cover some of the basics you’ll need to manage software on your instances via the command line interface.</p>
 
@@ -101,6 +101,7 @@ The above command is a shortcut, a combination of the two commands we learnt pre
 import pandas as pd
 
 data = pd.read_csv('data/gapminder_gdp_americas.csv')
+print(data.describe())
 </code></pre></div>  </div>
   <p><br /></p>
 
