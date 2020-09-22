@@ -23,7 +23,7 @@ To maintain a secure system, we require all Nimbus users to have a key pair. Key
 ><br><br>
 >*Question: Why are key pairs more secure than username and password?*
 > > ## Answer
-> > A key is much longer than a password and is completely randomly generated so  it is harder to brute force; the key is not transmitted or typed on a keyboard, so it cannot be intercepted.
+> > A key contains many more characters than a password and is completely randomly generated so it is harder to compromise; when using a key for authentication it is not typed on a keyboard, so it cannot be intercepted by for example keyboard logging malware.
 > {: .solution}
 {: .callout}
 
@@ -54,3 +54,4 @@ To maintain a secure system, we require all Nimbus users to have a key pair. Key
 > <kbd><img src="{{ page.root }}/fig/Nimbus_Create_Key_Pairs_new.png" /></kbd>
 >
 {: .challenge}
+

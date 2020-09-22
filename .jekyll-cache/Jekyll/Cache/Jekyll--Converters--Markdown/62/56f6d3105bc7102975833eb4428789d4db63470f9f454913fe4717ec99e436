@@ -1,6 +1,6 @@
-I")<h2 id="managing-software">Managing software</h2>
+I"d<h2 id="managing-software">Managing software</h2>
 
-<p>Unlike on your laptop or desktop computer, you interact with your Nimbus instance remotely using the command line, ie. via a terminal. This means managing software is also done via the terminal, which might be an unfamiliar experience for many. In this episode we cover some of the basics you’ll need to manage software on your instances via the command line interface.</p>
+<p>In earlier episodes you learned that on Nimbus you are responsible for managing all aspects of your instances, including the installation and maintaining of all software. In this episode we cover what you’ll need to manage software on your instances via the command line interface.</p>
 
 <h2 id="keeping-your-instance-up-to-date">Keeping your instance up-to-date</h2>
 
@@ -8,7 +8,7 @@
 
 <blockquote class="callout">
   <h2 id="performing-administrative-tasks-on-linux">Performing administrative tasks on Linux</h2>
-  <p>Before going any further it’s important to note what happens if you try to perform an administrative task on different operating systems. On Windows or a Mac a dialog box asks you if you wish to continue and you may be required to type in your password and click OK. Things are a little more complicated in Linux. In order to be able to run system commands you need to have permission at the root (most powerful) level of the system. You can achieve this via <code class="highlighter-rouge">sudo</code> (pronounced like “sue dough”), which stands for “super user do!”.</p>
+  <p>Before going any further it’s important to note what happens if you try to perform an administrative task on different operating systems. On Windows or a Mac a dialog box asks you if you wish to continue and you may be required to type in your password and click OK. Things are a little more complicated in Linux. In order to be able to run system commands you need to have permission at the root (most powerful) level of the system. You can achieve this via <code class="highlighter-rouge">sudo</code> (pronounced like “sue dough”), which stands for “super user do!”. You may remember we used this command in the Storage episode in order to format and mount the Data Volume to our instance.</p>
 
   <p><kbd><img src="../fig/sandwich-1.png" /></kbd></p>
 </blockquote>
@@ -17,7 +17,7 @@
 
 <p><kbd><img src="../fig/apt_update.gif" /></kbd></p>
 
-<p>This command updates the local database of available packages. The command fetches the package information from the respective repositories, which is why you see lots of URLs in the output.  At the end of the command, it tells you how many packages can be upgraded.
+<p>This command updates the local database of available software packages for Ubuntu. At the end of the command, it tells you how many packages can be upgraded.
 To see them run the following command: <code class="highlighter-rouge">apt list --upgradable</code>.</p>
 
 <p>The second command you need is <code class="highlighter-rouge">sudo apt upgrade</code>:</p>
@@ -57,7 +57,7 @@ The above command is a shortcut, a combination of the two commands we learnt pre
 
 </blockquote>
 
-<p>Apt is not the only useful package manager, another is conda, a package manager for Python. Conda quickly installs, runs, and updates packages and their dependencies. As well, conda is an environment management system. It easily creates, saves, loads, and switches between environments. It was created for Python programs but it can package and distribute software for any language.</p>
+<p>Apt is not the only useful package manager, another is conda, a package manager for Python. Conda quickly installs, runs, and updates packages and their dependencies. As well, conda is an environment management system. It easily creates, saves, loads, and switches between environments. For eg, if you had some legacy code that required Python 2, but all the rest of your workflows used Python 3, you could create a separate environment for Python 2 and run the workflow completely separately from all your others.</p>
 
 <blockquote class="challenge">
   <h2 id="activity-install-conda-and-use-it-to-install-pandas">Activity: Install conda and use it to install Pandas</h2>

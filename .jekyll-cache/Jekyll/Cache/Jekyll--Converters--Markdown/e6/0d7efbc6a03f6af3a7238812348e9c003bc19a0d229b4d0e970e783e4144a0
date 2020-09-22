@@ -1,4 +1,4 @@
-I"1<p>To maintain a secure system, we require all Nimbus users to have a key pair. Key pairs take the form of public (think: ‘lock’) and private (think: ‘key’) key files.  These files are presented together to securely authenticate on a Nimbus instance. Without a key pair you cannot access your instance, as the username/password login option is disabled by default.</p>
+I"w<p>To maintain a secure system, we require all Nimbus users to have a key pair. Key pairs take the form of public (think: ‘lock’) and private (think: ‘key’) key files.  These files are presented together to securely authenticate on a Nimbus instance. Without a key pair you cannot access your instance, as the username/password login option is disabled by default.</p>
 
 <blockquote class="callout">
   <h2 id="secure-access">Secure access</h2>
@@ -7,7 +7,7 @@
 <em>Question: Why are key pairs more secure than username and password?</em></p>
   <blockquote class="solution">
     <h2 id="answer">Answer</h2>
-    <p>A key is much longer than a password and is completely randomly generated so  it is harder to brute force; the key is not transmitted or typed on a keyboard, so it cannot be intercepted.</p>
+    <p>A key contains many more characters than a password and is completely randomly generated so it is harder to compromise; when using a key for authentication it is not typed on a keyboard, so it cannot be intercepted by for example keyboard logging malware.</p>
   </blockquote>
 </blockquote>
 
@@ -48,4 +48,5 @@
   <p><kbd><img src="../fig/Nimbus_Create_Key_Pairs_new.png" /></kbd></p>
 
 </blockquote>
+
 :ET

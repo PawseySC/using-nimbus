@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-09-08 11:19:46 +0800">
+    <meta http-equiv="last-modified" content="2020-09-22 09:56:41 +0800">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -155,9 +155,9 @@
 
   <div class="row">
     <div class="col-md-3">
-      <strong>Teaching:</strong> 30 min
+      <strong>Teaching:</strong> 20 min
       <br/>
-      <strong>Exercises:</strong> 0 min
+      <strong>Exercises:</strong> 15 min
     </div>
     <div class="col-md-9">
       <strong>Questions</strong>
@@ -210,10 +210,12 @@
     </li>
   </ol>
 
-  <p>We recommend you use the Root Volume strictly as the home for your operating software, and that all data and documents are kept on a Data Volume. <strong>Discuss why you think we recommend this?</strong></p>
+  <p><kbd><img src="../fig/Data_volumes.png" /></kbd>
+<br /><br />
+We recommend you use the Root Volume strictly as the home for your operating software, and that all data and documents are kept on a Data Volume. <strong>Discuss why you think we recommend this?</strong></p>
   <blockquote class="solution">
     <h2 id="answer">Answer</h2>
-    <p>One answer is because it allows you to take full advantage of the flexible nature of cloud computing, so for example if your instance develops a problem, you can quickly delete and recreate the instance without losing your working data. When you delete an instance, the original root volume is deleted also; however, because you have not stored your working data there, you have no data loss. Then, when you create a new instance, you can attach the data volume to it and continue working with your data.</p>
+    <p>One answer is because it allows you to take full advantage of the flexible nature of cloud computing, so for example if your instance develops a problem, you can unmount and detach your Data Volume from your instance, then delete and recreate the instance before attaching and remounting your Data Volume, all without losing any data.</p>
   </blockquote>
 </blockquote>
 

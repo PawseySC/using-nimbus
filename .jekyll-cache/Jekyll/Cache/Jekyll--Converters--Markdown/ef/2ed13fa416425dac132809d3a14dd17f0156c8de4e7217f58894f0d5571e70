@@ -1,4 +1,4 @@
-I"ž!<blockquote class="callout">
+I"2!<blockquote class="callout">
   <h2 id="best-practice">Best practice</h2>
   <p>Nimbus gives access to two types of storage by default, both of which can be considered like the hard-disk drive of your desktop or laptop:</p>
   <ol>
@@ -10,10 +10,12 @@
     </li>
   </ol>
 
-  <p>We recommend you use the Root Volume strictly as the home for your operating software, and that all data and documents are kept on a Data Volume. <strong>Discuss why you think we recommend this?</strong></p>
+  <p><kbd><img src="../fig/Data_volumes.png" /></kbd>
+<br /><br />
+We recommend you use the Root Volume strictly as the home for your operating software, and that all data and documents are kept on a Data Volume. <strong>Discuss why you think we recommend this?</strong></p>
   <blockquote class="solution">
     <h2 id="answer">Answer</h2>
-    <p>One answer is because it allows you to take full advantage of the flexible nature of cloud computing, so for example if your instance develops a problem, you can quickly delete and recreate the instance without losing your working data. When you delete an instance, the original root volume is deleted also; however, because you have not stored your working data there, you have no data loss. Then, when you create a new instance, you can attach the data volume to it and continue working with your data.</p>
+    <p>One answer is because it allows you to take full advantage of the flexible nature of cloud computing, so for example if your instance develops a problem, you can unmount and detach your Data Volume from your instance, then delete and recreate the instance before attaching and remounting your Data Volume, all without losing any data.</p>
   </blockquote>
 </blockquote>
 
