@@ -33,9 +33,9 @@ keypoints:
 {: .callout}
 
 >## Two roles with Nimbus
->There are two distinct roles that need to be performed when using Pawsey's cloud computing. The first is the typical role you >have with your local laptop or desktop computer, ie using the processing and storage resources available to you to perform >your research. This might include: moving, cleaning and visualising data; writing and or installing programs to analyse data. >The difference with cloud computing is of course you are working remotely, rather than on a local machine. The primary means >by which this is done is via a Secure Shell (SSH) over a Command Line Interface (CLI). You will begin using SSH in episode 5.
+>There are two distinct roles that need to be performed when using Pawsey's cloud computing. The first is the typical role you  have with your local laptop or desktop computer, ie using the processing and storage resources available to you to perform your research. This might include: moving, cleaning and visualising data; writing and or installing programs to analyse data. The difference with cloud computing is of course you are working remotely, rather than on a local machine. The primary means by which this is done is via a Secure Shell (SSH) over a Command Line Interface (CLI). You will begin using SSH in episode 5.
 >
->The second role is an administrative and management role, wherein you monitor, allocate, and manage the resources allocated to >your project. This is achieved via a web-based interface, the Nimbus dashboard. From your dashboard you are able to create, >configure, start, stop, modify, and delete instances within your project.
+>The second role is an administrative and management role, wherein you monitor, allocate, and manage the resources allocated to your project. This is achieved via a web-based interface, the Nimbus dashboard. From your dashboard you are able to create, configure, start, stop, modify, and delete instances within your project.
 >
 ><kbd><img src="{{ page.root }}/fig/diagram-nimbus.png" /></kbd>
 {: .callout}
@@ -48,6 +48,6 @@ keypoints:
 ><kbd><img src="{{ page.root }}/fig/Overview_dashboard.png" /></kbd>
 ><br>
 > > ## Answer
-> >
+> > The system administrators pre-allocate resources required for the basic functioning of all Nimbus projects.   
 > {: .solution}
 {: .challenge}

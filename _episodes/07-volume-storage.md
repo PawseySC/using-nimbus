@@ -1,7 +1,7 @@
 ---
 title: "Storage"
-teaching: 30
-exercises: 0
+teaching: 20
+exercises: 15
 questions:
 - "What’s the difference between root and data volumes?"
 - "How do I set up a volume to store my working data?"
@@ -24,9 +24,11 @@ start: true
 >
 >  2. Data Volume - a second, independent volume you can attach to your instance for working storage, and has the device name `/dev/vdc`
 > 
+><kbd><img src="{{ page.root }}/fig/Data_volumes.png" /></kbd>
+><br><br>
 > We recommend you use the Root Volume strictly as the home for your operating software, and that all data and documents are kept on a Data Volume. **Discuss why you think we recommend this?**
 > > ## Answer
-> > One answer is because it allows you to take full advantage of the flexible nature of cloud computing, so for example if your instance develops a problem, you can quickly delete and recreate the instance without losing your working data. When you delete an instance, the original root volume is deleted also; however, because you have not stored your working data there, you have no data loss. Then, when you create a new instance, you can attach the data volume to it and continue working with your data.
+> > One answer is because it allows you to take full advantage of the flexible nature of cloud computing, so for example if your instance develops a problem, you can unmount and detach your Data Volume from your instance, then delete and recreate the instance before attaching and remounting your Data Volume, all without losing any data.
 > {: .solution}
 {: .callout}
 

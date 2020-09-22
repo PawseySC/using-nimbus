@@ -1,7 +1,7 @@
 ---
 title: "Data"
 teaching: 10
-exercises: 0
+exercises: 5
 questions:
 - "How do we move data to and from an instance?"
 - "How do we backup data?"
@@ -10,18 +10,17 @@ objectives:
 keypoints:
 
 ---
+Your Nimbus instance will be used to store, explore, process, analyse, and create new data. However this begs the question, how do you transfer data to and from an instance?
 
 ## Transfer Protocols
 
 Transfer protocols are the different sets of rules governing the exchange or transmission of data between devices. The functionality of each protocol can give advantages depending on the situation in which they are used.
 
-HTTP is the protocol used to fetch data from web servers. It is a very simple protocol that is built upon TCP/IP and transfers via unencrypted text. 
+HTTP is the protocol used to fetch data from web servers. It is a very simple protocol that transfers via unencrypted text. 
 
-SCP is a network protocol which ensures the authenticity, encryption, and confidentiality of data by making use of SSH for transferring files. In SCP you do not need to start an FTP session or log into the remote host explicitly for transfer.
+SCP is a network protocol which ensures the authenticity, encryption, and confidentiality of data by making use of SSH for transferring files. In SCP you do not need to log into the remote host explicitly for transfer.
 
-SFTP is another protocol packaged with SSH. Like SCP it uses a secure connection to transfer files, however unlike SCP it allows you to traverse the filesystem on both the local and remote systems.
-
-There are many graphical file management tools which have transfer protocols like SFTP integrated into them (for eg cyberduck or filezilla), but in this lesson we will only be introducing command line tools.
+<!--SFTP is another protocol packaged with SSH. Like SCP it uses a secure connection to transfer files, however unlike SCP it allows you to traverse the filesystem on both the local and remote systems. There are many graphical file management tools which have transfer protocols like SFTP integrated into them (for eg cyberduck or filezilla), but in this lesson we will only be introducing command line tools.-->
 
 
 > ## Activity: Copying files with HTTP
@@ -45,7 +44,7 @@ There are many graphical file management tools which have transfer protocols lik
 >  $ scp -i `name_of_your_key`.pem `local_file_path` `login_name`@###.###.###.###:`instance_file_path`
 >~~~
 ><br>
-> This command might be starting to look a little complicated, but you just need to remember that most CLI copying tools, just like ordinary `cp`, require you to provide where something is that needs to be copied (origin), and where it needs to be copied to (destination) in that order.
+> This command might look complicated, but you just need to remember that most CLI copying tools, just like ordinary `cp`, require you to provide where something is that needs to be copied (origin), and where it needs to be copied to (destination) in that order.
 > 
 > Lets try that now, either by creating a text file, or copying a file you already have. For example, from your local terminal:
 ><br>
@@ -79,6 +78,7 @@ There are many graphical file management tools which have transfer protocols lik
 
 
 
+<!--
 > ## Activity: Managing data via SFTP
 > SCP is a popular solution that can prove helpful if you simply need to transfer files. However, if you need to list remote directories, create new directories, remove files, or do other administrative tasks, SFTP can do the job.
 > 
@@ -116,6 +116,7 @@ There are many graphical file management tools which have transfer protocols lik
 >  Just as with `scp` you can copy entire directories using the recursive flag -r. 
 > 
 {: .challenge}
+-->
 
 
 

@@ -1,30 +1,30 @@
 ---
 title: "Software"
-teaching: 10
+teaching: 30
 exercises: 0
 questions:
-- "How do you maintain the software on your instance?"
-- "How do you install new software?"
+- "Why is it important to maintain your instances’ software?"
+- "What is the process for maintaining an instances’ software?"
+- "How do I install software on my instance?"
 objectives:
 - "Learn the commands to keep your instance up-to-date"
 - "Install software using package managers"
 
 keypoints:
-- "You learnt how to keep your instance up to date"
-- "You learnt how to install software using package managers"
-
+- "Perform maintenance updates on your instances at least weekly to ensure the security and effectiveness of your software."
+- "Install software when needed as administrator of your instance, but remind yourself that root commands have the potential to damage the system."
 ---
 
 ## Managing software
 
-Unlike on your laptop or desktop computer, you interact with your Nimbus instance remotely using the command line, ie. via a terminal. This means managing software is also done via the terminal, which might be an unfamiliar experience for many. In this episode we cover some of the basics you'll need to manage software on your instances via the command line interface.
+In earlier episodes you learned that on Nimbus you are responsible for managing all aspects of your instances, including the installation and maintaining of all software. In this episode we cover what you'll need to manage software on your instances via the command line interface.
 
 ## Keeping your instance up-to-date
 
 Regularly updating your instance means you are installing the latest security patches, bug fixes and application upgrades. Updates on Ubuntu are managed via the `apt` application (there are a number of different Linux distributions, and not all of them are updated in the same fashion), which is actually a package manager. Package managers are a collection of software tools that automate the process of installing, upgrading, configuring, and removing computer programs for a computer's operating system in a consistent manner.
 
 > ## Performing administrative tasks on Linux
-> Before going any further it's important to note what happens if you try to perform an administrative task on different operating systems. On Windows or a Mac a dialog box asks you if you wish to continue and you may be required to type in your password and click OK. Things are a little more complicated in Linux. In order to be able to run system commands you need to have permission at the root (most powerful) level of the system. You can achieve this via `sudo` (pronounced like “sue dough”), which stands for “super user do!”.
+> Before going any further it's important to note what happens if you try to perform an administrative task on different operating systems. On Windows or a Mac a dialog box asks you if you wish to continue and you may be required to type in your password and click OK. Things are a little more complicated in Linux. In order to be able to run system commands you need to have permission at the root (most powerful) level of the system. You can achieve this via `sudo` (pronounced like “sue dough”), which stands for “super user do!”. You may remember we used this command in the Storage episode in order to format and mount the Data Volume to our instance.
 >
 ><kbd><img src="{{ page.root }}/fig/sandwich-1.png" /></kbd>
 {: .callout}
@@ -34,7 +34,7 @@ The first command you need is `sudo  apt  update`:
 
 <kbd><img src="{{ page.root }}/fig/apt_update.gif" /></kbd>
 
-This command updates the local database of available packages. The command fetches the package information from the respective repositories, which is why you see lots of URLs in the output.  At the end of the command, it tells you how many packages can be upgraded.
+This command updates the local database of available software packages for Ubuntu. At the end of the command, it tells you how many packages can be upgraded.
 To see them run the following command: `apt list --upgradable`.
 
 The second command you need is `sudo apt upgrade`:
@@ -77,7 +77,7 @@ To install new software you use `sudo  apt  install <package_name>`
 >
 {: .challenge}
 
-Apt is not the only useful package manager, another is conda, a package manager for Python. Conda quickly installs, runs, and updates packages and their dependencies. As well, conda is an environment management system. It easily creates, saves, loads, and switches between environments. It was created for Python programs but it can package and distribute software for any language.
+Apt is not the only useful package manager, another is conda, a package manager for Python. Conda quickly installs, runs, and updates packages and their dependencies. As well, conda is an environment management system. It easily creates, saves, loads, and switches between environments. For eg, if you had some legacy code that required Python 2, but all the rest of your workflows used Python 3, you could create a separate environment for Python 2 and run the workflow completely separately from all your others.
 
 > ## Activity: Install conda and use it to install Pandas
 > Download and run the miniconda install shell script, test that the installation has worked, and then use it to install the Python package pandas:
@@ -118,6 +118,7 @@ Apt is not the only useful package manager, another is conda, a package manager 
 > import pandas as pd
 >
 >data = pd.read_csv('data/gapminder_gdp_americas.csv')
+>print(data.describe())
 >~~~
 > <br>
 >
