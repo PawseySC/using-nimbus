@@ -1,4 +1,4 @@
-I"2!<blockquote class="callout">
+I"5!<blockquote class="callout">
   <h2 id="best-practice">Best practice</h2>
   <p>Nimbus gives access to two types of storage by default, both of which can be considered like the hard-disk drive of your desktop or laptop:</p>
   <ol>
@@ -122,7 +122,7 @@ The output of the <em>df</em> command shows that the volume attached to ‘/dev/
   <p>You can now store files and create subdirectories in the /data directory. Try it by creating a file, typing some made up data into it, then save and quit (^X):</p>
 
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@test-instance:~$ nano /data/my-data-file
-ubuntu@test-instance:~$ ls /data
+ubuntu@test-instance:~$ ls -l /data
 ubuntu@test-instance:~$ cat /data/my-data-file
 </code></pre></div>  </div>
   <p><br /></p>

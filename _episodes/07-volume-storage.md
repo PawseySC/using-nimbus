@@ -142,7 +142,7 @@ You should see output like below:
 >
 >~~~
 >ubuntu@test-instance:~$ nano /data/my-data-file
->ubuntu@test-instance:~$ ls /data
+>ubuntu@test-instance:~$ ls -l /data
 >ubuntu@test-instance:~$ cat /data/my-data-file
 >~~~
 ><br>

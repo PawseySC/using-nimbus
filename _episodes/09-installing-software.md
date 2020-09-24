@@ -1,7 +1,7 @@
 ---
 title: "Software"
-teaching: 30
-exercises: 0
+teaching: 20
+exercises: 5
 questions:
 - "Why is it important to maintain your instances’ software?"
 - "What is the process for maintaining an instances’ software?"
@@ -77,7 +77,7 @@ To install new software you use `sudo  apt  install <package_name>`
 >
 {: .challenge}
 
-Apt is not the only useful package manager, another is conda, a package manager for Python. Conda quickly installs, runs, and updates packages and their dependencies. As well, conda is an environment management system. It easily creates, saves, loads, and switches between environments. For eg, if you had some legacy code that required Python 2, but all the rest of your workflows used Python 3, you could create a separate environment for Python 2 and run the workflow completely separately from all your others.
+<!-- Apt is not the only useful package manager, another is conda, a package manager for Python. Conda quickly installs, runs, and updates packages and their dependencies. As well, conda is an environment management system. It easily creates, saves, loads, and switches between environments. For eg, if you had some legacy code that required Python 2, but all the rest of your workflows used Python 3, you could create a separate environment for Python 2 and run the workflow completely separately from all your others.
 
 > ## Activity: Install conda and use it to install Pandas
 > Download and run the miniconda install shell script, test that the installation has worked, and then use it to install the Python package pandas:
@@ -92,7 +92,7 @@ Apt is not the only useful package manager, another is conda, a package manager 
 >~~~
 > <br>
 >
-{: .challenge}
+{: .challenge}-->
 
 > ## Challenge
 > Practice everything you've learned:
@@ -111,6 +111,7 @@ Apt is not the only useful package manager, another is conda, a package manager 
 > {: .solution}
 {: .challenge}
 
+<!--
 > ## Activity: Use Pandas to examine the data
 >
 >~~~
@@ -122,4 +123,4 @@ Apt is not the only useful package manager, another is conda, a package manager 
 >~~~
 > <br>
 >
-{: .challenge}
+{: .challenge}-->

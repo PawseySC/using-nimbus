@@ -1,4 +1,4 @@
-I"d<h2 id="managing-software">Managing software</h2>
+I"ð<h2 id="managing-software">Managing software</h2>
 
 <p>In earlier episodes you learned that on Nimbus you are responsible for managing all aspects of your instances, including the installation and maintaining of all software. In this episode we cover what youâ€™ll need to manage software on your instances via the command line interface.</p>
 
@@ -57,22 +57,22 @@ The above command is a shortcut, a combination of the two commands we learnt pre
 
 </blockquote>
 
-<p>Apt is not the only useful package manager, another is conda, a package manager for Python. Conda quickly installs, runs, and updates packages and their dependencies. As well, conda is an environment management system. It easily creates, saves, loads, and switches between environments. For eg, if you had some legacy code that required Python 2, but all the rest of your workflows used Python 3, you could create a separate environment for Python 2 and run the workflow completely separately from all your others.</p>
+<!-- Apt is not the only useful package manager, another is conda, a package manager for Python. Conda quickly installs, runs, and updates packages and their dependencies. As well, conda is an environment management system. It easily creates, saves, loads, and switches between environments. For eg, if you had some legacy code that required Python 2, but all the rest of your workflows used Python 3, you could create a separate environment for Python 2 and run the workflow completely separately from all your others.
 
-<blockquote class="challenge">
-  <h2 id="activity-install-conda-and-use-it-to-install-pandas">Activity: Install conda and use it to install Pandas</h2>
-  <p>Download and run the miniconda install shell script, test that the installation has worked, and then use it to install the Python package pandas:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-   $ bash Miniconda3-latest-Linux-x86_64.sh
-   $ source .bashrc
-   $ conda -V
-   $ conda list
-   $ conda install pandas
-   $ conda list pandas
-</code></pre></div>  </div>
-  <p><br /></p>
-
-</blockquote>
+> ## Activity: Install conda and use it to install Pandas
+> Download and run the miniconda install shell script, test that the installation has worked, and then use it to install the Python package pandas:
+>~~~
+>    $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+>    $ bash Miniconda3-latest-Linux-x86_64.sh
+>    $ source .bashrc
+>    $ conda -V
+>    $ conda list
+>    $ conda install pandas
+>    $ conda list pandas
+>~~~
+> <br>
+>
+{: .challenge}-->
 
 <blockquote class="challenge">
   <h2 id="challenge">Challenge</h2>
@@ -94,16 +94,16 @@ The above command is a shortcut, a combination of the two commands we learnt pre
   </blockquote>
 </blockquote>
 
-<blockquote class="challenge">
-  <h2 id="activity-use-pandas-to-examine-the-data">Activity: Use Pandas to examine the data</h2>
-
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipython
-import pandas as pd
-
-data = pd.read_csv('data/gapminder_gdp_americas.csv')
-print(data.describe())
-</code></pre></div>  </div>
-  <p><br /></p>
-
-</blockquote>
+<!-->> ## Activity: Use Pandas to examine the data
+>
+>~~~
+> ipython
+> import pandas as pd
+>
+>data = pd.read_csv('data/gapminder_gdp_americas.csv')
+>print(data.describe())
+>~~~
+> <br>
+>
+{: .challenge}-->
 :ET
